@@ -1,0 +1,257 @@
+---
+---
+
+@images: '../images';
+
+.border-radius(@top-left:0px, @top-right:0px, @bottom-right:0px, @bottom-left:0px){
+	border-radius: @arguments;
+	-o-border-radius: @arguments;
+	-ms-border-radius: @arguments;
+	-moz-border-radius: @arguments;
+	-khtml-border-radius: @arguments;
+	-webkit-border-radius: @arguments;
+}
+
+.box-shadow(@h:1px, @v:1px, @blur:0px, @color:black, @type:outset){
+	box-shadow: @arguments;
+	-o-box-shadow: @arguments;
+	-ms-box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	-khtml-box-shadow: @arguments;
+	-webkit-box-shadow: @arguments;
+}
+
+.text-shadow(@h:1px, @v:1px, @blur:0px, @color:black){
+	text-shadow: @arguments;
+	-o-text-shadow: @arguments;
+	-ms-text-shadow: @arguments;
+	-moz-text-shadow: @arguments;
+	-khtml-text-shadow: @arguments;
+	-webkit-text-shadow: @arguments;
+}
+
+.columns(@count, @gap:0px, @rule:'none'){
+	column-gap: @gap;
+	column-rule: ~'@{rule}';
+	column-count: @count;
+	-o-column-gap: @gap;
+	-o-column-rule: ~'@{rule}';
+	-o-column-count: @count;
+	-ms-column-gap: @gap;
+	-ms-column-rule: ~'@{rule}';
+	-ms-column-count: @count;
+	-moz-column-gap: @gap;
+	-moz-column-rule: ~'@{rule}';
+	-moz-column-count: @count;
+	-khtml-column-gap: @gap;
+	-khtml-column-rule: ~'@{rule}';
+	-khtml-column-count: @count;
+	-webkit-column-gap: @gap;
+	-webkit-column-rule: ~'@{rule}';
+	-webkit-column-count: @count;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background: url('@{images}/yellow.png') #EAEAD3;
+	font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+h1, h2, h3 {
+	font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+h1 {
+	font-weight: 100;
+	font-size: 36px;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 29px;
+	line-height: 1.2em;
+}
+
+#menu {
+	position: fixed;
+	width: 38.2%;
+	height: 100%;
+	background: url('@{images}/black.png') #111111;
+	z-index: 100;
+	color: #ddd;
+
+	li {
+		padding: 18px 0px;
+	}
+
+	ul {
+		list-style: none;
+		padding: 20px 0px 0px 36px;
+
+		a {
+			display: block;
+			background-color: #DDD;
+			width: 36px;
+			height: 36px;
+
+			&.icon {
+				background: url(../images/icons.png) no-repeat;
+
+				.icon(@offset){
+					background-position: left @offset;
+
+					&:hover {
+						background-position: right @offset;
+					}
+				}
+
+				&.twitter {
+					height: 25px;
+					.icon(-6px);
+				}
+
+				&.lastfm {
+					height: 19px;
+					.icon(-45px);
+				}
+
+				&.linkedin {
+					height: 27px;
+					.icon(-77px);
+				}
+
+				&.facebook {
+					height: 31px;
+					.icon(-111px);
+				}
+
+				&.googleplus {
+					height: 23px;
+					.icon(-152px);
+				}
+
+				&.speakerdeck {
+					height: 18px;
+					.icon(-190px);
+				}
+
+				&.github {
+					height: 31px;
+					.icon(-219px);
+				}
+
+				&.coderwall {
+					height: 25px;
+					.icon(-258px);
+				}
+
+				&.email {
+					height: 27px;
+					.icon(-294px);
+				}
+
+				&.blog {
+					height: 31px;
+					.icon(-327px);
+				}
+
+				&.me {
+					height: 26px;
+					margin-bottom: 5px;
+					.icon(-365px);
+				}
+
+				&.loopinfinito {
+					height: 20px;
+					.icon(-404px);
+				}
+			}
+		}
+	}
+
+	nav {
+		width: 110px;
+		height: 100%;
+		float: right;
+		background: rgba(51,51,51, 0.35);
+		border-right: 5px solid #50504B;
+
+		li {
+			padding-bottom: 14px;
+		}
+	}
+}
+
+#network {
+	width: 110px;
+	float: right;
+}
+
+#stage {
+	width: 61.6%;
+	// height: 100%;
+	position: relative;
+	left: 38.2%;
+	/*padding: 50px;*/
+	/*box-sizing: border-box;*/
+}
+
+@stage-padding: 50px;
+
+#content {
+	padding: 0.7*@stage-padding @stage-padding @stage-padding @stage-padding;
+
+	> header {
+		margin-bottom: 30px;
+	}
+}
+
+article {
+	font-size: 15px;
+
+	time {
+		display: inline-block;
+		background: #50504B;
+		color: white;
+		font-size: 12px;
+		font-weight: bold;
+		padding: 3px 10px 3px @stage-padding;
+		position: relative;
+		left: -@stage-padding;
+		margin-bottom: 30px;
+		.border-radius(0px, 10px, 10px, 0px);
+		.box-shadow(-1px, 1px, 0px, #222, inset);
+	}
+
+	header {
+		margin-bottom: 20px;
+
+		h2 {
+			.text-shadow(1px, 1px, 0px, white);
+		}
+	}
+
+	> section {
+		// outline:1px solid;
+		.columns(2, 60px, 'thin dashed #bbb');
+	}
+
+	p {
+		text-indent: 4ex;
+		line-height: 2em;
+	}
+}
+
