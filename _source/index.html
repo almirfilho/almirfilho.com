@@ -1,15 +1,13 @@
 ---
 layout: home
 ---
-<header>
-	<h1>ALMIR FILHO</h1>
-</header>
 {% for post in site.posts %}
-<article id="{{ post.custom_id }}" itemscope itemtype="http://schema.org/BlogPosting">
-	<time itemprop="datePublished" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%d %b %Y" | upcase }}</time>
+<article itemscope itemtype="http://schema.org/BlogPosting">
+	<meta itemprop="author" content="Almir Filho" />
+	<time itemprop="datePublished" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%d <span>%b</span> %Y" | upcase }}</time>
 	<section>
 		<header>
-			<h2 itemprop="headline">{{ post.title }}</h2>
+			<h2 itemprop="headline"><a href="{{ post.url }}" title="{{ post.title | strip_html }}">{{ post.title }}</a></h2>
 		</header>
 		<section itemprop="articleBody">{{ post.content }}</section>
 	</section>
