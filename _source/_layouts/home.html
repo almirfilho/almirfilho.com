@@ -8,9 +8,13 @@
 	{% include menu.html %}
 	
 	<section id="stage">
+
+		{% include header.html %}
+		
 		<section id="content">
-			{% include header.html %}
-			{{ content }}
+			<div id="content-load">
+				{{ content }}
+			</div>
 		</section>
 	</section>
 	

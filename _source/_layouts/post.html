@@ -8,19 +8,23 @@
 	{% include menu.html %}
 	
 	<section id="stage">
+
+		{% include header.html %}
+		
 		<section id="content">
-			{% include header.html %}
-			<article itemscope itemtype="http://schema.org/BlogPosting">
-				<meta itemprop="author" content="Almir Filho" />
-				<time itemprop="datePublished" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%d <span>%b</span> %Y" | upcase }}</time>
-				<section>
-					<header>
-						<h2 itemprop="headline"><a href="{{ page.url }}" title="{{ page.title | strip_html }}">{{ page.title }}</a></h2>
-					</header>
-					<section itemprop="articleBody">{{ page.content | markdownify }}</section>
-				</section>
-			</article>
-			<p><a href="/" class="back">← voltar</a></p>
+			<div id="content-load">
+				<article itemscope itemtype="http://schema.org/BlogPosting">
+					<meta itemprop="author" content="Almir Filho" />
+					<time itemprop="datePublished" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%d <span>%b</span> %Y" | upcase }}</time>
+					<section>
+						<header>
+							<h2 itemprop="headline"><a class="push-content" href="{{ page.url }}" title="{{ page.title | strip_html }}">{{ page.title }}</a></h2>
+						</header>
+						<section itemprop="articleBody">{{ page.content | markdownify }}</section>
+					</section>
+				</article>
+				<p><a href="/" class="back push-content">← voltar</a></p>
+			</div>
 		</section>
 	</section>
 	

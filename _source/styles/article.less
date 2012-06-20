@@ -1,0 +1,76 @@
+article {
+	font-size: 15px;
+	margin-bottom: 25px;
+
+	time {
+		.highlight;
+
+		span {
+			color: #CC8;
+		}
+	}
+
+	header {
+		margin-bottom: 20px;
+
+		h2 {
+			.text-shadow(1px, 1px, 0px, white);
+		}
+	}
+
+	> section {
+		.columns(2, 60px, 'thin dashed #bbb');
+	}
+
+	p {
+		line-height: 2em;
+		text-align: justify;
+	}
+
+	a.leia-mais {
+		background: @color-link;
+		color: white;
+		padding: 0px 5px;
+		border-radius: 2px;
+
+		span {
+			position: relative;
+			top: -1px;
+		}
+
+		&:hover {
+			text-decoration: none;
+			background-color: darken(@color-link, 10%);
+		}
+	}
+
+	figure {
+		// @figure-width: 314px;
+
+		// width: @figure-width;
+		width: 100%;
+		margin: 10px 0px;
+
+		img {
+			width: 100%;
+			display: block;
+			margin-bottom: 3px;
+			.border-radius(4px,4px,4px,4px);
+			.box-shadow(0px, 3px, 0px, fade(black,15%));
+		}
+
+		figcaption {
+			font-size: 0.8em;
+			// max-width: @figure-width/1.618;
+			max-width: 62%;
+
+			span {
+				background-color: fade(black, 10%);
+				margin: 1px 7px 0px 7px;
+				padding: 2px 6px 3px 6px;
+				display: inline-block;
+				.border-radius(0px,0px,4px,4px);
+			}
+		}
+	}
+}
