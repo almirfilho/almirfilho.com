@@ -37,7 +37,6 @@
 		});
 
 		window.onpopstate = function( event ){
-			// alert(event.state);
 			loadContent(location.pathname, (event.state == null));
 		};
 
@@ -47,13 +46,14 @@
 
 				$('#content-load').fadeOut(200, function(){
 					
+					$('#loading').fadeIn(200);
 					$('#content').load( url + ' #content-load', function(){
 						$('#content-load').hide().fadeIn(300);
+						$('#loading').fadeOut(200);
 					});
 				});
 			}
 		}
-
 	});
 	</script>
 </head>

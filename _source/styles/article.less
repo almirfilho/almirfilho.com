@@ -1,6 +1,19 @@
+@media screen and (max-width:1024px){
+	
+	article {
+		width: auto !important;
+	}
+}
+
 article {
-	font-size: 15px;
-	margin-bottom: 25px;
+	font-size: 16px;
+	width: 90%;
+
+	&.complete {
+
+		h2 { font-size: 32px }
+		p { font-size: 18px }
+	}
 
 	time {
 		.highlight;
@@ -12,19 +25,19 @@ article {
 
 	header {
 		margin-bottom: 20px;
-
-		h2 {
-			.text-shadow(1px, 1px, 0px, white);
-		}
 	}
 
 	> section {
-		.columns(2, 60px, 'thin dashed #bbb');
+		padding: 40px 0px 50px 0px;
+		.columns(2, 86px, 'thin dashed #bbb');
 	}
 
 	p {
 		line-height: 2em;
 		text-align: justify;
+		color: #444;
+		padding: 0px 2px;
+		.hyphens(auto);
 	}
 
 	a.leia-mais {
@@ -32,6 +45,7 @@ article {
 		color: white;
 		padding: 0px 5px;
 		border-radius: 2px;
+		.text-shadow(none);
 
 		span {
 			position: relative;
@@ -45,9 +59,6 @@ article {
 	}
 
 	figure {
-		// @figure-width: 314px;
-
-		// width: @figure-width;
 		width: 100%;
 		margin: 10px 0px;
 
@@ -61,7 +72,6 @@ article {
 
 		figcaption {
 			font-size: 0.8em;
-			// max-width: @figure-width/1.618;
 			max-width: 62%;
 
 			span {

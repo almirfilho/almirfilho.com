@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en-US">
 
 {% include head.html %}
 
@@ -10,10 +10,11 @@
 	<section id="stage">
 
 		{% include header.html %}
+		{% include spinner.html %}
 		
 		<section id="content">
 			<div id="content-load">
-				<article itemscope itemtype="http://schema.org/BlogPosting">
+				<article class="complete" itemscope itemtype="http://schema.org/BlogPosting">
 					<meta itemprop="author" content="Almir Filho" />
 					<time itemprop="datePublished" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%d <span>%b</span> %Y" | upcase }}</time>
 					<section>
