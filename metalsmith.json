@@ -2,5 +2,8 @@
   "source": "src",
   "destination": "build",
   "plugins": {
+    "metalsmith-markdown": {
+      "smartypants": true
+    }
   }
 }
