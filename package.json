@@ -24,6 +24,7 @@
     "grunt-contrib-stylus": "~0.17.0",
     "coffee-script": "~1.7.1",
     "metalsmith": "~0.8.0",
-    "metalsmith-markdown": "~0.2.1"
+    "metalsmith-markdown": "~0.2.1",
+    "metalsmith-permalinks": "~0.3.2"
   }
 }
