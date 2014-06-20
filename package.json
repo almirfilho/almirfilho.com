@@ -1,0 +1,20 @@
+{
+  "name": "almirfilho.com",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/almirfilho/almirfilho.com.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Almir Filho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/almirfilho/almirfilho.com/issues"
+  },
+  "homepage": "https://github.com/almirfilho/almirfilho.com"
+}
