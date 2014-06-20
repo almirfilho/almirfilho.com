@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/almirfilho/almirfilho.com/issues"
   },
-  "homepage": "https://github.com/almirfilho/almirfilho.com"
+  "homepage": "https://github.com/almirfilho/almirfilho.com",
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  }
 }
