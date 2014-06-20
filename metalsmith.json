@@ -4,6 +4,9 @@
   "plugins": {
     "metalsmith-markdown": {
       "smartypants": true
+    },
+    "metalsmith-permalinks": {
+      "pattern": "posts/:title"
     }
   }
 }
