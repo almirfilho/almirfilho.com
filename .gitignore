@@ -1,8 +1,1 @@
-# Arquivos invisiveis
 .DS_Store
-.cake_task_cache
-Cakefile
-
-#Diretorio 'site' (o site compilado para deployment)
-site/*
-site/**/*
