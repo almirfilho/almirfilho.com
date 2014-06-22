@@ -7,14 +7,14 @@ module.exports = (grunt) ->
 
     shell:
       metalsmith:
-        command: 'node_modules/.bin/metalsmith'
+        command: 'node_modules/.bin/coffee build.coffee'
         options:
           stderr: false
 
     watch:
       content:
         files: ['src/**/*.md']
-        tasks: ['metal']
+        tasks: ['shell:metalsmith']
 
   grunt.registerTask 'metal', ['shell:metalsmith']
   grunt.registerTask 'run', ['watch:content']
