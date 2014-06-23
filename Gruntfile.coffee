@@ -1,5 +1,6 @@
 module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-shell'
+  grunt.loadNpmTasks 'grunt-concurrent'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-connect'
 
@@ -24,5 +25,12 @@ module.exports = (grunt) ->
         files: ['src/**/*.md']
         tasks: ['shell:metalsmith']
 
+    concurrent:
+      dev:
+        tasks: ['connect', 'watch:content']
+        options:
+          logConcurrentOutput: true
+
   grunt.registerTask 'metal', ['shell:metalsmith']
-  grunt.registerTask 'run', ['watch:content']
+  grunt.registerTask 'run', ['metal', 'concurrent']
+  grunt.registerTask 'default', ['run']
