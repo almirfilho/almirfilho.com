@@ -26,7 +26,7 @@ module.exports = (grunt) ->
 
     watch:
       content:
-        files: ['src/**/*.md']
+        files: ['src/**/*.md', 'src/**/*.hbt']
         tasks: ['shell:metalsmith']
 
     concurrent:
