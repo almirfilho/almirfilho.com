@@ -1,6 +1,7 @@
 module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-shell'
   grunt.loadNpmTasks 'grunt-concurrent'
+  grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-connect'
 
@@ -19,6 +20,9 @@ module.exports = (grunt) ->
           port: 4001
           base: 'build'
           keepalive: true
+
+    clean:
+      build: ['build']
 
     watch:
       content:
