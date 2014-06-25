@@ -10,7 +10,7 @@ module.exports = (grunt) ->
 
     shell:
       metalsmith:
-        command: 'node_modules/.bin/coffee build.coffee'
+        command: 'node_modules/.bin/coffee <%= pkg.main %>'
         options:
           stderr: false
 

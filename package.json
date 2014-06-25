@@ -2,7 +2,7 @@
   "name": "almirfilho.com",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.coffee",
   "scripts": {},
   "repository": {
     "type": "git",
