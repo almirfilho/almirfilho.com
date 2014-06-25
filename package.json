@@ -29,6 +29,7 @@
     "metalsmith": "~0.8.0",
     "metalsmith-branch": "0.0.4",
     "metalsmith-markdown": "~0.2.1",
-    "metalsmith-permalinks": "~0.3.2"
+    "metalsmith-permalinks": "~0.3.2",
+    "handlebars": "~2.0.0-alpha.4"
   }
 }
