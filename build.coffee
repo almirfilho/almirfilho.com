@@ -3,7 +3,8 @@ permalinks = require 'metalsmith-permalinks'
 markdown   = require 'metalsmith-markdown'
 branch     = require 'metalsmith-branch'
 
-metalsmith = new Metalsmith(__dirname)
+metalsmith = new Metalsmith __dirname
+  .source 'src/content'
   .use(
     branch '**/*.pt.md'
       .use markdown smartypants: true

@@ -1,5 +1,6 @@
 ---
 title: This is a test
+template: post.hbt
 lang: en-US
 ---
 
