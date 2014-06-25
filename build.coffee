@@ -1,5 +1,6 @@
 Metalsmith = require 'metalsmith'
 permalinks = require 'metalsmith-permalinks'
+templates  = require 'metalsmith-templates'
 markdown   = require 'metalsmith-markdown'
 branch     = require 'metalsmith-branch'
 
@@ -13,4 +14,8 @@ metalsmith = new Metalsmith __dirname
     branch '**/*.md'
       .use markdown smartypants: true
       .use permalinks pattern: 'posts/:title'
-  ).build()
+  )
+  .use templates
+    engine: 'handlebars'
+    directory: 'src/templates'
+  .build()
