@@ -1,8 +1,27 @@
+# loading dependencies ---------------------------------------------------------
+
 Metalsmith = require 'metalsmith'
 permalinks = require 'metalsmith-permalinks'
 templates  = require 'metalsmith-templates'
 markdown   = require 'metalsmith-markdown'
 branch     = require 'metalsmith-branch'
+handlebars = require 'handlebars'
+fs         = require 'fs'
+
+
+# registering template partials ------------------------------------------------
+
+partials   = ['head', 'header', 'footer']
+
+addPartial = (name) ->
+  handlebars.registerPartial name,
+    fs.readFileSync "#{__dirname}/src/templates/partials/#{name}.hbt"
+    .toString()
+
+addPartial partial for partial in partials
+
+
+# running metalsmith pipeline --------------------------------------------------
 
 metalsmith = new Metalsmith __dirname
   .source 'src/content'
