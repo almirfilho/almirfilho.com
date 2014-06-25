@@ -1,12 +1,13 @@
 # loading dependencies ---------------------------------------------------------
 
-Metalsmith = require 'metalsmith'
-permalinks = require 'metalsmith-permalinks'
-templates  = require 'metalsmith-templates'
-markdown   = require 'metalsmith-markdown'
-branch     = require 'metalsmith-branch'
-handlebars = require 'handlebars'
-fs         = require 'fs'
+Metalsmith  = require 'metalsmith'
+collections = require 'metalsmith-collections'
+permalinks  = require 'metalsmith-permalinks'
+templates   = require 'metalsmith-templates'
+markdown    = require 'metalsmith-markdown'
+branch      = require 'metalsmith-branch'
+handlebars  = require 'handlebars'
+fs          = require 'fs'
 
 
 # registering template partials ------------------------------------------------
@@ -26,11 +27,14 @@ addPartial partial for partial in partials
 metalsmith = new Metalsmith __dirname
   .source 'src/content'
   .use(
-    branch '**/*.pt.md'
+    branch 'posts/**/*.pt.md'
       .use markdown smartypants: true
       .use permalinks pattern: 'posts/:title/pt'
   ).use(
-    branch '**/*.md'
+    branch 'posts/**/*.md'
+      .use collections
+        posts:
+          pattern: 'posts/**/*.md'
       .use markdown smartypants: true
       .use permalinks pattern: 'posts/:title'
   )
