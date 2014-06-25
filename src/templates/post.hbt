@@ -1,13 +1,9 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>{{ title }} | Metalsmith Page</title>
-</head>
-<body>
-    <div class="main-wrapper">
+    {{> head }}
+    <body>
+        {{> header }}
         {{{ contents }}}
-    </div>
-
-</body>
+        {{> footer }}
+    </body>
 </html>
