@@ -6,7 +6,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-connect'
 
   grunt.initConfig
-    pkg: grunt.file.readJSON('package.json')
+    pkg: grunt.file.readJSON 'package.json'
 
     shell:
       metalsmith:

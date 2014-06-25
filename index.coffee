@@ -12,7 +12,7 @@ fs          = require 'fs'
 
 # registering template partials ------------------------------------------------
 
-partials   = ['head', 'header', 'footer']
+partials = ['head', 'header', 'footer']
 
 addPartial = (name) ->
   handlebars.registerPartial name,
@@ -30,7 +30,8 @@ metalsmith = new Metalsmith __dirname
     branch 'posts/**/*.pt.md'
       .use markdown smartypants: true
       .use permalinks pattern: 'posts/:title/pt'
-  ).use(
+  )
+  .use(
     branch 'posts/**/*.md'
       .use collections
         posts:

@@ -4,11 +4,11 @@
     <body>
         {{> header }}
         <ul>
-        {{#each collections.posts}}
+        {{# each collections.posts }}
             <li>
                 <h3>{{this.title}}</h3>
             </li>
-        {{/each}}
+        {{/ each }}
         </ul>
         {{> footer }}
     </body>
