@@ -1,7 +1,7 @@
 ---
 title: This is a test
 titulo: Isso é um teste
-lang: pt-BR
+template: post.hbt
 ---
 
 ## Português texto
