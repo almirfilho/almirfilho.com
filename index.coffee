@@ -39,6 +39,12 @@ metalsmith = new Metalsmith __dirname
       .use markdown smartypants: true
       .use permalinks pattern: 'posts/:title'
   )
+  .use(
+    branch 'pages/*.md'
+      .use markdown smartypants: true
+      .use permalinks pattern: ':title'
+  )
+  .use markdown smartypants: true
   .use templates
     engine: 'handlebars'
     directory: 'src/templates'
