@@ -1,4 +1,4 @@
 ---
-title: teste
+title: HOME
 template: home.hbt
 ---
