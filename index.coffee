@@ -26,28 +26,28 @@ addPartial partial for partial in partials
 
 metalsmith = new Metalsmith __dirname
   .source 'src/content'
+  .use collections
+    posts:
+      pattern: 'posts/**/*.en.md'
+  .use(
+    branch 'posts/**/*.en.md'
+      .use markdown smartypants: true
+      .use permalinks pattern: 'posts/:title'
+  )
   .use(
     branch 'posts/**/*.pt.md'
       .use markdown smartypants: true
       .use permalinks pattern: 'posts/:title/pt'
   )
   .use(
-    branch 'posts/**/*.md'
-      .use collections
-        posts:
-          pattern: 'posts/**/*.md'
-      .use markdown smartypants: true
-      .use permalinks pattern: 'posts/:title'
-  )
-  .use(
-    branch 'pages/*.pt.md'
-      .use markdown smartypants: true
-      .use permalinks pattern: ':title/pt'
-  )
-  .use(
-    branch 'pages/*.md'
+    branch 'pages/**/*.en.md'
       .use markdown smartypants: true
       .use permalinks pattern: ':title'
+  )
+  .use(
+    branch 'pages/**/*.pt.md'
+      .use markdown smartypants: true
+      .use permalinks pattern: ':title/pt'
   )
   .use markdown smartypants: true
   .use templates
