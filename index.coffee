@@ -1,31 +1,40 @@
 # loading dependencies ---------------------------------------------------------
 
-Metalsmith  = require 'metalsmith'
-collections = require 'metalsmith-collections'
-permalinks  = require 'metalsmith-permalinks'
-templates   = require 'metalsmith-templates'
-markdown    = require 'metalsmith-markdown'
-branch      = require 'metalsmith-branch'
-handlebars  = require 'handlebars'
-fs          = require 'fs'
+Metalsmith   = require 'metalsmith'
+filemetadata = require 'metalsmith-filemetadata'
+collections  = require 'metalsmith-collections'
+permalinks   = require 'metalsmith-permalinks'
+templates    = require 'metalsmith-templates'
+markdown     = require 'metalsmith-markdown'
+branch       = require 'metalsmith-branch'
+handlebars   = require 'handlebars'
+fs           = require 'fs'
 
 
-# registering template partials ------------------------------------------------
+# handmade plugins -------------------------------------------------------------
 
-partials = ['head', 'header', 'footer']
+partials = (partials) ->
+  (files, metalsmith, done) ->
+    for partial in partials
+      handlebars.registerPartial partial,
+        fs.readFileSync "#{__dirname}/src/templates/partials/#{partial}.hbt"
+        .toString()
+    done()
 
-addPartial = (name) ->
-  handlebars.registerPartial name,
-    fs.readFileSync "#{__dirname}/src/templates/partials/#{name}.hbt"
-    .toString()
-
-addPartial partial for partial in partials
+debug = ->
+  (files, metalsmith, done) ->
+    console.log files
+    done()
 
 
 # running metalsmith pipeline --------------------------------------------------
 
-metalsmith = new Metalsmith __dirname
+new Metalsmith __dirname
   .source 'src/content'
+  .use filemetadata [
+    {pattern: "**/*.en.md", metadata: {"lang": "en"}},
+    {pattern: "**/*.pt.md", metadata: {"lang": "pt"}}
+  ]
   .use collections
     posts:
       pattern: 'posts/**/*.en.md'
@@ -50,6 +59,7 @@ metalsmith = new Metalsmith __dirname
       .use permalinks pattern: ':title/pt'
   )
   .use markdown smartypants: true
+  .use partials ['head', 'header', 'footer']
   .use templates
     engine: 'handlebars'
     directory: 'src/templates'
