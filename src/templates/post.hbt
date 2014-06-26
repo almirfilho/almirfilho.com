@@ -1,9 +1,7 @@
-<!doctype html>
-<html lang="en">
-    {{> head }}
-    <body>
-        {{> header }}
-        {{{ contents }}}
-        {{> footer }}
-    </body>
-</html>
+{{> head }}
+    {{> header }}
+    <article>
+	    {{{ contents }}}
+    </article>
+    {{> footer }}
+{{> tail }}

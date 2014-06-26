@@ -1,4 +1,7 @@
-<head>
-    <meta charset="UTF-8" />
-    <title>{{ title }}</title>
-</head>
+<!doctype html>
+<html lang="{{# if lang }}{{ lang }}{{ else }}en{{/ if }}">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{{ title }}</title>
+    </head>
+    <body>
