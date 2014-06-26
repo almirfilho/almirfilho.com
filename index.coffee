@@ -40,6 +40,11 @@ metalsmith = new Metalsmith __dirname
       .use permalinks pattern: 'posts/:title'
   )
   .use(
+    branch 'pages/*.pt.md'
+      .use markdown smartypants: true
+      .use permalinks pattern: ':title/pt'
+  )
+  .use(
     branch 'pages/*.md'
       .use markdown smartypants: true
       .use permalinks pattern: ':title'
