@@ -32,6 +32,7 @@
     "metalsmith-templates": "~0.5.1",
     "metalsmith-permalinks": "~0.3.2",
     "metalsmith-collections": "~0.4.1",
+    "metalsmith-filemetadata": "0.0.1",
     "handlebars": "~2.0.0-alpha.4"
   }
 }
