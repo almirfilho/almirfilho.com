@@ -22,7 +22,8 @@ module.exports = (grunt) ->
           keepalive: true
 
     clean:
-      build: ['build']
+      all: ['build']
+      after: ['build/pages']
 
     watch:
       content:
@@ -35,6 +36,6 @@ module.exports = (grunt) ->
         options:
           logConcurrentOutput: true
 
-  grunt.registerTask 'metal', ['shell:metalsmith']
+  grunt.registerTask 'metal', ['shell:metalsmith', 'clean:after']
   grunt.registerTask 'run', ['metal', 'concurrent']
   grunt.registerTask 'default', ['run']
