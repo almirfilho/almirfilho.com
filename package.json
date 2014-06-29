@@ -33,6 +33,7 @@
     "metalsmith-permalinks": "~0.3.2",
     "metalsmith-collections": "~0.4.1",
     "metalsmith-filemetadata": "0.0.1",
-    "handlebars": "~2.0.0-alpha.4"
+    "handlebars": "~2.0.0-alpha.4",
+    "grunt-contrib-copy": "~0.5.0"
   }
 }
