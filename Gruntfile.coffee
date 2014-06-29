@@ -1,6 +1,7 @@
 module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-shell'
   grunt.loadNpmTasks 'grunt-concurrent'
+  grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-connect'
@@ -25,10 +26,19 @@ module.exports = (grunt) ->
       all: ['build']
       after: ['build/pages']
 
+    copy:
+      images:
+        files: [
+          expand: true
+          cwd: 'src/content/images/'
+          src: ['**']
+          dest: 'build/images/'
+        ]
+
     watch:
       content:
         files: ['src/**/*.md', 'src/**/*.hbt']
-        tasks: ['shell:metalsmith']
+        tasks: ['metal']
 
     concurrent:
       dev:
@@ -36,6 +46,6 @@ module.exports = (grunt) ->
         options:
           logConcurrentOutput: true
 
-  grunt.registerTask 'metal', ['shell:metalsmith', 'clean:after']
+  grunt.registerTask 'metal', ['shell:metalsmith', 'clean:after', 'copy:images']
   grunt.registerTask 'run', ['metal', 'concurrent']
   grunt.registerTask 'default', ['run']
