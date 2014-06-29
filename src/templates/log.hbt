@@ -1,0 +1,14 @@
+{{> head }}
+
+    {{> header }}
+    <ul>
+        {{# each articles }}
+        <li>
+            <h3>{{ this.title }}</h3>
+            <img src="/images/talks/{{ this.slug }}.jpg">
+        </li>
+        {{/ each }}
+    </ul>
+    {{> footer }}
+
+{{> tail }}
