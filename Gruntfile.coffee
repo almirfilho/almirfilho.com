@@ -43,8 +43,8 @@ module.exports = (grunt) ->
 
     watch:
       content:
-        files: ['src/content/**/*.md', 'src/content/**/*.hbt']
-        tasks: ['metal']
+        files: ['src/content/**/*.md', 'src/templates/**/*.hbt']
+        tasks: ['build']
       styles:
         files: ['src/assets/styles/**/*.styl']
         tasks: ['stylus']
@@ -54,7 +54,7 @@ module.exports = (grunt) ->
 
     concurrent:
       dev:
-        tasks: ['connect', 'watch:content', 'watch:styles', 'watch:images']
+        tasks: ['connect', 'watch']
         options:
           logConcurrentOutput: true
 
