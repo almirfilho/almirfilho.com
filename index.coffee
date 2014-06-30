@@ -32,7 +32,7 @@ debug = ->
 new Metalsmith __dirname
   .source 'src/content'
   .use filemetadata [
-    {pattern: "**/*.en.md", metadata: {"lang": "en"}},
+    {pattern: "**/*.en.md", metadata: {"lang": "en"}}
     {pattern: "**/*.pt.md", metadata: {"lang": "pt"}}
   ]
   .use collections
