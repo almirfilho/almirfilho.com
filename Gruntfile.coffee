@@ -48,13 +48,17 @@ module.exports = (grunt) ->
       styles:
         files: ['src/assets/styles/**/*.styl']
         tasks: ['stylus']
+      images:
+        files: ['src/**/*.jpg']
+        tasks: ['copy:images']
 
     concurrent:
       dev:
-        tasks: ['connect', 'watch:content', 'watch:styles']
+        tasks: ['connect', 'watch:content', 'watch:styles', 'watch:images']
         options:
           logConcurrentOutput: true
 
-  grunt.registerTask 'metal', ['shell:metalsmith', 'clean:after', 'copy:images']
-  grunt.registerTask 'run', ['metal', 'concurrent']
+  grunt.registerTask 'metal', ['shell:metalsmith', 'clean:after']
+  grunt.registerTask 'build', ['metal', 'stylus', 'copy:images']
+  grunt.registerTask 'run', ['build', 'concurrent']
   grunt.registerTask 'default', ['run']
