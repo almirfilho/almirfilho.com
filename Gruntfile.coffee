@@ -4,6 +4,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-connect'
 
   grunt.initConfig
@@ -14,6 +15,11 @@ module.exports = (grunt) ->
         command: 'node_modules/.bin/coffee <%= pkg.main %>'
         options:
           stderr: false
+
+    stylus:
+      compile:
+        files:
+          'build/styles/style.css': 'src/assets/styles/main.styl'
 
     connect:
       server:
@@ -37,12 +43,15 @@ module.exports = (grunt) ->
 
     watch:
       content:
-        files: ['src/**/*.md', 'src/**/*.hbt']
+        files: ['src/content/**/*.md', 'src/content/**/*.hbt']
         tasks: ['metal']
+      styles:
+        files: ['src/assets/styles/**/*.styl']
+        tasks: ['stylus']
 
     concurrent:
       dev:
-        tasks: ['connect', 'watch:content']
+        tasks: ['connect', 'watch:content', 'watch:styles']
         options:
           logConcurrentOutput: true
 
