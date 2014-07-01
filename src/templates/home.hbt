@@ -1,13 +1,11 @@
 {{> head }}
 
-    {{> header }}
-    <ul>
-        {{# each collections.posts }}
-        <li>
-            <h3>{{ this.title }}</h3>
-        </li>
-        {{/ each }}
-    </ul>
-    {{> footer }}
+<ul>
+    {{# each collections.posts }}
+    <li>
+        <h3>{{ this.title }}</h3>
+    </li>
+    {{/ each }}
+</ul>
 
 {{> tail }}
