@@ -1,11 +1,15 @@
 {{> head }}
 
-<ul>
-    {{# each collections.posts }}
-    <li>
-        <h3>{{ this.title }}</h3>
-    </li>
-    {{/ each }}
-</ul>
+<section class="alm-main-content">
+    <ul class="alm-post-list">
+        {{# each collections.posts }}
+        <li class="alm-post-list--item">
+            <a class="alm-post-list--item-link" href="{{ this.path }}/">
+                <span class="alm-post--title">{{ this.title }}</span>
+            </a>
+        </li>
+        {{/ each }}
+    </ul>
+</section>
 
 {{> tail }}

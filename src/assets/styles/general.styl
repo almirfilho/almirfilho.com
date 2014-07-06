@@ -7,15 +7,22 @@ body-desktop-width = 60em
 body
   color color-palette-gray
   font-size base-font-size
+  font-family avenirmedium
   background color-palette-purple
+  -webkit-font-smoothing antialiased
 
 a
   color color-palette-gray
   text-decoration none
 
 .alm-body
-  border 1px solid white
 
   @media screen and (min-width: min-desktop-width)
     width body-desktop-width
     margin auto
+
+.alm-main-content
+  background rgba(255, 255, 255, 0.05)
+
+.alm-main-content--with-contrast
+  background white

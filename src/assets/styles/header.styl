@@ -1,22 +1,22 @@
 // mobile sizes
 logo-mobile-width = size-bigger * 1.85
 logo-mobile-height = size-bigger
-header-mobile-padding = size-medium
 
 // desktop sizes
 logo-desktop-width = size-medium * 1.85
 logo-desktop-height = size-medium
-header-desktop-padding = size-small
 
+// -----------------------------------------------------------------------------
 
 .alm-header
   position relative
-  // height logo-mobile-height
-  padding header-mobile-padding 0
+  padding size-medium 0 size-small 0
 
   @media screen and (min-width: min-tablet-width)
     height logo-desktop-height
-    padding header-desktop-padding 0
+    padding size-small 0
+
+// -----------------------------------------------------------------------------
 
 .alm-header--title
   position absolute
@@ -25,18 +25,25 @@ header-desktop-padding = size-small
   font-size 2em
   width ((body-desktop-width - logo-desktop-width) / 2 / @font-size)
   left 'calc(50% - %dem)' % (@width + (logo-desktop-width / 2 / @font-size))
-  padding-right (size-small / @font-size)
-  line-height (logo-desktop-height / @font-size)
+  padding-right (size-smaller / @font-size * 1.1)
+  height (logo-desktop-height / @font-size)
+  fix-line-height(@height)
+  font-family fonts-sans-lighter
   font-weight normal
+  letter-spacing 0.15em
   text-align right
   text-transform uppercase
-  background #999
+  color color-palette-gray
+  opacity 0.3
 
   @media screen and (min-width: min-tablet-width)
     display block
 
 .alm-header--title-alt
-  font-weight bold
+  font-family fonts-sans-bolder
+  margin-left -0.15em
+
+// -----------------------------------------------------------------------------
 
 .alm-header--logo
   width logo-mobile-width
@@ -57,26 +64,38 @@ header-desktop-padding = size-small
 .alm-header--logo-image
   height 100%
 
+// -----------------------------------------------------------------------------
+
 .alm-header--menu
-  background white
+  margin-top size-small
 
   @media screen and (min-width: min-tablet-width)
     position absolute
     width ((body-desktop-width - logo-desktop-width) / 2)
     left 'calc(50% + %dem)' % (logo-desktop-width / 2)
-    line-height logo-desktop-height
+    height logo-desktop-height
+    margin-top 0
+    fix-line-height(@height)
 
 .alm-header--menu-list
+  height 2.8em
   list-style none
   text-align center
 
 .alm-header--menu-item
   display inline
-  font-size size-small
+  font-size size-smaller * 1.3
   text-transform uppercase
+  letter-spacing -0.05em
+  margin-left 0.6em
+
+  &:first-child
+    margin-left 0
 
   @media screen and (min-width: min-tablet-width)
     font-size size-smallest
+    margin-left 1.6em
+    letter-spacing 0
 
 // .alm-header--menu-item--link
 
