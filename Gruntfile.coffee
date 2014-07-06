@@ -54,7 +54,7 @@ module.exports = (grunt) ->
         files: ['src/assets/styles/**/*.styl']
         tasks: ['stylus:dev']
       images:
-        files: ['src/**/*.jpg']
+        files: ['src/**/*.jpg', 'src/**/*.svg']
         tasks: ['copy:images']
 
     concurrent:
