@@ -1,10 +1,58 @@
 // .alm-post
-
-
 // .alm-post--header
 // .alm-post--header-image
+// .alm-post--header-image-description
 // .alm-post--title
 // .alm-post--title-link
+// .alm-post--info
+// .alm-post--info-description
+// .alm-post--time
+// .alm-post--author-image
+// .alm-post--author-name
+// .alm-post--hr
+
 .alm-post--content
-  font-size 2.1em
+  padding size-smaller
+  font-family fonts-serif-normal
   color color-palette-purple
+
+  @media screen and (min-width: min-tablet-width)
+    padding size-small
+
+  a
+    color color-palette-green
+    border-bottom 1px dotted @color
+
+    &:hover
+      color color-palette-blue
+
+  strong
+    font-family fonts-serif-bold
+    letter-spacing -0.05em
+
+  em
+    font-family fonts-serif-italic
+
+  p
+    font-size 1.6em
+    line-height 200%
+    margin (size-smaller / @font-size) 0
+
+    &:first-child
+      margin-top 0
+
+  h2, h3, h4
+    letter-spacing -0.05em
+    font-family fonts-serif-bold
+    margin-top size-smallest
+    color rgba(color-palette-purple, 0.8)
+
+  h2
+    font-size size-small * 0.8
+
+  h3
+    font-size size-smaller * 1.1
+
+  h4
+    font-size size-smallest * 1.1
+    text-transform uppercase
