@@ -17,7 +17,12 @@ module.exports = (grunt) ->
           stderr: false
 
     stylus:
-      compile:
+      prod:
+        files:
+          'build/styles/style.css': 'src/assets/styles/main.styl'
+      dev:
+        options:
+          compress: false
         files:
           'build/styles/style.css': 'src/assets/styles/main.styl'
 
@@ -44,10 +49,10 @@ module.exports = (grunt) ->
     watch:
       content:
         files: ['src/content/**/*.md', 'src/templates/**/*.hbt']
-        tasks: ['build']
+        tasks: ['build:dev']
       styles:
         files: ['src/assets/styles/**/*.styl']
-        tasks: ['stylus']
+        tasks: ['stylus:dev']
       images:
         files: ['src/**/*.jpg']
         tasks: ['copy:images']
@@ -59,6 +64,7 @@ module.exports = (grunt) ->
           logConcurrentOutput: true
 
   grunt.registerTask 'metal', ['shell:metalsmith', 'clean:after']
-  grunt.registerTask 'build', ['metal', 'stylus', 'copy:images']
-  grunt.registerTask 'run', ['build', 'concurrent']
+  grunt.registerTask 'build:dev', ['metal', 'stylus:dev', 'copy:images']
+  grunt.registerTask 'build:prod', ['metal', 'stylus:prod', 'copy:images']
+  grunt.registerTask 'run', ['build:dev', 'concurrent']
   grunt.registerTask 'default', ['run']
