@@ -1,3 +1,5 @@
+body-desktop-width = 60em
+
 *
   margin 0
   padding 0
@@ -7,9 +9,13 @@ body
   font-size base-font-size
   background color-palette-purple
 
-.alm-body
-  background white
+a
+  color color-palette-gray
+  text-decoration none
 
-  @media screen and (min-device-width: min-desktop-width)
-    width 30em
+.alm-body
+  border 1px solid white
+
+  @media screen and (min-width: min-desktop-width)
+    width body-desktop-width
     margin auto
