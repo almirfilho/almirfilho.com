@@ -1,10 +1,12 @@
-fonts-path-avenir = '/fonts/avenir/'
-fonts-fallback    = Helvetica, sans-serif;
-fonts-sans-lighter = 'avenirlight', fonts-fallback
-fonts-sans-light   = 'avenirbook', fonts-fallback
-fonts-sans-normal  = 'avenirmedium', fonts-fallback
-fonts-sans-bold    = 'avenirheavy', fonts-fallback
-fonts-sans-bolder  = 'avenirblack', fonts-fallback
+// avenir font families --------------------------------------------------------
+
+fonts-path-avenir   = '/fonts/avenir/'
+fonts-sans-fallback = Helvetica, sans-serif
+fonts-sans-lighter  = 'avenirlight', fonts-sans-fallback
+fonts-sans-light    = 'avenirbook', fonts-sans-fallback
+fonts-sans-normal   = 'avenirmedium', fonts-sans-fallback
+fonts-sans-bold     = 'avenirheavy', fonts-sans-fallback
+fonts-sans-bolder   = 'avenirblack', fonts-sans-fallback
 
 @font-face
     font-family 'avenirlight'
@@ -39,4 +41,33 @@ fonts-sans-bolder  = 'avenirblack', fonts-fallback
     src url(fonts-path-avenir + 'avenir_95_black-webfont.eot')
     src url(fonts-path-avenir + 'avenir_95_black-webfont.eot?#iefix') format('embedded-opentype'), url(fonts-path-avenir + 'avenir_95_black-webfont.woff') format('woff'), url(fonts-path-avenir + 'avenir_95_black-webfont.ttf') format('truetype'), url(fonts-path-avenir + 'avenir_95_black-webfont.svg#avenirblack') format('svg')
     font-weight normal
+    font-style normal
+
+// baskerville font families ---------------------------------------------------
+
+fonts-path-baskerville = '/fonts/baskerville/'
+fonts-serif-fallback   = Helvetica, serif
+fonts-serif-normal     = 'baskervilleregular', fonts-serif-fallback
+fonts-serif-italic     = 'baskervilleitalic', fonts-serif-fallback
+fonts-serif-bold       = 'baskervillebold', fonts-serif-fallback
+
+@font-face
+    font-family 'baskervilleregular'
+    src url(fonts-path-baskerville + 'librebaskerville-regular-webfont.eot')
+    src url(fonts-path-baskerville + 'librebaskerville-regular-webfont.eot?#iefix') format('embedded-opentype'), url(fonts-path-baskerville + 'librebaskerville-regular-webfont.woff') format('woff'), url(fonts-path-baskerville + 'librebaskerville-regular-webfont.ttf') format('truetype'), url(fonts-path-baskerville + 'librebaskerville-regular-webfont.svg#libre_baskervilleregular') format('svg')
+    font-weight normal
+    font-style normal
+
+@font-face
+    font-family 'baskervilleitalic'
+    src url(fonts-path-baskerville + 'librebaskerville-italic-webfont.eot')
+    src url(fonts-path-baskerville + 'librebaskerville-italic-webfont.eot?#iefix') format('embedded-opentype'), url(fonts-path-baskerville + 'librebaskerville-italic-webfont.woff') format('woff'), url(fonts-path-baskerville + 'librebaskerville-italic-webfont.ttf') format('truetype'), url(fonts-path-baskerville + 'librebaskerville-italic-webfont.svg#libre_baskervilleitalic') format('svg')
+    font-weight normal
+    font-style italic
+
+@font-face
+    font-family 'baskervillebold'
+    src url(fonts-path-baskerville + 'librebaskerville-bold-webfont.eot')
+    src url(fonts-path-baskerville + 'librebaskerville-bold-webfont.eot?#iefix') format('embedded-opentype'), url(fonts-path-baskerville + 'librebaskerville-bold-webfont.woff') format('woff'), url(fonts-path-baskerville + 'librebaskerville-bold-webfont.ttf') format('truetype'), url(fonts-path-baskerville + 'librebaskerville-bold-webfont.svg#libre_baskervillebold') format('svg')
+    font-weight bold
     font-style normal
