@@ -45,6 +45,13 @@ module.exports = (grunt) ->
           src: ['**']
           dest: 'build/images/'
         ]
+      fonts:
+        files: [
+          expand: true
+          cwd: 'src/assets/fonts/'
+          src: ['**']
+          dest: 'build/fonts/'
+        ]
 
     watch:
       content:
@@ -64,7 +71,7 @@ module.exports = (grunt) ->
           logConcurrentOutput: true
 
   grunt.registerTask 'metal', ['shell:metalsmith', 'clean:after']
-  grunt.registerTask 'build:dev', ['metal', 'stylus:dev', 'copy:images']
-  grunt.registerTask 'build:prod', ['metal', 'stylus:prod', 'copy:images']
+  grunt.registerTask 'build:dev', ['metal', 'stylus:dev', 'copy']
+  grunt.registerTask 'build:prod', ['metal', 'stylus:prod', 'copy']
   grunt.registerTask 'run', ['build:dev', 'concurrent']
   grunt.registerTask 'default', ['run']
