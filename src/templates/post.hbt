@@ -1,8 +1,28 @@
 {{> head }}
 
-<article>
-	{{{ contents }}}
-</article>
+<section class="alm-main-content alm-main-content--with-contrast">
+	<article class="alm-post">
+		<header class="alm-post--header">
+			<img class="alm-post--header-image" src="#" />
+			<h1 class="alm-post--title">
+				<a class="alm-post--title-link" href="#">{{ title }}</a>
+			</h1>
+			<aside class="alm-post--info">
+				<span class="alm-post--info-whatever">
+					Em <time class="alm-post--time" datetime="">13-Set-14</time>
+				</span>
+				<div class="alm-post--author-image"></div>
+				<span class="alm-post--info-whatever">
+					Por <span class="alm-post--author-name">Almir Filho</span>
+				</span>
+				<p class="alm-post--header-image-description">Foto: lalal</p>
+			</aside>
+		</header>
+		<section class="alm-post--content">
+			{{{ contents }}}
+		</section>
+	</article>
+</section>
 
 {{> back }}
 {{> tail }}
