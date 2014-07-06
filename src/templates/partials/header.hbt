@@ -3,7 +3,11 @@
 		almir
 		<span class="alm-header--title-alt">filho</span>
 	</h1>
-	<div class="alm-header--logo"></div>
+	<div class="alm-header--logo">
+		<a class="alm-header--logo-link" href="/">
+			<img class="alm-header--logo-image" src="/images/almirfilho-logo.svg" />
+		</a>
+	</div>
 	<nav class="alm-header--menu">
 		<ul class="alm-header--menu-list">
 			<li class="alm-header--menu-item">
