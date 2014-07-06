@@ -1,7 +1,8 @@
 {{> head }}
 
-    <article>
-	    {{{ contents }}}
-    </article>
+<article>
+	{{{ contents }}}
+</article>
 
+{{> back }}
 {{> tail }}

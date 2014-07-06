@@ -59,7 +59,7 @@ new Metalsmith __dirname
       .use permalinks pattern: ':title/pt'
   )
   .use markdown smartypants: true
-  .use partials ['head', 'tail', 'header', 'footer']
+  .use partials ['head', 'tail', 'header', 'footer', 'back']
   .use templates
     engine: 'handlebars'
     directory: 'src/templates'
