@@ -1,23 +1,75 @@
-// .alm-header
+// mobile sizes
+logo-mobile-width = size-biggest
+logo-mobile-height = size-bigger
+header-mobile-padding = size-medium
+
+// desktop sizes
+logo-desktop-width = size-big
+logo-desktop-height = size-medium
+header-desktop-padding = size-small
 
 
-// .alm-header--title
+.alm-header
+  position relative
+  height logo-mobile-height
+  padding header-mobile-padding 0
 
+  @media screen and (min-width: min-tablet-width)
+    height logo-desktop-height
+    padding header-desktop-padding 0
 
-// .alm-header--title-alt
+.alm-header--title
+  position absolute
+  display none
+  box-sizing border-box
+  font-size 2em
+  width ((body-desktop-width - logo-desktop-width) / 2 / @font-size)
+  left 'calc(50% - %dem)' % (@width + (logo-desktop-width / 2 / @font-size))
+  padding-right (size-small / @font-size)
+  line-height (logo-desktop-height / @font-size)
+  font-weight normal
+  text-align right
+  text-transform uppercase
+  background #999
 
+  @media screen and (min-width: min-tablet-width)
+    display block
 
-// .alm-header--logo
+.alm-header--title-alt
+  font-weight bold
 
+.alm-header--logo
+  width logo-mobile-width
+  height logo-mobile-height
+  margin auto
+  background #ccc
 
-// .alm-header--menu
+  @media screen and (min-width: min-tablet-width)
+    position absolute
+    width logo-desktop-width
+    height logo-desktop-height
+    left 'calc(50% - %dem)' % (@width / 2)
 
+.alm-header--menu
+  background white
 
-// .alm-header--menu-list
+  @media screen and (min-width: min-tablet-width)
+    position absolute
+    width ((body-desktop-width - logo-desktop-width) / 2)
+    left 'calc(50% + %dem)' % (logo-desktop-width / 2)
+    line-height logo-desktop-height
 
+.alm-header--menu-list
+  list-style none
+  text-align center
 
-// .alm-header--menu-item
+.alm-header--menu-item
+  display inline
+  font-size size-small
+  text-transform uppercase
 
+  @media screen and (min-width: min-tablet-width)
+    font-size size-smallest
 
 // .alm-header--menu-item--link
 
