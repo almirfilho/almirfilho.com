@@ -1,7 +1,7 @@
 {{> head }}
-    {{> header }}
+
     <article>
 	    {{{ contents }}}
     </article>
-    {{> footer }}
+
 {{> tail }}

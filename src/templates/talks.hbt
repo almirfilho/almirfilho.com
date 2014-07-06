@@ -1,6 +1,5 @@
 {{> head }}
 
-    {{> header }}
     <ul>
         {{# each talks }}
         <li>
@@ -9,6 +8,5 @@
         </li>
         {{/ each }}
     </ul>
-    {{> footer }}
 
 {{> tail }}
