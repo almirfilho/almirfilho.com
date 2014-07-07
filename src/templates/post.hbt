@@ -3,19 +3,21 @@
 <section class="alm-main-content alm-main-content--with-contrast">
 	<article class="alm-post">
 		<header class="alm-post--header">
-			<img class="alm-post--header-image" src="#" />
+			<div class="alm-post--header-image-box">
+				<img class="alm-post--header-image" src="/images/posts/{{ slugify title }}.jpg" />
+			</div>
 			<h1 class="alm-post--title">
 				<a class="alm-post--title-link" href="#">{{ title }}</a>
 			</h1>
 			<aside class="alm-post--info">
-				<span class="alm-post--info-description">
+				<span class="alm-post--info-description alm-post--info-description--is-left">
 					Em <time class="alm-post--time" datetime="">13-Set-14</time>
 				</span>
 				<div class="alm-post--author-image"></div>
-				<span class="alm-post--info-description">
+				<span class="alm-post--info-description alm-post--info-description--is-right">
 					Por <span class="alm-post--author-name">Almir Filho</span>
 				</span>
-				<p class="alm-post--header-image-description">Foto: lalal</p>
+				<p class="alm-post--header-image-description">Foto: Lorem ipsum dolor sit amet lala lusac é noob.</p>
 			</aside>
 			<hr class="alm-post--hr" />
 		</header>
