@@ -8,6 +8,7 @@ templates    = require 'metalsmith-templates'
 markdown     = require 'metalsmith-markdown'
 branch       = require 'metalsmith-branch'
 handlebars   = require 'handlebars'
+_s           = require 'underscore.string'
 fs           = require 'fs'
 
 
@@ -20,6 +21,9 @@ partials = (partials) ->
         fs.readFileSync "#{__dirname}/src/templates/partials/#{partial}.hbt"
         .toString()
     done()
+
+handlebars.registerHelper 'slugify', (str) ->
+  new handlebars.SafeString _s.slugify str
 
 debug = ->
   (files, metalsmith, done) ->
