@@ -1,15 +1,84 @@
+header-image-height = 260px
+
 // .alm-post
-// .alm-post--header
-// .alm-post--header-image
-// .alm-post--header-image-description
-// .alm-post--title
-// .alm-post--title-link
-// .alm-post--info
-// .alm-post--info-description
+.alm-post--header
+  position relative
+
+.alm-post--header-image-box
+  position absolute
+  height header-image-height
+  overflow hidden
+  z-index 0
+
+.alm-post--header-image
+  width 100%
+  -webkit-transform s('translateY(calc(' + (header-image-height / 2) + ' - 50%))')
+
+.alm-post--header-image-description
+  margin 1em size-smallest size-smallest size-smallest
+  font-size 1.4em
+  line-height 170%
+  color color-palette-blue
+
+  @media screen and (min-width: min-tablet-width)
+    margin 1em size-big size-smallest size-big
+
+.alm-post--title
+  position relative
+  display flex
+  height 260px
+  z-index 100
+  background linear-gradient(transparent 50%,white)
+
+.alm-post--title-link
+  position relative
+  font-size 37px
+  top -20px
+  margin auto
+  color white
+  text-transform uppercase
+
+.alm-post--info
+  position relative
+  margin-top -32px
+  z-index 200
+  font-family fonts-serif-italic
+  font-style italic
+  text-align center
+  color color-palette-purple
+
+.alm-post--info-description
+  display inline-block
+  width 8.5em
+  font-size 1.3em
+  vertical-align 2em
+
+.alm-post--info-description--is-left
+  text-align right
+
+.alm-post--info-description--is-right
+  text-align left
+
 // .alm-post--time
-// .alm-post--author-image
+.alm-post--author-image
+  display inline-block
+  width size-medium
+  height @width
+  margin 0 size-smallest
+  border-radius 50%
+  background #ccc
+
 // .alm-post--author-name
-// .alm-post--hr
+.alm-post--hr
+  height 13px
+  border none
+  text-align center
+
+  &::after
+    content '~'
+    font-size 8em
+    font-family 'Times New Roman', serif
+    line-height 0px
 
 .alm-post--content
   padding size-smaller
