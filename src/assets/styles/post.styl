@@ -1,5 +1,10 @@
 header-image-height = 260px
 
+text(fontsize)
+  font-size fontsize
+  line-height 200%
+  margin (size-smaller / @font-size) 0
+
 // .alm-post
 .alm-post--header
   position relative
@@ -86,7 +91,7 @@ header-image-height = 260px
   color color-palette-purple
 
   @media screen and (min-width: min-tablet-width)
-    padding size-small
+    padding size-medium
 
   a
     color color-palette-green
@@ -103,12 +108,14 @@ header-image-height = 260px
     font-family fonts-serif-italic
 
   p
-    font-size 1.6em
-    line-height 200%
-    margin (size-smaller / @font-size) 0
+    text(1.6em)
 
     &:first-child
       margin-top 0
+
+  ul, ol
+    text(1.4em)
+    list-style-position inside
 
   h2, h3, h4
     letter-spacing -0.05em
@@ -125,3 +132,9 @@ header-image-height = 260px
   h4
     font-size size-smallest * 1.1
     text-transform uppercase
+
+  abbr
+    font-size 0.75em
+    font-family fonts-serif-bold
+    color rgba(color-palette-purple, 0.5)
+    border-bottom 1px dashed rgba(color-palette-purple, 0.4)
