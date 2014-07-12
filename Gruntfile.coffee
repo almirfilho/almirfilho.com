@@ -35,7 +35,7 @@ module.exports = (grunt) ->
 
     clean:
       all: ['build']
-      after: ['build/pages']
+      after: ['build/pages', 'build/posts/2014']
 
     copy:
       images:
