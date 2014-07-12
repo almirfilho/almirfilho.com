@@ -14,16 +14,25 @@ fs           = require 'fs'
 
 # handmade plugins -------------------------------------------------------------
 
-partials = (partials) ->
+handlebarsConfig = (options) ->
   (files, metalsmith, done) ->
-    for partial in partials
-      handlebars.registerPartial partial,
-        fs.readFileSync "#{__dirname}/src/templates/partials/#{partial}.hbt"
-        .toString()
-    done()
 
-handlebars.registerHelper 'slugify', (str) ->
-  new handlebars.SafeString _s.slugify str
+    if 'partials' in options
+      for partial in options.partials
+        handlebars.registerPartial partial,
+          fs.readFileSync "#{__dirname}/src/templates/partials/#{partial}.hbt"
+          .toString()
+
+    if 'helpers' in options
+      availableHelpers =
+        slugify: (str) ->
+          new handlebars.SafeString _s.slugify str
+
+      for helper in options.helpers
+        if helper in availableHelpers
+          handlebars.registerHelper helper, availableHelpers[helper]
+
+    done()
 
 debug = ->
   (files, metalsmith, done) ->
@@ -63,7 +72,9 @@ new Metalsmith __dirname
       .use permalinks pattern: ':title/pt'
   )
   .use markdown smartypants: true
-  .use partials ['head', 'tail', 'header', 'footer', 'back']
+  .use handlebarsConfig
+    partials: ['head', 'tail', 'header', 'footer', 'back']
+    helpers: ['slugify']
   .use templates
     engine: 'handlebars'
     directory: 'src/templates'
