@@ -16,20 +16,19 @@ fs           = require 'fs'
 
 handlebarsConfig = (options) ->
   (files, metalsmith, done) ->
-
-    if 'partials' in options
+    if 'partials' of options
       for partial in options.partials
         handlebars.registerPartial partial,
           fs.readFileSync "#{__dirname}/src/templates/partials/#{partial}.hbt"
           .toString()
 
-    if 'helpers' in options
+    if 'helpers' of options
       availableHelpers =
         slugify: (str) ->
           new handlebars.SafeString _s.slugify str
 
       for helper in options.helpers
-        if helper in availableHelpers
+        if helper of availableHelpers
           handlebars.registerHelper helper, availableHelpers[helper]
 
     done()
