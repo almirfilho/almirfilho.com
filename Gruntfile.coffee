@@ -55,7 +55,7 @@ module.exports = (grunt) ->
 
     watch:
       content:
-        files: ['src/content/**/*.md', 'src/templates/**/*.hbt']
+        files: ['src/content/**/*.md', 'src/templates/*.hbt', 'src/templates/**/*.hbt']
         tasks: ['build:dev']
       styles:
         files: ['src/assets/styles/**/*.styl']
@@ -74,5 +74,5 @@ module.exports = (grunt) ->
   grunt.registerTask 'build:dev', ['metal', 'stylus:dev', 'copy']
   grunt.registerTask 'build:dev:fresh', ['clean:all', 'metal', 'stylus:dev', 'copy']
   grunt.registerTask 'build:prod', ['metal', 'stylus:prod', 'copy']
-  grunt.registerTask 'run', ['build:dev', 'concurrent']
+  grunt.registerTask 'run', ['build:dev:fresh', 'concurrent']
   grunt.registerTask 'default', ['run']
