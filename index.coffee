@@ -24,6 +24,9 @@ handlebarsConfig = (options) ->
 
     if 'helpers' of options
       availableHelpers =
+        ifequals: (value1, value2, options) ->
+          if value1 is value2 then options.fn @ else options.inverse @
+
         slugify: (str) ->
           new handlebars.SafeString _s.slugify str
 
@@ -78,7 +81,7 @@ new Metalsmith __dirname
   .use markdown smartypants: true
   .use handlebarsConfig
     partials: ['head', 'tail', 'header', 'footer', 'back']
-    helpers: ['slugify']
+    helpers: ['ifequals', 'slugify']
   .use templates
     engine: 'handlebars'
     directory: 'src/templates'
