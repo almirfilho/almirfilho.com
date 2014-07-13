@@ -70,6 +70,11 @@ new Metalsmith __dirname
       .use markdown smartypants: true
       .use permalinks pattern: ':title/pt'
   )
+  .use(
+    branch 'styleguides/**/*.md'
+      .use markdown smartypants: true
+      .use permalinks pattern: 'styleguides/:title'
+  )
   .use markdown smartypants: true
   .use handlebarsConfig
     partials: ['head', 'tail', 'header', 'footer', 'back']
