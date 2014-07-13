@@ -72,6 +72,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'metal', ['shell:metalsmith', 'clean:after']
   grunt.registerTask 'build:dev', ['metal', 'stylus:dev', 'copy']
+  grunt.registerTask 'build:dev:fresh', ['clean:all', 'metal', 'stylus:dev', 'copy']
   grunt.registerTask 'build:prod', ['metal', 'stylus:prod', 'copy']
   grunt.registerTask 'run', ['build:dev', 'concurrent']
   grunt.registerTask 'default', ['run']
