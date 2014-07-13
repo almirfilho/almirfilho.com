@@ -5,10 +5,10 @@
 		<header class="alm-post--header">
 			<div class="alm-post--header-image-box">
 				<img class="alm-post--header-image
-					{{#ifequals cover_ini_pos 'top' }}alm-post--header-image--at-top-on-ini{{/ifequals}}
-				 	{{#ifequals cover_ini_pos 'bottom' }}alm-post--header-image--at-bottom-on-ini{{/ifequals}}
-				 	{{#ifequals cover_end_pos 'top' }}alm-post--header-image--at-top-on-end{{/ifequals}}
-				 	{{#ifequals cover_end_pos 'bottom' }}alm-post--header-image--at-bottom-on-end{{/ifequals}}"
+					{{# ifequals cover_ini_pos 'top' }}alm-post--header-image--at-top-on-ini{{/ ifequals }}
+				 	{{# ifequals cover_ini_pos 'bottom' }}alm-post--header-image--at-bottom-on-ini{{/ ifequals }}
+				 	{{# ifequals cover_end_pos 'top' }}alm-post--header-image--at-top-on-end{{/ ifequals }}
+				 	{{# ifequals cover_end_pos 'bottom' }}alm-post--header-image--at-bottom-on-end{{/ ifequals }}"
 				{{#if cover}}
 					src="{{ cover }}"
 				{{else}}
@@ -23,11 +23,15 @@
 			</div>
 			<aside class="alm-post--info">
 				<span class="alm-post--info-description alm-post--info-description--is-left">
-					Em <time class="alm-post--time" datetime="">13-Set-14</time>
+					{{# ifEn lang }}On{{ else }}Em{{/ ifEn }}
+					<time class="alm-post--time" datetime="{{ date }}">
+						{{ dateformat date lang }}
+					</time>
 				</span>
 				<div class="alm-post--author-image"></div>
 				<span class="alm-post--info-description alm-post--info-description--is-right">
-					Por <span class="alm-post--author-name">Almir Filho</span>
+					{{# ifEn lang }}By{{ else }}Por{{/ ifEn }}
+					<span class="alm-post--author-name">Almir Filho</span>
 				</span>
 				<p class="alm-post--header-image-description">Foto: Lorem ipsum dolor sit amet lala lusac é noob.</p>
 			</aside>

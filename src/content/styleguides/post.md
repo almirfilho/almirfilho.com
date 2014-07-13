@@ -1,9 +1,11 @@
 ---
 title: Post
-template: post.hbt
+date: 2014-07-13
 cover: /images/styleguides/post-header.jpg
 cover_ini_pos:
 cover_end_pos: bottom
+lang: en
+template: post.hbt
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
