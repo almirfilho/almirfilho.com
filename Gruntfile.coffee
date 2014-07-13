@@ -55,7 +55,7 @@ module.exports = (grunt) ->
 
     watch:
       content:
-        files: ['src/content/**/*.md', 'src/templates/*.hbt', 'src/templates/**/*.hbt']
+        files: ['src/content/**/*.md', 'src/content/*.yaml', 'src/templates/*.hbt', 'src/templates/**/*.hbt']
         tasks: ['build:dev']
       styles:
         files: ['src/assets/styles/**/*.styl']

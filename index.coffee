@@ -6,6 +6,7 @@ collections  = require 'metalsmith-collections'
 permalinks   = require 'metalsmith-permalinks'
 templates    = require 'metalsmith-templates'
 markdown     = require 'metalsmith-markdown'
+metadata     = require 'metalsmith-metadata'
 branch       = require 'metalsmith-branch'
 handlebars   = require 'handlebars'
 _s           = require 'underscore.string'
@@ -62,6 +63,8 @@ debug = ->
 
 new Metalsmith __dirname
   .source 'src/content'
+  .use metadata
+    author: 'author.yaml'
   .use filemetadata [
     {pattern: "**/*.en.md", metadata: {"lang": "en"}}
     {pattern: "**/*.pt.md", metadata: {"lang": "pt"}}

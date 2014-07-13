@@ -31,7 +31,7 @@
 				<div class="alm-post--author-image"></div>
 				<span class="alm-post--info-description alm-post--info-description--is-right">
 					{{# ifEn lang }}By{{ else }}Por{{/ ifEn }}
-					<span class="alm-post--author-name">Almir Filho</span>
+					<span class="alm-post--author-name">{{ author.name }}</span>
 				</span>
 				<p class="alm-post--header-image-description">Foto: Lorem ipsum dolor sit amet lala lusac é noob.</p>
 			</aside>
