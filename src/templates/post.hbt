@@ -5,12 +5,12 @@
 		<header class="alm-post--header">
 			<div class="alm-post--header-image-box">
 				<img class="alm-post--header-image
-					{{# ifequals cover_ini_pos 'top' }}alm-post--header-image--at-top-on-ini{{/ ifequals }}
-				 	{{# ifequals cover_ini_pos 'bottom' }}alm-post--header-image--at-bottom-on-ini{{/ ifequals }}
-				 	{{# ifequals cover_end_pos 'top' }}alm-post--header-image--at-top-on-end{{/ ifequals }}
-				 	{{# ifequals cover_end_pos 'bottom' }}alm-post--header-image--at-bottom-on-end{{/ ifequals }}"
+					{{# ifequals cover.ini_pos 'top' }}alm-post--header-image--at-top-on-ini{{/ ifequals }}
+				 	{{# ifequals cover.ini_pos 'bottom' }}alm-post--header-image--at-bottom-on-ini{{/ ifequals }}
+				 	{{# ifequals cover.end_pos 'top' }}alm-post--header-image--at-top-on-end{{/ ifequals }}
+				 	{{# ifequals cover.end_pos 'bottom' }}alm-post--header-image--at-bottom-on-end{{/ ifequals }}"
 				{{#if cover}}
-					src="{{ cover }}"
+					src="{{ cover.file }}"
 				{{else}}
 					src="/images/posts/{{ slugify title }}.jpg"
 				{{/if}}
@@ -23,17 +23,19 @@
 			</div>
 			<aside class="alm-post--info">
 				<span class="alm-post--info-description alm-post--info-description--is-left">
-					{{# ifEn lang }}On{{ else }}Em{{/ ifEn }}
+					{{ en_pt lang 'On' 'Em' }}
 					<time class="alm-post--time" datetime="{{ date }}">
-						{{ dateformat date lang }}
+						{{ dateformat lang date }}
 					</time>
 				</span>
 				<div class="alm-post--author-image"></div>
 				<span class="alm-post--info-description alm-post--info-description--is-right">
-					{{# ifEn lang }}By{{ else }}Por{{/ ifEn }}
+					{{ en_pt lang 'By' 'Por' }}
 					<span class="alm-post--author-name">{{ author.name }}</span>
 				</span>
-				<p class="alm-post--header-image-description">Foto: Lorem ipsum dolor sit amet lala lusac é noob.</p>
+				<p class="alm-post--header-image-description">
+					{{ en_pt lang 'Photo' 'Foto' }}: {{ cover.desc }}
+				</p>
 			</aside>
 			<hr class="alm-post--hr" />
 		</header>

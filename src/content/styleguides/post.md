@@ -1,11 +1,13 @@
 ---
 title: Post
 date: 2014-07-13
-cover: /images/styleguides/post-header.jpg
-cover_ini_pos:
-cover_end_pos: bottom
-lang: en
 template: post.hbt
+lang: en
+cover:
+  file: /images/styleguides/post-header.jpg
+  desc: Lorem ipsum dolor sit amet some day in my life.
+  ini_pos:
+  end_pos: bottom
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
