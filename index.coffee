@@ -39,6 +39,12 @@ handlebarsConfig = (options) ->
 
           new handlebars.SafeString "#{date.getDate()}-#{months[lang][date.getMonth()]}-#{date.getFullYear()}"
 
+        ifEn: (lang = 'en', options) ->
+          if lang is 'en' then options.fn @ else options.inverse @
+
+        ifPt: (lang = 'en', options) ->
+          if lang is 'pt' then options.fn @ else options.inverse @
+
 
       for helper in options.helpers
         if helper of availableHelpers
@@ -91,7 +97,7 @@ new Metalsmith __dirname
   .use markdown smartypants: true
   .use handlebarsConfig
     partials: ['head', 'tail', 'header', 'footer', 'back']
-    helpers: ['ifequals', 'slugify', 'dateformat']
+    helpers: ['ifequals', 'slugify', 'dateformat', 'ifEn', 'ifPt']
   .use templates
     engine: 'handlebars'
     directory: 'src/templates'
