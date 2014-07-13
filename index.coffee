@@ -30,6 +30,16 @@ handlebarsConfig = (options) ->
         slugify: (str) ->
           new handlebars.SafeString _s.slugify str
 
+        dateformat: (dateStr, lang = 'en') ->
+          date = new Date dateStr
+          date.setDate date.getDate() + 1
+          months =
+            en: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+            pt: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
+
+          new handlebars.SafeString "#{date.getDate()}-#{months[lang][date.getMonth()]}-#{date.getFullYear()}"
+
+
       for helper in options.helpers
         if helper of availableHelpers
           handlebars.registerHelper helper, availableHelpers[helper]
@@ -81,7 +91,7 @@ new Metalsmith __dirname
   .use markdown smartypants: true
   .use handlebarsConfig
     partials: ['head', 'tail', 'header', 'footer', 'back']
-    helpers: ['ifequals', 'slugify']
+    helpers: ['ifequals', 'slugify', 'dateformat']
   .use templates
     engine: 'handlebars'
     directory: 'src/templates'
