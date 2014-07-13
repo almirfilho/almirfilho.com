@@ -4,11 +4,23 @@
 	<article class="alm-post">
 		<header class="alm-post--header">
 			<div class="alm-post--header-image-box">
-				<img class="alm-post--header-image" src="/images/posts/{{ slugify title }}.jpg" />
+				<img class="alm-post--header-image
+					{{#ifequals cover_ini_pos 'top' }}alm-post--header-image--is-ini-top{{/ifequals}}
+				 	{{#ifequals cover_ini_pos 'bottom' }}alm-post--header-image--is-ini-bottom{{/ifequals}}
+				 	{{#ifequals cover_end_pos 'top' }}alm-post--header-image--is-end-top{{/ifequals}}
+				 	{{#ifequals cover_end_pos 'bottom' }}alm-post--header-image--is-end-bottom{{/ifequals}}"
+				{{#if cover}}
+					src="{{ cover }}"
+				{{else}}
+					src="/images/posts/{{ slugify title }}.jpg"
+				{{/if}}
+				/>
+				<h1 class="alm-post--title">
+					<a class="alm-post--title-link" href="#">
+						<span class="alm-post--title-str">{{ title }}</span>
+					</a>
+				</h1>
 			</div>
-			<h1 class="alm-post--title">
-				<a class="alm-post--title-link" href="#">{{ title }}</a>
-			</h1>
 			<aside class="alm-post--info">
 				<span class="alm-post--info-description alm-post--info-description--is-left">
 					Em <time class="alm-post--time" datetime="">13-Set-14</time>

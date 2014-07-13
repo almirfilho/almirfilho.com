@@ -10,14 +10,39 @@ text(fontsize)
   position relative
 
 .alm-post--header-image-box
-  position absolute
+  // position absolute
+  position relative
+  width 100%
   height header-image-height
   overflow hidden
   z-index 0
+  transition height 0.8s ease
+
+  &:hover
+    transition height 1.2s ease
+    height header-image-height * scale
+
+    .alm-post--header-image
+      transition -webkit-transform 0.8s ease
+      -webkit-transform s('translateY(calc(' + (header-image-height * scale / 2) + ' - 50%))')
+
+    .alm-post--header-image--is-end-top
+      -webkit-transform none
+
+    .alm-post--header-image--is-end-bottom
+      -webkit-transform s('translateY(calc(' + (header-image-height * scale) + ' - 100%))')
 
 .alm-post--header-image
+  position absolute
   width 100%
+  transition -webkit-transform 1.2s ease
   -webkit-transform s('translateY(calc(' + (header-image-height / 2) + ' - 50%))')
+
+.alm-post--header-image--is-ini-top
+  -webkit-transform none
+
+.alm-post--header-image--is-ini-bottom
+  -webkit-transform s('translateY(calc(' + header-image-height + ' - 100%))')
 
 .alm-post--header-image-description
   margin 1em size-smallest size-smallest size-smallest
@@ -30,18 +55,28 @@ text(fontsize)
 
 .alm-post--title
   position relative
-  display flex
-  height 260px
+  // display flex
+  height 100%
+  font-size 3.8em
+  text-transform uppercase
   z-index 100
-  background linear-gradient(transparent 50%,white)
+  background linear-gradient(transparent 50%, white)
 
 .alm-post--title-link
-  position relative
-  font-size 37px
-  top -20px
-  margin auto
+  // position relative
+  display flex
+  width 100%
+  height 100%
+  // font-size 37px
+  // top -20px
+  // margin auto
   color white
-  text-transform uppercase
+  // text-transform uppercase
+
+.alm-post--title-str
+  position relative
+  top -0.3em
+  margin auto
 
 .alm-post--info
   position relative
