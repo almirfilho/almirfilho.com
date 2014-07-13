@@ -28,7 +28,9 @@
 						{{ dateformat lang date }}
 					</time>
 				</span>
-				<div class="alm-post--author-image"></div>
+				<img class="alm-author-avatar"
+					 src="{{ author.avatar }}"
+					 alt="{{ author.name }}" />
 				<span class="alm-post--info-description alm-post--info-description--is-right">
 					{{ en_pt lang 'By' 'Por' }}
 					<span class="alm-post--author-name">{{ author.name }}</span>

@@ -18,18 +18,27 @@ text(fontsize)
   transition height 0.8s ease
 
   &:hover
-    transition height 1.2s ease
-    height header-image-height * scale
+    transition-duration 1.2s
+    height header-image-height * 1.3
+
+    @media screen and (min-width: min-desktop-width)
+      height header-image-height * scale
 
     .alm-post--header-image
       transition -webkit-transform 0.8s ease
-      -webkit-transform s('translateY(calc(' + (header-image-height * scale / 2) + ' - 50%))')
+      -webkit-transform s('translateY(calc(' + (header-image-height * 1.3 / 2) + ' - 50%))')
+
+      @media screen and (min-width: min-desktop-width)
+        -webkit-transform s('translateY(calc(' + (header-image-height * scale / 2) + ' - 50%))')
 
     .alm-post--header-image--at-top-on-end
       -webkit-transform none
 
     .alm-post--header-image--at-bottom-on-end
-      -webkit-transform s('translateY(calc(' + (header-image-height * scale) + ' - 100%))')
+      -webkit-transform s('translateY(calc(' + (header-image-height * 1.3) + ' - 100%))')
+
+      @media screen and (min-width: min-desktop-width)
+        -webkit-transform s('translateY(calc(' + (header-image-height * scale) + ' - 100%))')
 
 .alm-post--header-image
   position absolute
@@ -56,11 +65,16 @@ text(fontsize)
   position relative
   height 100%
   font-size 3.8em
+  text-align center
   text-transform uppercase
   z-index 100
-  background linear-gradient(transparent 50%, white)
+  background linear-gradient(transparent 40%, white 95%)
+
+  @media screen and (min-width: min-tablet-width)
+    background linear-gradient(transparent 50%, white 100%)
 
 .alm-post--title-link
+  display -webkit-flex
   display flex
   width 100%
   height 100%
@@ -80,11 +94,15 @@ text(fontsize)
   text-align center
   color color-palette-purple
 
+  .alm-author-avatar
+    margin 0 size-smallest
+    vertical-align middle
+
 .alm-post--info-description
   display inline-block
   width 8.5em
   font-size 1.3em
-  vertical-align 2em
+  vertical-align middle
 
 .alm-post--info-description--is-left
   text-align right
@@ -93,13 +111,6 @@ text(fontsize)
   text-align left
 
 // .alm-post--time
-.alm-post--author-image
-  display inline-block
-  width size-medium
-  height @width
-  margin 0 size-smallest
-  border-radius 50%
-  background #ccc
 
 // .alm-post--author-name
 .alm-post--hr
@@ -119,7 +130,7 @@ text(fontsize)
   color color-palette-purple
 
   @media screen and (min-width: min-tablet-width)
-    padding size-medium
+    padding size-small size-medium size-medium size-medium
 
   a
     color color-palette-green
