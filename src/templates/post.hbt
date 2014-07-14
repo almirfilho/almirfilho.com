@@ -9,11 +9,11 @@
 				 	{{# ifequals cover.ini_pos 'bottom' }}alm-post--header-image--at-bottom-on-ini{{/ ifequals }}
 				 	{{# ifequals cover.end_pos 'top' }}alm-post--header-image--at-top-on-end{{/ ifequals }}
 				 	{{# ifequals cover.end_pos 'bottom' }}alm-post--header-image--at-bottom-on-end{{/ ifequals }}"
-				{{#if cover}}
+				{{# if cover }}
 					src="{{ cover.file }}"
-				{{else}}
+				{{ else }}
 					src="/images/posts/{{ slugify title }}.jpg"
-				{{/if}}
+				{{/ if }}
 				/>
 				<h1 class="alm-post--title">
 					<a class="alm-post--title-link" href="#">
@@ -35,9 +35,11 @@
 					{{ en_pt lang 'By' 'Por' }}
 					<span class="alm-post--author-name">{{ author.name }}</span>
 				</span>
-				<p class="alm-post--header-image-description">
-					{{ en_pt lang 'Photo' 'Foto' }}: {{ cover.desc }}
-				</p>
+				{{# if cover.desc }}
+					<p class="alm-post--header-image-description">
+						{{ en_pt lang 'Photo' 'Foto' }}: {{ cover.desc }}
+					</p>
+				{{/ if }}
 			</aside>
 			<hr class="alm-post--hr" />
 		</header>

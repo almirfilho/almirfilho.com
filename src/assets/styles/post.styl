@@ -5,9 +5,23 @@ text(fontsize)
   line-height 200%
   margin (size-smaller / @font-size) 0
 
+blockquote-start()
+  content '\2018\2018'
+  position relative
+  left -8px
+  height 0
+  font-size 160px
+  font-family fonts-serif-normal
+  font-style normal
+  letter-spacing -0.08em
+  color rgba(color-palette-purple, 0.1)
+
 // .alm-post
 .alm-post--header
   position relative
+
+  .alm-post--hr
+    margin-top 2em
 
 .alm-post--header-image-box
   position relative
@@ -59,7 +73,8 @@ text(fontsize)
   color color-palette-blue
 
   @media screen and (min-width: min-tablet-width)
-    margin 1em size-big size-smallest size-big
+    margin-left size-big
+    margin-right size-big
 
 .alm-post--title
   position relative
@@ -87,7 +102,7 @@ text(fontsize)
 
 .alm-post--info
   position relative
-  margin-top -32px
+  margin-top -3.2em
   z-index 200
   font-family fonts-serif-italic
   font-style italic
@@ -113,16 +128,17 @@ text(fontsize)
 // .alm-post--time
 
 // .alm-post--author-name
-.alm-post--hr
-  height 13px
+.alm-post--hr,
+.alm-post--content hr
+  height 1.3em
   border none
   text-align center
 
   &::after
     content '~'
     font-size 8em
-    font-family 'Times New Roman', serif
-    line-height 0px
+    font-family 'Times New Roman', Times, serif
+    line-height 0
 
 .alm-post--content
   padding size-smaller
@@ -132,12 +148,32 @@ text(fontsize)
   @media screen and (min-width: min-tablet-width)
     padding size-small size-medium size-medium size-medium
 
+  h2, h3, h4
+    letter-spacing -0.05em
+    font-weight normal
+    margin-top size-smallest
+    color rgba(color-palette-purple, 0.5)
+
+  h2
+    font-size size-small * 0.8
+    font-family fonts-sans-lighter
+
+  h3
+    font-size size-smaller * 1.1
+    font-family fonts-sans-light
+
+  h4
+    font-size size-smallest * 1.1
+    font-family fonts-sans-normal
+    text-transform uppercase
+
   a
     color color-palette-green
     border-bottom 1px dotted @color
 
     &:hover
       color color-palette-blue
+      border-bottom-color @color
 
   strong
     font-family fonts-serif-bold
@@ -146,8 +182,18 @@ text(fontsize)
   em
     font-family fonts-serif-italic
 
+  del
+    color rgba(color-palette-purple, 0.5)
+
+  abbr
+    font-size 0.75em
+    font-family fonts-serif-bold
+    color color-palette-blue
+    border-bottom 1px dashed @color
+
   p
-    text(1.6em)
+    text(1.7em)
+    letter-spacing -0.04em
 
     &:first-child
       margin-top 0
@@ -156,24 +202,97 @@ text(fontsize)
     text(1.4em)
     list-style-position inside
 
-  h2, h3, h4
-    letter-spacing -0.05em
-    font-family fonts-serif-bold
-    margin-top size-smallest
-    color rgba(color-palette-purple, 0.8)
+    ul, ol
+      font-size 1em
+      margin 0 0 0 (@font-size * 2)
 
-  h2
-    font-size size-small * 0.8
+  blockquote
+    text(1.6em)
+    margin-top size-smaller
 
-  h3
-    font-size size-smaller * 1.1
+    &::before
+      blockquote-start()
+      display block
+      float left
+      top 47px
 
-  h4
-    font-size size-smallest * 1.1
-    text-transform uppercase
+    p
+      margin 0 0 0 2.8em
+      font-size 1.45em
+      font-family fonts-serif-italic
+      font-style italic
+      color rgba(color-palette-purple, 0.5)
+      letter-spacing -0.06em
+      line-height 170%
 
-  abbr
-    font-size 0.75em
-    font-family fonts-serif-bold
-    color rgba(color-palette-purple, 0.5)
-    border-bottom 1px dashed rgba(color-palette-purple, 0.4)
+      &::after
+        content '\201D'
+        margin-left -0.2em
+        vertical-align -0.04em
+        color rgba(color-palette-purple, 0.35)
+
+    footer
+      margin-top 0.5em
+      text-align right
+
+    cite
+      font-style normal
+      color rgba(color-palette-purple, 0.5)
+
+      &::before
+        content '~'
+        font-size 1.5em
+        font-family fonts-serif-fallback
+        vertical-align -0.04em
+        margin-right 0.2em
+
+    &.pull-right
+
+      &::before
+        content none
+
+      p
+        text-align right
+
+        &:first-child
+          &::before
+            blockquote-start()
+            display inline-block
+            top 5px
+            vertical-align -86px
+
+    &.float-left,
+    &.float-right
+      box-sizing border-box
+      width 50%
+      margin-top 1em
+      margin-bottom 1em
+
+      &::before
+        content none
+
+      p
+        margin-left 0
+
+        &:first-child
+          &::before
+            blockquote-start()
+            display inline-block
+            top 5px
+            vertical-align -86px
+
+    &.float-left
+      float left
+      margin-right 1em
+      padding-right 2em
+
+    &.float-right
+      float right
+      margin-left 1em
+      padding-left 1em
+
+  hr
+    margin size-small 0
+
+    &::after
+      color color-palette-gray
