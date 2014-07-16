@@ -103,7 +103,7 @@ new Metalsmith __dirname
   )
   .use markdown smartypants: true
   .use handlebarsConfig
-    partials: ['head', 'tail', 'header', 'footer', 'back']
+    partials: ['head', 'tail', 'header', 'footer', 'back', 'scripts']
     helpers: ['ifequals', 'slugify', 'dateformat', 'ifEn', 'ifPt', 'en_pt']
   .use templates
     engine: 'handlebars'
