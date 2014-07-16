@@ -1,4 +1,5 @@
             {{> footer }}
+            {{> scripts }}
         </div>
     </body>
 </html>
