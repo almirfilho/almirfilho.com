@@ -69,40 +69,29 @@ consectetur adipisicing elit, sed do eiusmod.
 
 ## Blockquotes
 
-<blockquote>
-  <p>
-    This is a paragraph inside a blockquoted section. Lorem ipsum dolor sit amet,
-    consectetur adipisicing elit, sed do eiusmod tempor.
-  </p>
-</blockquote>
+> This is a paragraph inside a blockquoted section. Lorem ipsum dolor sit amet,
+consectetur adipisicing elit, sed do eiusmod tempor.
 
 ### With citation
 
-<blockquote>
-  <p>
-    Air and light and time and space have nothing to do with it and don’t create
-    anything except maybe a longer life to find new excuses for.
-  </p>
-  <footer>
-    <cite>Charles Bukowski</cite>
-  </footer>
-</blockquote>
+> Air and light and time and space have nothing to do with it and don’t create
+anything except maybe a longer life to find new excuses for.
+<footer>
+  <cite>Charles Bukowski</cite>
+</footer>
 
 ### With citation link
 
-<blockquote>
-  <p>
-    The canvas element provides scripts with a resolution-dependent bitmap
-    canvas, which can be used for rendering graphs, game graphics, art, or other
-    visual images on the fly.
-  </p>
-  <footer>
-    <cite>
-      [The canvas element](http://www.w3.org/TR/html5/scripting-1.html#the-canvas-element)
-      at Scripting — HTML5
-    </cite>
-  </footer>
-</blockquote>
+> The canvas element provides scripts with a resolution-dependent bitmap
+canvas, which can be used for rendering graphs, game graphics, art, or other
+visual images on the fly.
+<footer>
+  <cite>
+    [The canvas element][canvas] at Scripting — HTML5
+  </cite>
+</footer>
+
+[canvas]: http://www.w3.org/TR/html5/scripting-1.html#the-canvas-element
 
 ### Pulled to right
 
@@ -114,8 +103,7 @@ consectetur adipisicing elit, sed do eiusmod.
   </p>
   <footer>
     <cite>
-      [The canvas element](http://www.w3.org/TR/html5/scripting-1.html#the-canvas-element)
-      at Scripting — HTML5
+      [The canvas element][canvas] at Scripting — HTML5
     </cite>
   </footer>
 </blockquote>
@@ -192,6 +180,60 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat.
 
+
+## Images
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
+<img class="alm-post--image" src="#" />
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
+### With caption
+
+<figure class="alm-post--figure">
+  <img class="alm-post--image" src="#" />
+  <figcaption class="alm-post--figcaption">A caption text here.</figcaption>
+</figure>
+
+### With floats
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+<img class="alm-post--image float-left" src="#" />
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+<img class="alm-post--image float-right" src="#" />
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
+### With floats and captions
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
+<figure class="alm-post--figure float-left">
+  <img class="alm-post--image" src="#" />
+  <figcaption class="alm-post--figcaption">A caption text here.</figcaption>
+</figure>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
+<figure class="alm-post--figure float-right">
+  <img class="alm-post--image" src="#" />
+  <figcaption class="alm-post--figcaption">A caption text here.</figcaption>
+</figure>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
 ## Context separator
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -201,6 +243,7 @@ tempor incididunt ut labore et dolore magna aliqua.
 
 Consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur.
+
 
 ## Lists
 
