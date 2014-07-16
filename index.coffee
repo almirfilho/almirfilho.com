@@ -40,7 +40,7 @@ handlebarsConfig = (options) ->
           day   = date.getDate()
           month = months[lang][date.getMonth()]
           year  = date.getFullYear()
-          new handlebars.SafeString "#{day}-#{month}-#{year}"
+          new handlebars.SafeString "#{day} / #{month} / #{year}"
 
         ifEn: (lang = 'en', options) ->
           if lang is 'en' then options.fn @ else options.inverse @

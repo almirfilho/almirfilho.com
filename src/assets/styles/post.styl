@@ -2,7 +2,7 @@ header-image-height = 260px
 
 text(fontsize)
   font-size fontsize
-  line-height 200%
+  line-height 170%
   margin (size-smaller / @font-size) 0
 
 blockquote-start()
@@ -15,6 +15,12 @@ blockquote-start()
   font-style normal
   letter-spacing -0.08em
   color rgba(color-palette-purple, 0.1)
+
+blockquote-start-inline()
+  blockquote-start()
+  display inline-block
+  top 5px
+  vertical-align -68px
 
 // .alm-post
 .alm-post--header
@@ -68,13 +74,13 @@ blockquote-start()
 
 .alm-post--header-image-description
   margin 1em size-smallest size-smallest size-smallest
-  font-size 1.4em
+  font-size 1.6em
   line-height 170%
   color color-palette-blue
 
   @media screen and (min-width: min-tablet-width)
-    margin-left size-big
-    margin-right size-big
+    margin-left size-medium
+    margin-right size-medium
 
 .alm-post--title
   position relative
@@ -104,7 +110,7 @@ blockquote-start()
   position relative
   margin-top -3.2em
   z-index 200
-  font-family fonts-serif-italic
+  font-family fonts-serif-normal
   font-style italic
   text-align center
   color color-palette-purple
@@ -116,7 +122,7 @@ blockquote-start()
 .alm-post--info-description
   display inline-block
   width 8.5em
-  font-size 1.3em
+  font-size 1.5em
   vertical-align middle
 
 .alm-post--info-description--is-left
@@ -125,7 +131,8 @@ blockquote-start()
 .alm-post--info-description--is-right
   text-align left
 
-// .alm-post--time
+.alm-post--date
+  text-transform lowercase
 
 // .alm-post--author-name
 .alm-post--hr,
@@ -169,37 +176,33 @@ blockquote-start()
 
   a
     color color-palette-green
-    border-bottom 1px dotted @color
+    text-decoration underline
 
     &:hover
       color color-palette-blue
       border-bottom-color @color
 
   strong
-    font-family fonts-serif-bold
     letter-spacing -0.05em
-
-  em
-    font-family fonts-serif-italic
 
   del
     color rgba(color-palette-purple, 0.5)
 
   abbr
-    font-size 0.75em
-    font-family fonts-serif-bold
+    font-size 0.6em
+    font-weight bold
     color color-palette-blue
-    border-bottom 1px dashed @color
+    margin 0 0.2em
 
   p
-    text(1.7em)
+    text(2em)
     letter-spacing -0.04em
 
     &:first-child
       margin-top 0
 
   ul, ol
-    text(1.4em)
+    text(1.7em)
     list-style-position inside
 
     ul, ol
@@ -207,23 +210,22 @@ blockquote-start()
       margin 0 0 0 (@font-size * 2)
 
   blockquote
-    text(1.6em)
+    text(1.9em)
     margin-top size-smaller
 
     &::before
       blockquote-start()
       display block
       float left
-      top 47px
+      top 0.28em
 
     p
-      margin 0 0 0 2.8em
+      margin 0 0 0 2.6em
       font-size 1.45em
-      font-family fonts-serif-italic
       font-style italic
       color rgba(color-palette-purple, 0.5)
       letter-spacing -0.06em
-      line-height 170%
+      line-height 140%
 
       &::after
         content '\201D'
@@ -238,12 +240,13 @@ blockquote-start()
     cite
       font-style normal
       color rgba(color-palette-purple, 0.5)
+      letter-spacing -0.04em
 
       &::before
         content '~'
-        font-size 1.5em
+        font-size 1.3em
         font-family fonts-serif-fallback
-        vertical-align -0.04em
+        vertical-align -0.05em
         margin-right 0.2em
 
     &.pull-right
@@ -256,10 +259,7 @@ blockquote-start()
 
         &:first-child
           &::before
-            blockquote-start()
-            display inline-block
-            top 5px
-            vertical-align -86px
+            blockquote-start-inline()
 
     &.float-left,
     &.float-right
@@ -276,10 +276,7 @@ blockquote-start()
 
         &:first-child
           &::before
-            blockquote-start()
-            display inline-block
-            top 5px
-            vertical-align -86px
+            blockquote-start-inline()
 
     &.float-left
       float left
