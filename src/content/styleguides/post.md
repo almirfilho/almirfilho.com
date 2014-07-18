@@ -186,17 +186,58 @@ cillum dolore eu fugiat.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 
-<img class="alm-post--image" src="#" />
+<figure class="alm-post--figure">
+  <img class="alm-post--image"
+       src="/images/styleguides/post-image.jpg"
+       alt="A normal post image." />
+</figure>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
+### Highlighted
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
+<figure class="alm-post--figure alm-post--figure--is-highlighted">
+  <img class="alm-post--image"
+       src="/images/styleguides/post-image.jpg"
+       alt="A highlighted post image." />
+</figure>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 
 ### With caption
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
 <figure class="alm-post--figure">
-  <img class="alm-post--image" src="#" />
+  <img class="alm-post--image"
+       src="/images/styleguides/post-image.jpg"
+       alt="A post image with caption." />
   <figcaption class="alm-post--figcaption">A caption text here.</figcaption>
 </figure>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
+### Highlighted with caption
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
+<figure class="alm-post--figure alm-post--figure--is-highlighted">
+  <img class="alm-post--image"
+       src="/images/styleguides/post-image.jpg"
+       alt="A post image with caption." />
+  <figcaption class="alm-post--figcaption">A caption text here.</figcaption>
+</figure>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
 
 ### With floats
 

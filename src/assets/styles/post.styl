@@ -1,9 +1,18 @@
 header-image-height = 260px
+post-text-size = 2em
+post-text-color-primary = color-palette-purple
+post-text-color-secondary = rgba(color-palette-purple, 0.5)
+post-text-line-height = 170%
+post-text-padding--desktop = 5em
+post-text-padding--mobile = size-smaller
 
 text(fontsize)
   font-size fontsize
-  line-height 170%
+  line-height post-text-line-height
   margin (size-smaller / @font-size) 0
+
+normalize(value, base = post-text-size)
+  value / base
 
 blockquote-start()
   content '\2018\2018'
@@ -148,19 +157,20 @@ blockquote-start-inline()
     line-height 0
 
 .alm-post--content
-  padding size-smaller
+  padding post-text-padding--mobile
   font-family fonts-serif-normal
   color color-palette-purple
 
   @media screen and (min-width: min-tablet-width)
-    padding size-small 5em 5em 5em
+    padding post-text-padding--desktop
+    padding-top size-small
 
   h2, h3, h4
     margin-top (size-smallest / scale)
     font-family fonts-serif-normal
     font-weight normal
     letter-spacing -0.05em
-    color rgba(color-palette-purple, 0.5)
+    color post-text-color-secondary
 
   h2
     font-size size-small
@@ -184,7 +194,7 @@ blockquote-start-inline()
     letter-spacing -0.05em
 
   del
-    color rgba(color-palette-purple, 0.5)
+    color post-text-color-secondary
 
   abbr
     font-size 0.6em
@@ -193,14 +203,14 @@ blockquote-start-inline()
     margin 0 0.2em
 
   p
-    text(2em)
+    text(post-text-size)
     letter-spacing -0.04em
 
     &:first-child
       margin-top 0
 
   ul, ol
-    text(1.7em)
+    text(post-text-size * 0.85)
     list-style-position inside
 
     ul, ol
@@ -208,8 +218,9 @@ blockquote-start-inline()
       margin 0 0 0 (@font-size * 2)
 
   blockquote
-    text(1.9em)
+    text(post-text-size * 0.95)
     margin-top size-smaller
+    color post-text-color-secondary
 
     &::before
       blockquote-start()
@@ -221,7 +232,6 @@ blockquote-start-inline()
       margin 0 0 0 2.6em
       font-size 1.45em
       font-style italic
-      color rgba(color-palette-purple, 0.5)
       letter-spacing -0.06em
       line-height 140%
 
@@ -238,7 +248,6 @@ blockquote-start-inline()
 
     cite
       font-style normal
-      color rgba(color-palette-purple, 0.5)
       letter-spacing -0.04em
 
       &::before
@@ -292,3 +301,46 @@ blockquote-start-inline()
 
     &::after
       color color-palette-gray
+
+.alm-post--figure
+  width s('calc(100% + ' + (post-text-padding--mobile * 2) + ')')
+  margin size-smaller 0
+  margin-left size-smaller * -1
+
+  @media screen and (min-width: min-tablet-width)
+    width s('calc(100% + ' + (post-text-padding--desktop * 2) + ')')
+    margin size-small 0
+    margin-left post-text-padding--desktop * -1
+
+.alm-post--figure--is-highlighted
+  background color-palette-purple-secondary
+
+  @media screen and (min-width: min-tablet-width)
+    border-top 1.2em solid color-palette-purple
+    border-bottom @border-top
+
+    p &
+      border-width normalize(1.2em)
+
+.alm-post--image
+  display block
+
+  .alm-post--figure &
+    width 100%
+
+.alm-post--figcaption
+  font-size post-text-size
+  font-style italic
+  text-align center
+  line-height post-text-line-height * 0.75
+  color post-text-color-secondary
+  padding 0 normalize(post-text-padding--mobile, @font-size)
+  margin-top 0.5em
+  margin-bottom normalize(size-small, @font-size)
+
+  .alm-post--figure--is-highlighted &
+    margin-bottom @margin-top
+    color color-palette-gray
+
+  @media screen and (min-width: min-tablet-width)
+    padding 0 normalize(post-text-padding--desktop, @font-size)
