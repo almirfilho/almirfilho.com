@@ -305,7 +305,7 @@ blockquote-start-inline()
 .alm-post--figure
   width s('calc(100% + ' + (post-text-padding--mobile * 2) + ')')
   margin size-smaller 0
-  margin-left size-smaller * -1
+  margin-left post-text-padding--mobile * -1
 
   @media screen and (min-width: min-tablet-width)
     width s('calc(100% + ' + (post-text-padding--desktop * 2) + ')')
@@ -313,14 +313,12 @@ blockquote-start-inline()
     margin-left post-text-padding--desktop * -1
 
 .alm-post--figure--is-highlighted
-  background color-palette-purple-secondary
 
   @media screen and (min-width: min-tablet-width)
-    border-top 1.2em solid color-palette-purple
+    border-top-width 1.2em
+    border-top @border-top-width solid color-palette-purple
     border-bottom @border-top
-
-    p &
-      border-width normalize(1.2em)
+    background color-palette-purple-secondary
 
 .alm-post--image
   display block
@@ -338,9 +336,9 @@ blockquote-start-inline()
   margin-top 0.5em
   margin-bottom normalize(size-small, @font-size)
 
-  .alm-post--figure--is-highlighted &
-    margin-bottom @margin-top
-    color color-palette-gray
-
   @media screen and (min-width: min-tablet-width)
     padding 0 normalize(post-text-padding--desktop, @font-size)
+
+    .alm-post--figure--is-highlighted &
+      margin-bottom @margin-top
+      color color-palette-gray
