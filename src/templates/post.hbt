@@ -24,7 +24,7 @@
 			<aside class="alm-post--info">
 				<span class="alm-post--info-description alm-post--info-description--is-left">
 					{{ en_pt lang 'On' 'Em' }}
-					<time class="alm-post--date" datetime="{{ date }}">
+					<time class="alm-post--info-date" datetime="{{ date }}">
 						{{ dateformat lang date }}
 					</time>
 				</span>
