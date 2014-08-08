@@ -16,23 +16,6 @@ text(fontsize)
 normalize(value, base = post-text-size)
   value / base
 
-blockquote-start()
-  content '\2018\2018'
-  position relative
-  left -8px
-  height 0
-  font-size 160px
-  font-family fonts-serif-normal
-  font-style normal
-  letter-spacing -0.08em
-  color rgba(color-palette-purple, 0.1)
-
-blockquote-start-inline()
-  blockquote-start()
-  display inline-block
-  top 5px
-  vertical-align -68px
-
 @import 'post/header'
 @import 'post/title'
 @import 'post/info'
@@ -48,42 +31,7 @@ blockquote-start-inline()
     padding-top size-small
 
   @import 'post/headline'
-
-  a
-    color color-palette-green
-    text-decoration underline
-
-    &:hover
-      color color-palette-blue
-      border-bottom-color @color
-
-  strong
-    letter-spacing -0.05em
-
-  del
-    color post-text-color-secondary
-
-  abbr
-    font-size 0.6em
-    font-weight bold
-    color color-palette-blue
-    margin 0 0.2em
-
-  p
-    text(post-text-size)
-    letter-spacing -0.04em
-
-    &:first-child
-      margin-top 0
-
-  ul, ol
-    text(post-text-size * 0.85)
-    list-style-position inside
-
-    ul, ol
-      font-size 1em
-      margin 0 0 0 (@font-size * 2)
-
+  @import 'post/text'
   @import 'post/blockquote'
 
 .alm-post--figure

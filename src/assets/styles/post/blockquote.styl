@@ -1,3 +1,20 @@
+blockquote-start()
+  content '\2018\2018'
+  position relative
+  left -8px
+  height 0
+  font-size 160px
+  font-family fonts-serif-normal
+  font-style normal
+  letter-spacing -0.08em
+  color rgba(color-palette-purple, 0.1)
+
+blockquote-start-inline()
+  blockquote-start()
+  display inline-block
+  top 5px
+  vertical-align -68px
+
 blockquote
   text(post-text-size * 0.95)
   margin-top size-smaller
