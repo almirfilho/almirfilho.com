@@ -1,11 +1,13 @@
+// Vars ------------------------------------------------------------------------
+
 post-text-size = 2em
 post-text-color-primary = color-palette-purple
-post-text-color-secondary = rgba(color-palette-purple, 0.5)
+post-text-color-secondary = rgba(post-text-color-primary, 0.5)
 post-text-line-height = 170%
 post-text-padding--desktop = 5em
 post-text-padding--mobile = size-smaller
-post-image-margin--desktop = 1.5em
-post-image-margin--mobile = 1em
+
+// Components ------------------------------------------------------------------
 
 @import 'post/header'
 @import 'post/title'
@@ -13,14 +15,18 @@ post-image-margin--mobile = 1em
 @import 'post/context-separator'
 @import 'post/image'
 
+// Post content ----------------------------------------------------------------
+
 .alm-post--content
   padding post-text-padding--mobile
   font-family fonts-serif-normal
-  color color-palette-purple
+  color post-text-color-primary
 
   @media screen and (min-width: min-tablet-width)
     padding post-text-padding--desktop
     padding-top size-small
+
+  // Post content Components ---------------------------------------------------
 
   @import 'post/headline'
   @import 'post/text'
