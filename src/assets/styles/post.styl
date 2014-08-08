@@ -33,65 +33,7 @@ blockquote-start-inline()
   top 5px
   vertical-align -68px
 
-// .alm-post
-.alm-post--header
-  position relative
-
-  .alm-post--hr
-    margin-top 2em
-
-.alm-post--header-image-box
-  position relative
-  width 100%
-  height header-image-height
-  overflow hidden
-  z-index 0
-  transition height 0.8s ease
-
-  &:hover
-    transition-duration 1.2s
-    height header-image-height * 1.3
-
-    @media screen and (min-width: min-desktop-width)
-      height header-image-height * scale
-
-    .alm-post--header-image
-      transition -webkit-transform 0.8s ease
-      -webkit-transform s('translateY(calc(' + (header-image-height * 1.3 / 2) + ' - 50%))')
-
-      @media screen and (min-width: min-desktop-width)
-        -webkit-transform s('translateY(calc(' + (header-image-height * scale / 2) + ' - 50%))')
-
-    .alm-post--header-image--at-top-on-end
-      -webkit-transform none
-
-    .alm-post--header-image--at-bottom-on-end
-      -webkit-transform s('translateY(calc(' + (header-image-height * 1.3) + ' - 100%))')
-
-      @media screen and (min-width: min-desktop-width)
-        -webkit-transform s('translateY(calc(' + (header-image-height * scale) + ' - 100%))')
-
-.alm-post--header-image
-  position absolute
-  width 100%
-  transition -webkit-transform 1.2s ease
-  -webkit-transform s('translateY(calc(' + (header-image-height / 2) + ' - 50%))')
-
-.alm-post--header-image--at-top-on-ini
-  -webkit-transform none
-
-.alm-post--header-image--at-bottom-on-ini
-  -webkit-transform s('translateY(calc(' + header-image-height + ' - 100%))')
-
-.alm-post--header-image-description
-  margin 1em size-smallest size-smallest size-smallest
-  font-size 1.6em
-  line-height 170%
-  color color-palette-blue
-
-  @media screen and (min-width: min-tablet-width)
-    margin-left size-medium
-    margin-right size-medium
+@import 'post/header'
 
 .alm-post--title
   position relative
@@ -145,9 +87,7 @@ blockquote-start-inline()
 .alm-post--date
   text-transform lowercase
 
-// .alm-post--author-name
-.alm-post--hr,
-.alm-post--content hr
+hr()
   height 1.3em
   border none
   text-align center
@@ -157,6 +97,15 @@ blockquote-start-inline()
     font-size 8em
     font-family 'Times New Roman', Times, serif
     line-height 0
+
+.alm-post--hr
+  hr()
+
+  .alm-post--header &
+    margin-top 2.5em
+
+.alm-post--content hr
+  hr()
 
 .alm-post--content
   padding post-text-padding--mobile
