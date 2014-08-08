@@ -3,12 +3,12 @@
 <section class="alm-main-content alm-main-content--with-contrast">
 	<article class="alm-post">
 		<header class="alm-post--header">
-			<div class="alm-post--header-image-box">
-				<img class="alm-post--header-image
-					{{# ifequals cover.ini_pos 'top' }}alm-post--header-image--at-top-on-ini{{/ ifequals }}
-				 	{{# ifequals cover.ini_pos 'bottom' }}alm-post--header-image--at-bottom-on-ini{{/ ifequals }}
-				 	{{# ifequals cover.end_pos 'top' }}alm-post--header-image--at-top-on-end{{/ ifequals }}
-				 	{{# ifequals cover.end_pos 'bottom' }}alm-post--header-image--at-bottom-on-end{{/ ifequals }}"
+			<div class="alm-post--header-cover-box">
+				<img class="alm-post--header-cover
+					{{# ifequals cover.ini_pos 'top' }}alm-post--header-cover--at-top-on-ini{{/ ifequals }}
+				 	{{# ifequals cover.ini_pos 'bottom' }}alm-post--header-cover--at-bottom-on-ini{{/ ifequals }}
+				 	{{# ifequals cover.end_pos 'top' }}alm-post--header-cover--at-top-on-end{{/ ifequals }}
+				 	{{# ifequals cover.end_pos 'bottom' }}alm-post--header-cover--at-bottom-on-end{{/ ifequals }}"
 				{{# if cover }}
 					src="{{ cover.file }}"
 				{{ else }}
@@ -36,7 +36,7 @@
 					<span class="alm-post--author-name">{{ author.name }}</span>
 				</span>
 				{{# if cover.desc }}
-					<p class="alm-post--header-image-description">
+					<p class="alm-post--header-cover-description">
 						{{ en_pt lang 'Photo' 'Foto' }}: {{ cover.desc }}
 					</p>
 				{{/ if }}

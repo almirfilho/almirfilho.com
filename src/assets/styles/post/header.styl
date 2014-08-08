@@ -1,50 +1,77 @@
+// Vars ------------------------------------------------------------------------
+
+header-cover-height = 260px
+header-cover-height--expanded-mobile  = header-cover-height * 1.3
+header-cover-height--expanded-desktop = header-cover-height * scale
+
+// Mixins ----------------------------------------------------------------------
+
+vertical-top()
+  -webkit-transform none
+
+vertical-bottom(height)
+  -webkit-transform s('translateY(calc(' + height + ' - 100%))')
+
+vertical-center(height)
+  -webkit-transform s('translateY(calc(' + (height / 2) + ' - 50%))')
+
+// Header ----------------------------------------------------------------------
+
 .alm-post--header
   position relative
 
-.alm-post--header-image-box
+.alm-post--header-cover-box
   position relative
   width 100%
-  height header-image-height
+  height header-cover-height
   overflow hidden
   z-index 0
   transition height 0.8s ease
 
   &:hover
     transition-duration 1.2s
-    height header-image-height * 1.3
+    height header-cover-height--expanded-mobile
 
     @media screen and (min-width: min-desktop-width)
-      height header-image-height * scale
+      height header-cover-height--expanded-desktop
 
-    .alm-post--header-image
-      transition -webkit-transform 0.8s ease
-      -webkit-transform s('translateY(calc(' + (header-image-height * 1.3 / 2) + ' - 50%))')
+// Header cover ----------------------------------------------------------------
 
-      @media screen and (min-width: min-desktop-width)
-        -webkit-transform s('translateY(calc(' + (header-image-height * scale / 2) + ' - 50%))')
-
-    .alm-post--header-image--at-top-on-end
-      -webkit-transform none
-
-    .alm-post--header-image--at-bottom-on-end
-      -webkit-transform s('translateY(calc(' + (header-image-height * 1.3) + ' - 100%))')
-
-      @media screen and (min-width: min-desktop-width)
-        -webkit-transform s('translateY(calc(' + (header-image-height * scale) + ' - 100%))')
-
-.alm-post--header-image
+.alm-post--header-cover
   position absolute
   width 100%
   transition -webkit-transform 1.2s ease
-  -webkit-transform s('translateY(calc(' + (header-image-height / 2) + ' - 50%))')
+  vertical-center(header-cover-height)
 
-.alm-post--header-image--at-top-on-ini
-  -webkit-transform none
+  .alm-post--header-cover-box:hover &
+    transition -webkit-transform 0.8s ease
+    vertical-center(header-cover-height--expanded-mobile)
 
-.alm-post--header-image--at-bottom-on-ini
-  -webkit-transform s('translateY(calc(' + header-image-height + ' - 100%))')
+    @media screen and (min-width: min-desktop-width)
+      vertical-center(header-cover-height--expanded-desktop)
 
-.alm-post--header-image-description
+// Header cover Modifiers ------------------------------------------------------
+
+.alm-post--header-cover--at-top-on-ini
+  vertical-top()
+
+.alm-post--header-cover--at-top-on-end
+  .alm-post--header-cover-box:hover &
+    vertical-top()
+
+.alm-post--header-cover--at-bottom-on-ini
+  vertical-bottom(header-cover-height)
+
+.alm-post--header-cover--at-bottom-on-end
+  .alm-post--header-cover-box:hover &
+    vertical-bottom(header-cover-height--expanded-mobile)
+
+    @media screen and (min-width: min-desktop-width)
+      vertical-bottom(header-cover-height--expanded-desktop)
+
+// Header cover description ----------------------------------------------------
+
+.alm-post--header-cover-description
   margin 1em size-smallest size-smallest size-smallest
   font-size 1.6em
   line-height 170%
