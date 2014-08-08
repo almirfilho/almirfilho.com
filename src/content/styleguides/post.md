@@ -95,7 +95,7 @@ visual images on the fly.
 
 ### Pulled to right
 
-<blockquote class="pull-right">
+<blockquote class="blockquote--pull-right">
   <p>
     The canvas element provides scripts with a resolution-dependent bitmap
     canvas, which can be used for rendering graphs, game graphics, art, or other
@@ -113,7 +113,7 @@ visual images on the fly.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 
-<blockquote class="float-right">
+<blockquote class="blockquote--float-right">
   <p>
     This is a blockquoted section floating to the right side of the text. Lorem
     ipsum dolor sit amet.
@@ -131,7 +131,7 @@ cillum dolore eu fugiat.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 
-<blockquote class="pull-right float-right">
+<blockquote class="blockquote--pull-right blockquote--float-right">
   <p>
     This is a blockquoted section floating to the right side of the text. Lorem
     ipsum dolor sit amet.
@@ -149,7 +149,7 @@ cillum dolore eu fugiat.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 
-<blockquote class="float-left">
+<blockquote class="blockquote--float-left">
   <p>
     This is a blockquoted section floating to the right side of the text. Lorem
     ipsum dolor sit amet.
@@ -167,7 +167,7 @@ cillum dolore eu fugiat.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 
-<blockquote class="pull-right float-left">
+<blockquote class="blockquote--pull-right blockquote--float-left">
   <p>
     This is a blockquoted section floating to the right side of the text. Lorem
     ipsum dolor sit amet.

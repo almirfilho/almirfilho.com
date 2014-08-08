@@ -1,3 +1,5 @@
+// Mixins ----------------------------------------------------------------------
+
 blockquote-start()
   content '\2018\2018'
   position relative
@@ -14,6 +16,8 @@ blockquote-start-inline()
   display inline-block
   top 5px
   vertical-align -68px
+
+// Blockquotes -----------------------------------------------------------------
 
 blockquote
   text(post-text-size * 0.95)
@@ -55,41 +59,43 @@ blockquote
       vertical-align -0.05em
       margin-right 0.2em
 
-  &.pull-right
+// Blockquote Modifiers --------------------------------------------------------
 
-    &::before
-      content none
+.blockquote--pull-right
 
-    p
-      text-align right
+  &::before
+    content none
 
-      &:first-child
-        &::before
-          blockquote-start-inline()
+  p
+    text-align right
 
-  &.float-left,
-  &.float-right
-    box-sizing border-box
-    width 50%
-    margin-top 1em
-    margin-bottom 1em
+    &:first-child
+      &::before
+        blockquote-start-inline()
 
-    &::before
-      content none
+.blockquote--float-left,
+.blockquote--float-right
+  box-sizing border-box
+  width 50%
+  margin-top 1em
+  margin-bottom 1em
 
-    p
-      margin-left 0
+  &::before
+    content none
 
-      &:first-child
-        &::before
-          blockquote-start-inline()
+  p
+    margin-left 0
 
-  &.float-left
-    float left
-    margin-right 1em
-    padding-right 2em
+    &:first-child
+      &::before
+        blockquote-start-inline()
 
-  &.float-right
-    float right
-    margin-left 1em
-    padding-left 1em
+.blockquote--float-left
+  float left
+  margin-right 1em
+  padding-right 2em
+
+.blockquote--float-right
+  float right
+  margin-left 1em
+  padding-left 1em
