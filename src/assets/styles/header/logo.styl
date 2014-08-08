@@ -1,0 +1,18 @@
+.alm-header--logo
+  width logo-mobile-width
+  height logo-mobile-height
+  margin auto
+
+  @media screen and (min-width: min-tablet-width)
+    position absolute
+    width logo-desktop-width
+    height logo-desktop-height
+    left 'calc(50% - %dem)' % (@width / 2)
+
+.alm-header--logo-link
+  display block
+  width 100%
+  height 100%
+
+.alm-header--logo-image
+  height 100%
