@@ -5,6 +5,8 @@ post-text-color-secondary = rgba(color-palette-purple, 0.5)
 post-text-line-height = 170%
 post-text-padding--desktop = 5em
 post-text-padding--mobile = size-smaller
+post-image-margin--desktop = 1.5em
+post-image-margin--mobile = 1em
 
 text(fontsize)
   font-size fontsize
@@ -167,6 +169,7 @@ blockquote-start-inline()
 
   h2, h3, h4
     margin-top (size-smallest / scale)
+    margin-bottom @margin-top * 0.8
     font-family fonts-serif-normal
     font-weight normal
     letter-spacing -0.05em
@@ -342,3 +345,45 @@ blockquote-start-inline()
     .alm-post--figure--is-highlighted &
       margin-bottom @margin-top
       color color-palette-gray
+
+image-float()
+  width 40%
+  margin (post-image-margin--mobile / 2) 0
+
+  &.alm-post--figure
+    margin-top 0
+    font-size post-text-size
+
+    .alm-post--figcaption
+      font-size (post-text-size / 2)
+      padding 0
+      margin-bottom 0
+
+  @media screen and (min-width: min-tablet-width)
+    margin-top (post-image-margin--desktop / 2)
+    margin-bottom (@margin-top / 2)
+
+    &.alm-post--figure
+      margin-top 0
+
+      .alm-post--figcaption
+        margin-bottom @margin-bottom
+
+.alm-post--image--float-left
+  image-float()
+  float left
+  margin-right post-image-margin--mobile
+
+  @media screen and (min-width: min-tablet-width)
+    margin-right post-image-margin--desktop
+
+.alm-post--image--float-right
+  image-float()
+  float right
+  margin-left post-image-margin--mobile
+
+  @media screen and (min-width: min-tablet-width)
+    margin-left post-image-margin--desktop
+
+.alm-post--image--is-rounded
+  border-radius 50%

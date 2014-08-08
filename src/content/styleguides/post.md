@@ -181,6 +181,29 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat.
 
 
+## Lists
+
+### Ordered list
+
+1. Lorem ipsum dolor
+2. The flavor of bacon
+  1. Lorem ipsum dolor
+  2. The flavor of bacon
+3. One day I'll end this
+  - Lorem ipsum dolor
+  - The flavor of bacon
+
+### Unordered list
+
+- Lorem ipsum dolor
+- The flavor of bacon
+  - The flavor of bacon
+  - One day I'll end this
+- One day I'll end this
+  1. Lorem ipsum dolor
+  2. The flavor of bacon
+
+
 ## Images
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -243,20 +266,29 @@ tempor incididunt ut labore et dolore magna aliqua.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
-<img class="alm-post--image float-left" src="#" />
+<img class="alm-post--image alm-post--image--float-left" src="/images/styleguides/post-image-float.jpg" />
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
-<img class="alm-post--image float-right" src="#" />
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+<img class="alm-post--image alm-post--image--float-right" src="/images/styleguides/post-image-float.jpg" />
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
 
 ### With floats and captions
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua.
 
-<figure class="alm-post--figure float-left">
-  <img class="alm-post--image" src="#" />
+<figure class="alm-post--figure alm-post--image--float-left">
+  <img class="alm-post--image" src="/images/styleguides/post-image-float.jpg" />
   <figcaption class="alm-post--figcaption">A caption text here.</figcaption>
 </figure>
 
@@ -264,12 +296,31 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
 
-<figure class="alm-post--figure float-right">
-  <img class="alm-post--image" src="#" />
+### Rounded
+
+<figure class="alm-post--figure alm-post--image--float-right">
+  <img class="alm-post--image alm-post--image--is-rounded" src="/images/styleguides/post-image-float.jpg" />
   <figcaption class="alm-post--figcaption">A caption text here.</figcaption>
 </figure>
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+<img class="alm-post--image alm-post--image--float-left alm-post--image--is-rounded" src="/images/styleguides/post-image-float.jpg" />
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -284,26 +335,3 @@ tempor incididunt ut labore et dolore magna aliqua.
 
 Consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur.
-
-
-## Lists
-
-### Ordered list
-
-1. Lorem ipsum dolor
-2. The flavor of bacon
-  1. Lorem ipsum dolor
-  2. The flavor of bacon
-3. One day I'll end this
-  - Lorem ipsum dolor
-  - The flavor of bacon
-
-### Unordered list
-
-- Lorem ipsum dolor
-- The flavor of bacon
-  - The flavor of bacon
-  - One day I'll end this
-- One day I'll end this
-  1. Lorem ipsum dolor
-  2. The flavor of bacon
