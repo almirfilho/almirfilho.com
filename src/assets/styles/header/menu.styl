@@ -1,0 +1,30 @@
+.alm-header--menu
+  margin-top size-small
+
+  @media screen and (min-width: min-tablet-width)
+    position absolute
+    width ((body-desktop-width - logo-desktop-width) / 2)
+    left 'calc(50% + %dem)' % (logo-desktop-width / 2)
+    height logo-desktop-height
+    margin-top 0
+    fix-line-height(@height)
+
+.alm-header--menu-list
+  height 2.8em
+  list-style none
+  text-align center
+
+.alm-header--menu-item
+  display inline
+  font-size size-smaller * 1.3
+  text-transform uppercase
+  letter-spacing -0.05em
+  margin-left 0.6em
+
+  &:first-child
+    margin-left 0
+
+  @media screen and (min-width: min-tablet-width)
+    font-size size-smallest
+    margin-left 1.6em
+    letter-spacing 0
