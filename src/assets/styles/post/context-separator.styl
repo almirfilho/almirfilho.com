@@ -1,0 +1,24 @@
+context-separator()
+  height 1.3em
+  border none
+  text-align center
+
+  &::after
+    content '~'
+    font-size 8em
+    font-family 'Times New Roman', Times, serif
+    line-height 0
+
+.alm-post--hr
+  context-separator()
+
+  .alm-post--header &
+    margin-top 2.5em
+
+hr
+  .alm-post--content &
+    context-separator()
+    margin size-small 0
+
+    &::after
+      color color-palette-gray
