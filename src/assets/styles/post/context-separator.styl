@@ -1,4 +1,7 @@
-context-separator()
+// Context separator -----------------------------------------------------------
+
+.alm-post--hr,
+.alm-post--content hr
   height 1.3em
   border none
   text-align center
@@ -10,14 +13,10 @@ context-separator()
     line-height 0
 
 .alm-post--hr
-  context-separator()
-
   .alm-post--header &
     margin-top 2.5em
 
-hr
-  .alm-post--content &
-    context-separator()
+.alm-post--content hr
     margin size-small 0
 
     &::after
