@@ -8,11 +8,6 @@ post-text-padding--mobile = size-smaller
 post-image-margin--desktop = 1.5em
 post-image-margin--mobile = 1em
 
-text(fontsize)
-  font-size fontsize
-  line-height post-text-line-height
-  margin (size-smaller / @font-size) 0
-
 normalize(value, base = post-text-size)
   value / base
 
@@ -20,6 +15,7 @@ normalize(value, base = post-text-size)
 @import 'post/title'
 @import 'post/info'
 @import 'post/context-separator'
+@import 'post/image'
 
 .alm-post--content
   padding post-text-padding--mobile
@@ -33,86 +29,3 @@ normalize(value, base = post-text-size)
   @import 'post/headline'
   @import 'post/text'
   @import 'post/blockquote'
-
-.alm-post--figure
-  width s('calc(100% + ' + (post-text-padding--mobile * 2) + ')')
-  margin size-smaller 0
-  margin-left post-text-padding--mobile * -1
-
-  @media screen and (min-width: min-tablet-width)
-    width s('calc(100% + ' + (post-text-padding--desktop * 2) + ')')
-    margin size-small 0
-    margin-left post-text-padding--desktop * -1
-
-.alm-post--figure--is-highlighted
-
-  @media screen and (min-width: min-tablet-width)
-    border-top-width 1.2em
-    border-top @border-top-width solid color-palette-purple
-    border-bottom @border-top
-    background color-palette-purple-secondary
-
-.alm-post--image
-  display block
-
-  .alm-post--figure &
-    width 100%
-
-.alm-post--figcaption
-  font-size post-text-size
-  font-style italic
-  text-align center
-  line-height post-text-line-height * 0.75
-  color post-text-color-secondary
-  padding 0 normalize(post-text-padding--mobile, @font-size)
-  margin-top 0.5em
-  margin-bottom normalize(size-small, @font-size)
-
-  @media screen and (min-width: min-tablet-width)
-    padding 0 normalize(post-text-padding--desktop, @font-size)
-
-    .alm-post--figure--is-highlighted &
-      margin-bottom @margin-top
-      color color-palette-gray
-
-image-float()
-  width 40%
-  margin (post-image-margin--mobile / 2) 0
-
-  &.alm-post--figure
-    margin-top 0
-    font-size post-text-size
-
-    .alm-post--figcaption
-      font-size (post-text-size / 2)
-      padding 0
-      margin-bottom 0
-
-  @media screen and (min-width: min-tablet-width)
-    margin-top (post-image-margin--desktop / 2)
-    margin-bottom (@margin-top / 2)
-
-    &.alm-post--figure
-      margin-top 0
-
-      .alm-post--figcaption
-        margin-bottom @margin-bottom
-
-.alm-post--image--float-left
-  image-float()
-  float left
-  margin-right post-image-margin--mobile
-
-  @media screen and (min-width: min-tablet-width)
-    margin-right post-image-margin--desktop
-
-.alm-post--image--float-right
-  image-float()
-  float right
-  margin-left post-image-margin--mobile
-
-  @media screen and (min-width: min-tablet-width)
-    margin-left post-image-margin--desktop
-
-.alm-post--image--is-rounded
-  border-radius 50%
