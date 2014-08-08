@@ -1,5 +1,9 @@
+// Mixins ----------------------------------------------------------------------
+
 normalize(value, base = post-text-size)
   value / base
+
+// Figure ----------------------------------------------------------------------
 
 .alm-post--figure
   width s('calc(100% + ' + (post-text-padding--mobile * 2) + ')')
@@ -11,6 +15,8 @@ normalize(value, base = post-text-size)
     margin size-small 0
     margin-left post-text-padding--desktop * -1
 
+// Figure Modifiers ------------------------------------------------------------
+
 .alm-post--figure--is-highlighted
 
   @media screen and (min-width: min-tablet-width)
@@ -19,11 +25,7 @@ normalize(value, base = post-text-size)
     border-bottom @border-top
     background color-palette-purple-secondary
 
-.alm-post--image
-  display block
-
-  .alm-post--figure &
-    width 100%
+// Figure caption --------------------------------------------------------------
 
 .alm-post--figcaption
   font-size post-text-size
@@ -42,7 +44,18 @@ normalize(value, base = post-text-size)
       margin-bottom @margin-top
       color color-palette-gray
 
-image-float()
+// Image -----------------------------------------------------------------------
+
+.alm-post--image
+  display block
+
+  .alm-post--figure &
+    width 100%
+
+// Image Modifiers -------------------------------------------------------------
+
+.alm-post--image--float-left,
+.alm-post--image--float-right
   width 40%
   margin (post-image-margin--mobile / 2) 0
 
@@ -66,7 +79,6 @@ image-float()
         margin-bottom @margin-bottom
 
 .alm-post--image--float-left
-  image-float()
   float left
   margin-right post-image-margin--mobile
 
@@ -74,7 +86,6 @@ image-float()
     margin-right post-image-margin--desktop
 
 .alm-post--image--float-right
-  image-float()
   float right
   margin-left post-image-margin--mobile
 
