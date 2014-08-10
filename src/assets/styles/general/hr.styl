@@ -1,0 +1,19 @@
+// Mixins ----------------------------------------------------------------------
+
+hr()
+  height 1.3em
+  margin size-smaller 0
+  border none
+  text-align center
+  opacity 0.2
+
+  &::after
+    content '~'
+    font-size 8em
+    font-family 'Times New Roman', Times, serif
+    line-height 0
+
+// -----------------------------------------------------------------------------
+
+.alm-hr
+  hr()

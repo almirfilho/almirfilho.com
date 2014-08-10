@@ -21,131 +21,17 @@ a
   color color-palette-gray
   text-decoration none
 
+// Body container --------------------------------------------------------------
+
 .alm-body
   @media screen and (min-width: min-desktop-width)
     width body-desktop-width
     margin auto
 
-// Main content ----------------------------------------------------------------
+// Components ------------------------------------------------------------------
 
-.alm-main-content
-  background color-palette-purple-secondary
-
-.alm-main-content--with-contrast
-  background white
-
-.alm-main-content--with-padding
-  padding main-content-padding--mobile
-
-  @media screen and (min-width: min-tablet-width)
-    padding size-small main-content-padding--desktop
-
-// Avatars ---------------------------------------------------------------------
-
-.alm-avatar
-  width size-medium
-  height @width
-  border-radius 50%
-  background color-palette-gray
-
-.alm-avatar--size-big
-  width size-big
-  height @width
-
-// Title -----------------------------------------------------------------------
-
-.alm-title
-  font-size 3.8em
-  text-align center
-  text-transform uppercase
-  letter-spacing -0.05em
-
-// Subtitle --------------------------------------------------------------------
-
-.alm-subtitle
-  font-size 2em
-  font-style italic
-  font-family fonts-serif-normal
-  text-align center
-
-.alm-title + .alm-subtitle
-  margin-top (size-smallest / 2)
-
-// Context separator -----------------------------------------------------------
-
-hr()
-  height 1.3em
-  margin size-smaller 0
-  border none
-  text-align center
-  opacity 0.2
-
-  &::after
-    content '~'
-    font-size 8em
-    font-family 'Times New Roman', Times, serif
-    line-height 0
-
-.alm-hr
-  hr()
-
-// Lists -----------------------------------------------------------------------
-
-.alm-list
-  list-style none
-
-.alm-list--item
-  margin-top size-small
-
-  &:first-child
-    margin-top 0
-
-  &::after
-    content ''
-    display block
-    clear both
-
-.alm-list--item-icon
-  float left
-  margin-right 2em
-
-.alm-list--item-title
-  margin-bottom 0.2em
-  padding-top 0.5em
-  font-size 2em
-  font-family fonts-sans-lighter
-  line-height 130%
-  letter-spacing -0.04em
-
-  &::after
-    display inline-block
-    width 2em
-    height 2em
-    line-height 2.1em
-    vertical-align 0.3em
-    margin-left 0.5em
-    font-size 0.5em
-    font-family fonts-sans-bolder
-    text-align center
-    border-radius 50%
-    background rgba(color-palette-blue, 0.8)
-    color color-palette-purple-secondary
-
-  html:lang(en) &
-    &:lang(pt)
-      &::after
-        content 'PT'
-
-  html:lang(pt) &
-    &:lang(en)
-      &::after
-        content 'EN'
-
-.alm-list--item-date
-  font-size 1.2em
-  font-family fonts-sans-light
-  text-transform uppercase
-  color color-palette-green
-
-.alm-list--item-year
-  font-family fonts-sans-bold
+@import 'general/content'
+@import 'general/avatar'
+@import 'general/titles'
+@import 'general/hr'
+@import 'general/list'
