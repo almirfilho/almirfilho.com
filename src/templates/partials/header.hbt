@@ -23,4 +23,14 @@
 			</li>
 		</ul>
 	</nav>
+	<ul class="alm-header--lang-list">
+		<li class="alm-header--lang-item {{#ifEn lang}}alm-header--lang-item--is-active{{/ifEn}}">
+			<a class="alm-header--lang-link" lang="en" title="English version"
+			   href="/{{ urlTo 'en' path }}/">EN</a>
+		</li>
+		<li class="alm-header--lang-item {{#ifPt lang}}alm-header--lang-item--is-active{{/ifPt}}">
+			<a class="alm-header--lang-link" lang="pt" title="Versão em português"
+			   href="/{{ urlTo 'pt' path }}/">PT</a>
+		</li>
+	</ul>
 </header>
