@@ -60,13 +60,25 @@ a
   text-transform uppercase
   letter-spacing -0.05em
 
+// Subtitle --------------------------------------------------------------------
+
+.alm-subtitle
+  font-size 2em
+  font-style italic
+  font-family fonts-serif-normal
+  text-align center
+
+.alm-title + .alm-subtitle
+  margin-top (size-smallest / 2)
+
 // Context separator -----------------------------------------------------------
 
 hr()
   height 1.3em
-  margin size-small 0
+  margin size-smaller 0
   border none
   text-align center
+  opacity 0.2
 
   &::after
     content '~'
@@ -76,3 +88,40 @@ hr()
 
 .alm-hr
   hr()
+
+// Lists -----------------------------------------------------------------------
+
+.alm-list
+  list-style none
+
+.alm-list--item
+  margin-top size-small
+
+  &:first-child
+    margin-top 0
+
+  &::after
+    content ''
+    display block
+    clear both
+
+.alm-list--item-icon
+  float left
+  margin-right 2em
+
+.alm-list--item-title
+  margin-bottom 0.2em
+  padding-top 0.5em
+  font-size 2em
+  font-family fonts-sans-lighter
+  line-height 130%
+  letter-spacing -0.04em
+
+.alm-list--item-date
+  font-size 1.2em
+  font-family fonts-sans-light
+  text-transform uppercase
+  color color-palette-green
+
+.alm-list--item-year
+  font-family fonts-sans-bold
