@@ -51,6 +51,16 @@ handlebarsConfig = (options) ->
         en_pt: (lang = 'en', term_en, term_pt) ->
           new handlebars.SafeString if lang is 'en' then term_en else term_pt
 
+        urlTo: (lang, path = '') ->
+          if lang? and path?
+            ptEnd = '/pt'
+            strEndsWithPt = path.indexOf(ptEnd, path.length - ptEnd.length) isnt -1
+            if lang is 'en' and strEndsWithPt
+              path = new handlebars.SafeString path[..-(ptEnd.length + 1)]
+            else if lang is 'pt' and not strEndsWithPt
+              path = new handlebars.SafeString "#{path}/pt"
+          path
+
       for helper in options.helpers
         if helper of availableHelpers
           handlebars.registerHelper helper, availableHelpers[helper]
@@ -104,7 +114,7 @@ new Metalsmith __dirname
   .use markdown smartypants: true
   .use handlebarsConfig
     partials: ['head', 'tail', 'header', 'footer', 'back', 'scripts']
-    helpers: ['ifequals', 'slugify', 'dateformat', 'ifEn', 'ifPt', 'en_pt']
+    helpers: ['ifequals', 'slugify', 'dateformat', 'ifEn', 'ifPt', 'en_pt', 'urlTo']
   .use templates
     engine: 'handlebars'
     directory: 'src/templates'
