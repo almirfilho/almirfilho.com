@@ -28,7 +28,7 @@
 						{{ dateformat lang date }}
 					</time>
 				</span>
-				<img class="alm-author-avatar"
+				<img class="alm-avatar alm-post--author-avatar"
 					 src="{{ author.avatar }}"
 					 alt="{{ author.name }}" />
 				<span class="alm-post--info-description alm-post--info-description--is-right">
