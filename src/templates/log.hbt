@@ -1,19 +1,29 @@
 {{> head }}
 
 <section class="alm-main-content alm-main-content--with-padding">
-	<h1 class="alm-title">
-		<a class="alm-title-link" href="/{{ path }}/">Log</a>
-	</h1>
-	<p class="alm-subtitle">A compilation of technical articles by myself.</p>
-	<hr class="alm-hr" />
+	<header class="alm-main-content--header">
+		<h1 class="alm-title">
+			<a class="alm-title-link" href="/{{ path }}/">{{ title }}</a>
+		</h1>
+		<p class="alm-subtitle">{{ subtitle }}</p>
+		<hr class="alm-hr" />
+	</header>
+
     <ul class="alm-list">
         {{# each articles }}
         <li class="alm-list--item">
         	<a class="alm-list--item-link" href="{{ this.url }}">
-	            <img class="alm-avatar" src="/images/avatars/{{ this.icon }}.jpg" />
-	            <h3 class="alm-list--item-title">{{ this.title }}</h3>
+	            <img class="alm-avatar alm-list--item-icon"
+	                 src="/images/avatars/{{ this.icon }}.jpg" />
+	            <h3 class="alm-list--item-title" lang="{{ this.lang }}">
+	            	{{ this.title }}
+	            </h3>
 	            <time class="alm-list--item-date" datetime="{{ this.date }}">
-	            	{{ this.date }}
+	            	{{ dateformat ../lang this.date 'day' }}
+	            	{{ dateformat ../lang this.date 'month' }}
+	            	<span class="alm-list--item-year">
+	            		{{ dateformat ../lang this.date 'year' }}
+	            	</span>
 	            </time>
 	        </a>
         </li>
