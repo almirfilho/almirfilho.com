@@ -1,0 +1,37 @@
+// Vars ------------------------------------------------------------------------
+
+lang-color = rgba(color-palette-gray, 0.3)
+lang-color--is-active = rgba(color-palette-gray, 0.8)
+
+// Lang ------------------------------------------------------------------------
+
+.alm-header--lang-list
+  position absolute
+  top 20px
+  right 20px
+  list-style none
+  font-size 0
+
+  @media screen and (min-width: min-desktop-width)
+    position fixed
+
+.alm-header--lang-item
+  display inline-block
+  font-size 12px
+  height @font-size
+  padding 0 (@font-size / 2)
+  border-left 1px solid lang-color
+
+  &:first-child
+    border-left none
+    padding-left 0
+
+  &:last-child
+    padding-right 0
+
+.alm-header--lang-link
+  font-family fonts-sans-bold
+  color lang-color
+
+  .alm-header--lang-item--is-active &
+    color lang-color--is-active
