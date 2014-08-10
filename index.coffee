@@ -31,7 +31,7 @@ handlebarsConfig = (options) ->
         slugify: (str) ->
           new handlebars.SafeString _s.slugify str
 
-        dateformat: (lang = 'en', dateStr) ->
+        dateformat: (lang, dateStr, part = null) ->
           date = new Date dateStr
           date.setDate date.getDate() + 1
           months =
@@ -40,7 +40,12 @@ handlebarsConfig = (options) ->
           day   = date.getDate()
           month = months[lang][date.getMonth()]
           year  = date.getFullYear()
-          new handlebars.SafeString "#{day} / #{month} / #{year}"
+
+          new handlebars.SafeString switch part
+            when 'day' then day
+            when 'month' then month
+            when 'year' then year
+            else "#{day} / #{month} / #{year}"
 
         ifEn: (lang = 'en', options) ->
           if lang is 'en' then options.fn @ else options.inverse @
