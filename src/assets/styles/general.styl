@@ -117,6 +117,30 @@ hr()
   line-height 130%
   letter-spacing -0.04em
 
+  &::after
+    display inline-block
+    width 2em
+    height 2em
+    line-height 2.1em
+    vertical-align 0.3em
+    margin-left 0.5em
+    font-size 0.5em
+    font-family fonts-sans-bolder
+    text-align center
+    border-radius 50%
+    background rgba(color-palette-blue, 0.8)
+    color color-palette-purple-secondary
+
+  html:lang(en) &
+    &:lang(pt)
+      &::after
+        content 'PT'
+
+  html:lang(pt) &
+    &:lang(en)
+      &::after
+        content 'EN'
+
 .alm-list--item-date
   font-size 1.2em
   font-family fonts-sans-light
