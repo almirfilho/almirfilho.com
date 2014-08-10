@@ -15,7 +15,7 @@
 					src="/images/posts/{{ slugify title }}.jpg"
 				{{/ if }}
 				/>
-				<h1 class="alm-post--title">
+				<h1 class="alm-title alm-post--title">
 					<a class="alm-post--title-link" href="#">
 						<span class="alm-post--title-str">{{ title }}</span>
 					</a>

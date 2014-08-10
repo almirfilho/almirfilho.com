@@ -22,10 +22,11 @@ a
   text-decoration none
 
 .alm-body
-
   @media screen and (min-width: min-desktop-width)
     width body-desktop-width
     margin auto
+
+// Main content ----------------------------------------------------------------
 
 .alm-main-content
   background color-palette-purple-secondary
@@ -37,7 +38,9 @@ a
   padding main-content-padding--mobile
 
   @media screen and (min-width: min-tablet-width)
-    padding main-content-padding--desktop
+    padding size-small main-content-padding--desktop
+
+// Avatars ---------------------------------------------------------------------
 
 .alm-avatar
   width size-medium
@@ -48,3 +51,11 @@ a
 .alm-avatar--size-big
   width size-big
   height @width
+
+// Title -----------------------------------------------------------------------
+
+.alm-title
+  font-size 3.8em
+  text-align center
+  text-transform uppercase
+  letter-spacing -0.05em
