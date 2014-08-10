@@ -3,6 +3,7 @@ title: Post
 date: 2014-07-13
 template: post.hbt
 lang: en
+translated: false
 cover:
   file: /images/styleguides/post-header.jpg
   desc: The is a description for the post's cover image.
