@@ -12,7 +12,6 @@ post-text-padding--mobile = main-content-padding--mobile
 @import 'post/header'
 @import 'post/title'
 @import 'post/info'
-@import 'post/context-separator'
 @import 'post/image'
 
 // Post content ----------------------------------------------------------------
@@ -25,6 +24,13 @@ post-text-padding--mobile = main-content-padding--mobile
   @media screen and (min-width: min-tablet-width)
     padding post-text-padding--desktop
     padding-top size-small
+
+  hr
+    hr()
+
+    &::after
+      color color-palette-gray
+
 
   // Post content Components ---------------------------------------------------
 

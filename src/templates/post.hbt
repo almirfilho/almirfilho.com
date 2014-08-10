@@ -41,7 +41,7 @@
 					</p>
 				{{/ if }}
 			</aside>
-			<hr class="alm-post--hr" />
+			<hr class="alm-hr" />
 		</header>
 		<section class="alm-post--content">
 			{{{ contents }}}

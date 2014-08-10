@@ -59,3 +59,20 @@ a
   text-align center
   text-transform uppercase
   letter-spacing -0.05em
+
+// Context separator -----------------------------------------------------------
+
+hr()
+  height 1.3em
+  margin size-small 0
+  border none
+  text-align center
+
+  &::after
+    content '~'
+    font-size 8em
+    font-family 'Times New Roman', Times, serif
+    line-height 0
+
+.alm-hr
+  hr()
