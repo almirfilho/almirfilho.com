@@ -1,12 +1,24 @@
 {{> head }}
 
-    <ul>
+<section class="alm-main-content alm-main-content--with-padding">
+	<h1 class="alm-title">
+		<a class="alm-title-link" href="/{{ path }}/">Log</a>
+	</h1>
+	<p class="alm-subtitle">A compilation of technical articles by myself.</p>
+	<hr class="alm-hr" />
+    <ul class="alm-list">
         {{# each articles }}
-        <li>
-            <h3>{{ this.title }}</h3>
-            <img src="/images/talks/{{ this.slug }}.jpg">
+        <li class="alm-list--item">
+        	<a class="alm-list--item-link" href="{{ this.url }}">
+	            <img class="alm-avatar" src="/images/avatars/{{ this.icon }}.jpg" />
+	            <h3 class="alm-list--item-title">{{ this.title }}</h3>
+	            <time class="alm-list--item-date" datetime="{{ this.date }}">
+	            	{{ this.date }}
+	            </time>
+	        </a>
         </li>
         {{/ each }}
     </ul>
+</section>
 
 {{> tail }}
