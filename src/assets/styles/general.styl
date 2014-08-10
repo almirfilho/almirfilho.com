@@ -1,4 +1,10 @@
+// Vars ------------------------------------------------------------------------
+
 body-desktop-width = 65em
+main-content-padding--desktop = 5em
+main-content-padding--mobile = size-smaller
+
+// General styles --------------------------------------------------------------
 
 *
   margin 0
@@ -26,6 +32,12 @@ a
 
 .alm-main-content--with-contrast
   background white
+
+.alm-main-content--with-padding
+  padding main-content-padding--mobile
+
+  @media screen and (min-width: min-tablet-width)
+    padding main-content-padding--desktop
 
 .alm-avatar
   width size-medium
