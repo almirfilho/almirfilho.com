@@ -3,15 +3,15 @@
   display none
   box-sizing border-box
   font-size 2em
-  width ((body-desktop-width - logo-desktop-width) / 2 / @font-size)
-  left 'calc(50% - %dem)' % (@width + (logo-desktop-width / 2 / @font-size))
-  padding-right (size-smaller / @font-size * 1.1)
-  height (logo-desktop-height / @font-size)
+  width normalize(((body-desktop-width - logo-desktop-width) / 2), @font-size)
+  left 'calc(50% - %dem)' % (@width + normalize((logo-desktop-width / 2), @font-size))
+  padding-left 1.8em
+  height normalize(logo-desktop-height, @font-size)
   fix-line-height(@height)
   font-family fonts-sans-lighter
   font-weight normal
   letter-spacing 0.15em
-  text-align right
+  text-align center
   text-transform uppercase
   color color-palette-gray
   opacity 0.3
