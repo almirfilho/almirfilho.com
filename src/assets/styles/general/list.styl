@@ -4,7 +4,12 @@
   list-style none
 
 .alm-list--item
-  margin-top size-small
+  display table
+  width 100%
+  margin-top size-smaller
+
+  @media screen and (min-width: min-tablet-width)
+    margin-top size-small
 
   &:first-child
     margin-top 0
@@ -14,25 +19,37 @@
     display block
     clear both
 
+.alm-list--item-link
+  display table-row
+
+.alm-list--item-thumb,
+.alm-list--item-info
+  display table-cell
+  vertical-align middle
+
+.alm-list--item-thumb
+  width avatar--size-medium
+
+.alm-list--item-info
+  padding-left 2em
+
 .alm-list--item-icon
-  float left
-  margin-right 2em
+  display block
 
 .alm-list--item-title
   margin-bottom 0.2em
-  padding-top 0.5em
   font-size 2em
   font-family fonts-sans-lighter
   line-height 130%
   letter-spacing -0.04em
 
   &::after
+    position absolute
     display inline-block
     width 2em
     height 2em
     line-height 2.1em
-    vertical-align 0.3em
-    margin-left 0.5em
+    margin 0.2em 0 0 0.8em
     font-size 0.5em
     font-family fonts-sans-bolder
     text-align center
@@ -51,6 +68,7 @@
         content 'EN'
 
 .alm-list--item-date
+  display block
   font-size 1.2em
   font-family fonts-sans-light
   text-transform uppercase
