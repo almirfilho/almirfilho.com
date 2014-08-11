@@ -1,12 +1,58 @@
 {{> head }}
 
-    <ul>
+<section class="alm-main-content alm-main-content--with-padding">
+	<header class="alm-main-content--header">
+		<h1 class="alm-title">
+			<a class="alm-title-link" href="/{{ path }}/">{{ title }}</a>
+		</h1>
+		<p class="alm-subtitle">{{ subtitle }}</p>
+		<hr class="alm-hr" />
+	</header>
+
+    <ul class="alm-list">
         {{# each talks }}
-        <li>
-            <h3>{{ this.title }}</h3>
-            <img src="/images/talks/{{ this.slug }}.jpg">
+        <li class="alm-list--item">
+        	<div class="alm-list--item-row">
+        		<div class="alm-list--item-thumb">
+		            <img class="alm-avatar alm-list--item-icon"
+		                 src="/images/avatars/{{ this.event.icon }}.jpg" />
+		        </div>
+	            <div class="alm-list--item-info">
+		            <h3 class="alm-list--item-title">
+		            	<a href="{{ this.event.url }}">
+		            		{{ this.event.title }}
+		            	</a>
+		            </h3>
+		            <p class="" lang="{{ this.keynote.lang }}">
+		            	<a href="{{ this.keynote.url }}">
+		            		{{ this.keynote.title }}
+		            	</a>
+		            </p>
+		            <p class="alm">
+			            <time class="alm-list--item-date" datetime="{{ this.event.date }}">
+			            	{{ dateformat ../lang this.event.date 'day' }}
+			            	{{ dateformat ../lang this.event.date 'month' }}
+			            	<span class="alm-list--item-year">
+			            		{{ dateformat ../lang this.event.date 'year' }}
+			            	</span>
+			            </time>
+			            <small class="">
+			            	{{ this.event.location }}
+			            </small>
+			            {{# if this.with }}
+			            <small class="">
+			            	with
+			            	<a href="{{ this.with.url }}">
+			            		{{ this.with.name }}
+			            	</a>
+			            </small>
+			            {{/ if }}
+			        </p>
+				</div>
+	        </div>
         </li>
         {{/ each }}
     </ul>
+</section>
 
 {{> tail }}
