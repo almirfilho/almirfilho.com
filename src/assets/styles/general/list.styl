@@ -19,6 +19,12 @@
     display block
     clear both
 
+.alm-list--item--size-big
+  margin-top size-small
+
+  @media screen and (min-width: min-tablet-width)
+    margin-top size-medium
+
 .alm-list--item-link
   display table-row
 
@@ -38,11 +44,11 @@
   display block
 
 .alm-list--item-title
-  margin-bottom 0.2em
+  margin-bottom 0.4em
   font-size 2.1em
   font-weight normal
   font-family fonts-sans-normal
-  line-height 130%
+  line-height 110%
   letter-spacing -0.03em
 
   &::after
@@ -73,10 +79,13 @@
   font-size 2.6em
   font-family fonts-sans-light
   text-transform uppercase
-  margin-bottom 0
+  margin-bottom 0.25em
 
 .alm-list--item-year
   color color-palette-blue
+
+.alm-list--item-attrs
+  line-height 180%
 
 .alm-small
   font-size 1.2em
@@ -85,16 +94,25 @@
   text-transform uppercase
   color color-palette-green
 
+  a
+    color color-palette-green
+
 .alm-strong
   font-family fonts-sans-bolder
 
 .alm-icon
-  padding 0.2em 0 0 1.7em
+  padding-left 1.7em
   background-size 1.2em
   background-repeat no-repeat
 
-  + .alm-icon
-    margin-left 0.6em
+  .alm-list--item-attrs &
+    display block
+
+    @media screen and (min-width: min-tablet-width)
+      display inline-block
+
+      + .alm-icon
+        margin-left 0.6em
 
 .alm-icon-date
   background-image url(../images/icon-calendar.svg)

@@ -11,7 +11,7 @@
 
     <ul class="alm-list">
         {{# each talks }}
-        <li class="alm-list--item">
+        <li class="alm-list--item alm-list--item--size-big">
         	<div class="alm-list--item-row">
         		<div class="alm-list--item-thumb">
 		            <img class="alm-avatar alm-avatar--size-big alm-list--item-icon"
@@ -31,7 +31,7 @@
 		            		{{ this.keynote.title }}
 		            	</a>
 		            </p>
-		            <p>
+		            <p class="alm-list--item-attrs">
 			            <time class="alm-small alm-icon alm-icon-date" datetime="{{ this.event.date }}">
 			            	{{ dateformat ../lang this.event.date 'day' }}
 			            	{{ dateformat ../lang this.event.date 'month' }}
