@@ -21,10 +21,10 @@
 		            <h3 class="alm-list--item-title" lang="{{ this.lang }}">
 		            	{{ this.title }}
 		            </h3>
-		            <time class="alm-list--item-date" datetime="{{ this.date }}">
+		            <time class="alm-small alm-icon alm-icon-date" datetime="{{ this.date }}">
 		            	{{ dateformat ../lang this.date 'day' }}
 		            	{{ dateformat ../lang this.date 'month' }}
-		            	<span class="alm-list--item-year">
+		            	<span class="alm-strong">
 		            		{{ dateformat ../lang this.date 'year' }}
 		            	</span>
 		            </time>
