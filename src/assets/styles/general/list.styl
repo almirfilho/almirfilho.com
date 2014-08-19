@@ -31,6 +31,7 @@
   width avatar--size-medium
 
 .alm-list--item-info
+  width 100%
   padding-left 2em
 
 .alm-list--item-icon
@@ -38,10 +39,11 @@
 
 .alm-list--item-title
   margin-bottom 0.2em
-  font-size 2em
-  font-family fonts-sans-lighter
+  font-size 2.1em
+  font-weight normal
+  font-family fonts-sans-normal
   line-height 130%
-  letter-spacing -0.04em
+  letter-spacing -0.03em
 
   &::after
     position absolute
@@ -67,12 +69,46 @@
       &::after
         content 'EN'
 
-.alm-list--item-date
-  display block
-  font-size 1.2em
+.alm-list--item-title--size-big
+  font-size 2.6em
   font-family fonts-sans-light
+  text-transform uppercase
+  margin-bottom 0
+
+.alm-list--item-year
+  color color-palette-blue
+
+.alm-small
+  font-size 1.2em
+  font-weight normal
+  font-family fonts-sans-normal
   text-transform uppercase
   color color-palette-green
 
-.alm-list--item-year
-  font-family fonts-sans-bold
+.alm-strong
+  font-family fonts-sans-bolder
+
+.alm-icon
+  padding 0.2em 0 0 1.7em
+  background-size 1.2em
+  background-repeat no-repeat
+
+  + .alm-icon
+    margin-left 0.6em
+
+.alm-icon-date
+  background-image url(../images/icon-calendar.svg)
+
+.alm-icon-location
+  background-image url(../images/icon-location.svg)
+
+.alm-list--item-with
+  &::before
+    content '~ '
+    text-transform lowercase
+
+    html:lang(en) &
+      content '~ with'
+
+    html:lang(pt) &
+      content '~ com'
