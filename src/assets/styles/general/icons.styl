@@ -1,0 +1,20 @@
+.alm-icon
+  padding 0.2em 0 0 1.7em
+  background-size 1.2em
+  background-repeat no-repeat
+
+  .alm-list--item-attrs &
+    display block
+    padding-top 0
+
+    @media screen and (min-width: min-tablet-width)
+      display inline-block
+
+      + .alm-icon
+        margin-left 0.6em
+
+.alm-icon-date
+  background-image url(../images/icon-calendar.svg)
+
+.alm-icon-location
+  background-image url(../images/icon-location.svg)
