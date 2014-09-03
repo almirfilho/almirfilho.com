@@ -5,9 +5,9 @@
 			<span class="alm-header--title-alt">filho</span>
 		</a>
 	</h1>
-	<div class="alm-header--logo">
-		<a class="alm-header--logo-link" href="/">
-			<img class="alm-header--logo-image" src="/images/almirfilho-logo.svg" />
+	<div class="alm-logo">
+		<a class="alm-logo--link" href="/">
+			<img class="alm-logo--image" src="/images/almirfilho-logo.svg" />
 		</a>
 	</div>
 	<nav class="alm-header--menu">
