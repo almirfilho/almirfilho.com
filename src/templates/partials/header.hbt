@@ -10,16 +10,16 @@
 			<img class="alm-logo--image" src="/images/almirfilho-logo.svg" />
 		</a>
 	</div>
-	<nav class="alm-header--menu">
-		<ul class="alm-header--menu-list">
-			<li class="alm-header--menu-item">
-				<a class="alm-header--menu-item--link" href="/about/">about</a>
+	<nav class="alm-menu">
+		<ul class="alm-menu-list">
+			<li class="alm-menu-item">
+				<a class="alm-menu-item--link" href="/about/">about</a>
 			</li>
-			<li class="alm-header--menu-item">
-				<a class="alm-header--menu-item--link" href="/log/">log</a>
+			<li class="alm-menu-item">
+				<a class="alm-menu-item--link" href="/log/">log</a>
 			</li>
-			<li class="alm-header--menu-item">
-				<a class="alm-header--menu-item--link" href="/talks/">talks</a>
+			<li class="alm-menu-item">
+				<a class="alm-menu-item--link" href="/talks/">talks</a>
 			</li>
 		</ul>
 	</nav>
