@@ -5,7 +5,7 @@ post-image-margin--mobile = 1em
 
 // Figure ----------------------------------------------------------------------
 
-.alm-post--figure
+.alm-post-figure
   width s('calc(100% + ' + (post-text-padding--mobile * 2) + ')')
   margin size-smaller 0
   margin-left post-text-padding--mobile * -1
@@ -17,7 +17,7 @@ post-image-margin--mobile = 1em
 
 // Figure Modifiers ------------------------------------------------------------
 
-.alm-post--figure--is-highlighted
+.alm-post-figure--is-highlighted
 
   @media screen and (min-width: min-tablet-width)
     border-top-width 1.2em
@@ -27,7 +27,7 @@ post-image-margin--mobile = 1em
 
 // Figure caption --------------------------------------------------------------
 
-.alm-post--figcaption
+.alm-post-figure-caption
   font-size post-text-size
   font-style italic
   text-align center
@@ -40,30 +40,30 @@ post-image-margin--mobile = 1em
   @media screen and (min-width: min-tablet-width)
     padding 0 normalize(post-text-padding--desktop, @font-size)
 
-    .alm-post--figure--is-highlighted &
+    .alm-post-figure--is-highlighted &
       margin-bottom @margin-top
       color color-palette-gray
 
 // Image -----------------------------------------------------------------------
 
-.alm-post--image
+.alm-post-image
   display block
 
-  .alm-post--figure &
+  .alm-post-figure &
     width 100%
 
 // Image Modifiers -------------------------------------------------------------
 
-.alm-post--image--float-left,
-.alm-post--image--float-right
+.alm-post-image--float-left,
+.alm-post-image--float-right
   width 40%
   margin (post-image-margin--mobile / 2) 0
 
-  &.alm-post--figure
+  &.alm-post-figure
     margin-top 0
     font-size post-text-size
 
-    .alm-post--figcaption
+    .alm-post-figure-caption
       font-size (post-text-size / 2)
       padding 0
       margin-bottom 0
@@ -72,25 +72,25 @@ post-image-margin--mobile = 1em
     margin-top (post-image-margin--desktop / 2)
     margin-bottom (@margin-top / 2)
 
-    &.alm-post--figure
+    &.alm-post-figure
       margin-top 0
 
-      .alm-post--figcaption
+      .alm-post-figure-caption
         margin-bottom @margin-bottom
 
-.alm-post--image--float-left
+.alm-post-image--float-left
   float left
   margin-right post-image-margin--mobile
 
   @media screen and (min-width: min-tablet-width)
     margin-right post-image-margin--desktop
 
-.alm-post--image--float-right
+.alm-post-image--float-right
   float right
   margin-left post-image-margin--mobile
 
   @media screen and (min-width: min-tablet-width)
     margin-left post-image-margin--desktop
 
-.alm-post--image--is-rounded
+.alm-post-image--is-rounded
   border-radius 50%

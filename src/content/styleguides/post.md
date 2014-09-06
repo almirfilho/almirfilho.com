@@ -210,8 +210,8 @@ cillum dolore eu fugiat.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 
-<figure class="alm-post--figure">
-  <img class="alm-post--image"
+<figure class="alm-post-figure">
+  <img class="alm-post-image"
        src="/images/styleguides/post-image.jpg"
        alt="A normal post image." />
 </figure>
@@ -224,8 +224,8 @@ tempor incididunt ut labore et dolore magna aliqua.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 
-<figure class="alm-post--figure alm-post--figure--is-highlighted">
-  <img class="alm-post--image"
+<figure class="alm-post-figure alm-post-figure--is-highlighted">
+  <img class="alm-post-image"
        src="/images/styleguides/post-image.jpg"
        alt="A highlighted post image." />
 </figure>
@@ -238,11 +238,11 @@ tempor incididunt ut labore et dolore magna aliqua.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 
-<figure class="alm-post--figure">
-  <img class="alm-post--image"
+<figure class="alm-post-figure">
+  <img class="alm-post-image"
        src="/images/styleguides/post-image.jpg"
        alt="A post image with caption." />
-  <figcaption class="alm-post--figcaption">A caption text here.</figcaption>
+  <figcaption class="alm-post-figure-caption">A caption text here.</figcaption>
 </figure>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -253,11 +253,11 @@ tempor incididunt ut labore et dolore magna aliqua.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 
-<figure class="alm-post--figure alm-post--figure--is-highlighted">
-  <img class="alm-post--image"
+<figure class="alm-post-figure alm-post-figure--is-highlighted">
+  <img class="alm-post-image"
        src="/images/styleguides/post-image.jpg"
        alt="A post image with caption." />
-  <figcaption class="alm-post--figcaption">A caption text here.</figcaption>
+  <figcaption class="alm-post-figure-caption">A caption text here.</figcaption>
 </figure>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -267,7 +267,7 @@ tempor incididunt ut labore et dolore magna aliqua.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
-<img class="alm-post--image alm-post--image--float-left"
+<img class="alm-post-image alm-post-image--float-left"
      src="/images/styleguides/post-image-float.jpg"
      alt="A post image floated to the left." />
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -278,7 +278,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
-<img class="alm-post--image alm-post--image--float-right"
+<img class="alm-post-image alm-post-image--float-right"
      src="/images/styleguides/post-image-float.jpg"
      alt="A post image floated to the right." />
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -291,11 +291,11 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
 
 ### With floats and captions
 
-<figure class="alm-post--figure alm-post--image--float-left">
-  <img class="alm-post--image"
+<figure class="alm-post-figure alm-post-image--float-left">
+  <img class="alm-post-image"
        src="/images/styleguides/post-image-float.jpg"
        alt="A post image with caption floated to the left." />
-  <figcaption class="alm-post--figcaption">A caption text here.</figcaption>
+  <figcaption class="alm-post-figure-caption">A caption text here.</figcaption>
 </figure>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -309,11 +309,11 @@ tempor incididunt ut labore et dolore magna aliqua.
 
 ### Rounded
 
-<figure class="alm-post--figure alm-post--image--float-right">
-  <img class="alm-post--image alm-post--image--is-rounded"
+<figure class="alm-post-figure alm-post-image--float-right">
+  <img class="alm-post-image alm-post-image--is-rounded"
        src="/images/styleguides/post-image-float.jpg"
        alt="A rounded post image with caption floated to the right." />
-  <figcaption class="alm-post--figcaption">A caption text here.</figcaption>
+  <figcaption class="alm-post-figure-caption">A caption text here.</figcaption>
 </figure>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -324,7 +324,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
-<img class="alm-post--image alm-post--image--float-left alm-post--image--is-rounded"
+<img class="alm-post-image alm-post-image--float-left alm-post-image--is-rounded"
      src="/images/styleguides/post-image-float.jpg"
      alt="A rounded post image floated to the left." />
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

@@ -17,7 +17,7 @@ vertical-center(height)
 
 // Header ----------------------------------------------------------------------
 
-.alm-post--header
+.alm-post-header
   position relative
 
   .alm-hr
@@ -25,7 +25,7 @@ vertical-center(height)
     margin-bottom 0
     opacity 1
 
-.alm-post--header-cover-box
+.alm-post-header-cover-box
   position relative
   width 100%
   height header-cover-height
@@ -42,13 +42,13 @@ vertical-center(height)
 
 // Header cover ----------------------------------------------------------------
 
-.alm-post--header-cover
+.alm-post-header-cover
   position absolute
   width 100%
   transition -webkit-transform 1.2s ease
   vertical-center(header-cover-height)
 
-  .alm-post--header-cover-box:hover &
+  .alm-post-header-cover-box:hover &
     transition -webkit-transform 0.8s ease
     vertical-center(header-cover-height--expanded-mobile)
 
@@ -57,18 +57,18 @@ vertical-center(height)
 
 // Header cover Modifiers ------------------------------------------------------
 
-.alm-post--header-cover--at-top-on-ini
+.alm-post-header-cover--at-top-on-ini
   vertical-top()
 
-.alm-post--header-cover--at-top-on-end
-  .alm-post--header-cover-box:hover &
+.alm-post-header-cover--at-top-on-end
+  .alm-post-header-cover-box:hover &
     vertical-top()
 
-.alm-post--header-cover--at-bottom-on-ini
+.alm-post-header-cover--at-bottom-on-ini
   vertical-bottom(header-cover-height)
 
-.alm-post--header-cover--at-bottom-on-end
-  .alm-post--header-cover-box:hover &
+.alm-post-header-cover--at-bottom-on-end
+  .alm-post-header-cover-box:hover &
     vertical-bottom(header-cover-height--expanded-mobile)
 
     @media screen and (min-width: min-desktop-width)
@@ -76,7 +76,7 @@ vertical-center(height)
 
 // Header cover description ----------------------------------------------------
 
-.alm-post--header-cover-description
+.alm-post-header-cover-description
   margin 1em size-smallest size-smallest size-smallest
   font-size 1.6em
   line-height 170%

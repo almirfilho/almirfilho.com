@@ -5,7 +5,7 @@
         {{# each collections.posts }}
         <li class="alm-post-list--item">
             <a class="alm-post-list--item-link" href="{{ this.path }}/">
-                <span class="alm-post--title">{{ this.title }}</span>
+                <span class="alm-post-title">{{ this.title }}</span>
             </a>
         </li>
         {{/ each }}
