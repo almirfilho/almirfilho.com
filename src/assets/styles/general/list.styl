@@ -61,6 +61,7 @@
     padding-left 2em
 
 .alm-list--item-year
+  font-family fonts-sans-bold
   color color-palette-blue
 
 .alm-list--item-attrs
@@ -81,11 +82,14 @@
 
 .alm-list--item-title
   margin-bottom 0.4em
-  font-size 2.1em
+  font-size 2em
   font-weight normal
   font-family fonts-sans-normal
   line-height 110%
   letter-spacing -0.03em
+
+  @media screen and (min-width: min-tablet-width)
+    font-size 2.1em
 
   &::after
     position absolute
@@ -114,7 +118,10 @@
 // List Item Title Modifiers ---------------------------------------------------
 
 .alm-list--item-title--size-big
-  font-size 2.6em
+  font-size 2.3em
   font-family fonts-sans-light
   text-transform uppercase
   margin-bottom 0.25em
+
+  @media screen and (min-width: min-tablet-width)
+    font-size 2.6em

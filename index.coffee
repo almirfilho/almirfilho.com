@@ -45,6 +45,7 @@ handlebarsConfig = (options) ->
             when 'day' then day
             when 'month' then month
             when 'year' then year
+            when 'shortYear' then new String(year)[2..]
             else "#{day} / #{month} / #{year}"
 
         ifEn: (lang = 'en', options) ->

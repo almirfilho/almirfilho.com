@@ -22,7 +22,7 @@
 		            	<a href="{{ this.event.url }}">
 		            		{{ this.event.title }}
 		            		<time class="alm-list--item-year">
-		            			{{ dateformat ../lang this.event.date 'year' }}
+		            			'{{ dateformat ../lang this.event.date 'shortYear' }}
 		            		</time>
 		            	</a>
 		            </h3>
