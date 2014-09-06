@@ -14,7 +14,7 @@
         <li class="alm-list--item">
         	<a class="alm-list--item-link" href="{{ this.url }}">
         		<div class="alm-list--item-thumb">
-		            <img class="alm-avatar alm-list--item-icon"
+		            <img class="alm-avatar"
 		                 src="/images/avatars/{{ this.icon }}.jpg" />
 		        </div>
 	            <div class="alm-list--item-info">
