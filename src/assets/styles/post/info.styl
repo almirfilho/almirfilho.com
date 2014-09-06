@@ -13,7 +13,7 @@
 
 .alm-post-info-description
   display inline-block
-  width 8.5em
+  width 7.7em
   font-size 1.5em
   vertical-align middle
 
@@ -34,3 +34,9 @@
 .alm-post-author-avatar
   margin 0 size-smallest
   vertical-align middle
+  width avatar--size-small
+  height @width
+
+  @media screen and (min-width: min-tablet-width)
+    width avatar--size-medium
+    height @width
