@@ -1,13 +1,13 @@
 <header class="alm-header">
-	<h1 class="alm-header--title">
-		<a class="alm-header--title-link" href="/">
+	<h1 class="alm-header-title">
+		<a class="alm-header-title-link" href="/">
 			almir
-			<span class="alm-header--title-alt">filho</span>
+			<span class="alm-header-title--strong">filho</span>
 		</a>
 	</h1>
 	<div class="alm-logo">
-		<a class="alm-logo--link" href="/">
-			<img class="alm-logo--image" src="/images/almirfilho-logo.svg" />
+		<a class="alm-logo-link" href="/">
+			<img class="alm-logo-image" src="/images/almirfilho-logo.svg" />
 		</a>
 	</div>
 	<nav class="alm-menu">
