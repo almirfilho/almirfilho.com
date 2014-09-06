@@ -11,14 +11,14 @@
 
     <ul class="alm-list">
         {{# each articles }}
-        <li class="alm-list-item">
-        	<a class="alm-list-item-link" href="{{ this.url }}">
-        		<div class="alm-list-item-thumb">
-		            <img class="alm-avatar alm-list-item-icon"
+        <li class="alm-list--item">
+        	<a class="alm-list--item-link" href="{{ this.url }}">
+        		<div class="alm-list--item-thumb">
+		            <img class="alm-avatar alm-list--item-icon"
 		                 src="/images/avatars/{{ this.icon }}.jpg" />
 		        </div>
-	            <div class="alm-list-item-info">
-		            <h3 class="alm-list-item-title" lang="{{ this.lang }}">
+	            <div class="alm-list--item-info">
+		            <h3 class="alm-list--item-title" lang="{{ this.lang }}">
 		            	{{ this.title }}
 		            </h3>
 		            <time class="alm-small alm-icon alm-icon-date" datetime="{{ this.date }}">

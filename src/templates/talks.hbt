@@ -11,27 +11,27 @@
 
     <ul class="alm-list">
         {{# each talks }}
-        <li class="alm-list-item alm-list-item--size-big">
-        	<div class="alm-list-item-row">
-        		<div class="alm-list-item-thumb">
-		            <img class="alm-avatar alm-avatar--size-big alm-list-item-icon"
+        <li class="alm-list--item alm-list--item--size-big">
+        	<div class="alm-list--item-row">
+        		<div class="alm-list--item-thumb">
+		            <img class="alm-avatar alm-avatar--size-big alm-list--item-icon"
 		                 src="/images/avatars/{{ this.event.icon }}.jpg" />
 		        </div>
-	            <div class="alm-list-item-info">
-		            <h3 class="alm-list-item-title alm-list-item-title--size-big">
+	            <div class="alm-list--item-info">
+		            <h3 class="alm-list--item-title alm-list--item-title--size-big">
 		            	<a href="{{ this.event.url }}">
 		            		{{ this.event.title }}
-		            		<time class="alm-list-item-year">
+		            		<time class="alm-list--item-year">
 		            			{{ dateformat ../lang this.event.date 'year' }}
 		            		</time>
 		            	</a>
 		            </h3>
-		            <p class="alm-list-item-title" lang="{{ this.keynote.lang }}">
+		            <p class="alm-list--item-title" lang="{{ this.keynote.lang }}">
 		            	<a href="{{ this.keynote.url }}">
 		            		{{ this.keynote.title }}
 		            	</a>
 		            </p>
-		            <p class="alm-list-item-attrs">
+		            <p class="alm-list--item-attrs">
 			            <time class="alm-small alm-icon alm-icon-date" datetime="{{ this.event.date }}">
 			            	{{ dateformat ../lang this.event.date 'day' }}
 			            	{{ dateformat ../lang this.event.date 'month' }}
@@ -43,7 +43,7 @@
 			            	{{ this.event.location }}
 			            </small>
 			            {{# if this.with }}
-			            <small class="alm-small alm-list-item-with">
+			            <small class="alm-small alm-list--item-with">
 			            	<a class="alm-strong" href="{{ this.with.url }}">
 			            		{{ this.with.name }}
 			            	</a>
