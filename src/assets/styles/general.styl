@@ -7,6 +7,9 @@ body-desktop-width = 66em
 normalize(value, base = post-text-size)
   value / base
 
+link-active()
+  opacity 0.4
+
 // General styles --------------------------------------------------------------
 
 *
@@ -23,6 +26,9 @@ body
 a
   color color-palette-gray
   text-decoration none
+
+  &:active
+    link-active()
 
 // Body container --------------------------------------------------------------
 
