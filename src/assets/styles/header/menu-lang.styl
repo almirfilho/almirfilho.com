@@ -3,9 +3,9 @@
 lang-color = rgba(color-palette-gray, 0.3)
 lang-color--is-active = rgba(color-palette-gray, 0.8)
 
-// Lang ------------------------------------------------------------------------
+// Lang Menu -------------------------------------------------------------------
 
-.alm-header--lang-list
+.alm-lang-menu
   position absolute
   top 20px
   right 20px
@@ -15,7 +15,7 @@ lang-color--is-active = rgba(color-palette-gray, 0.8)
   @media screen and (min-width: min-desktop-width)
     position fixed
 
-.alm-header--lang-item
+.alm-lang-menu-item
   display inline-block
   font-size 12px
   height @font-size
@@ -29,9 +29,9 @@ lang-color--is-active = rgba(color-palette-gray, 0.8)
   &:last-child
     padding-right 0
 
-.alm-header--lang-link
+.alm-lang-menu-link
   font-family fonts-sans-bold
   color lang-color
 
-  .alm-header--lang-item--is-active &
+  .alm-lang-menu-item--is-active &
     color lang-color--is-active

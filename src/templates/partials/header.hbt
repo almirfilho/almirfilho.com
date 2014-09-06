@@ -13,24 +13,24 @@
 	<nav class="alm-menu">
 		<ul class="alm-menu-list">
 			<li class="alm-menu-item">
-				<a class="alm-menu-item--link" href="/about/">about</a>
+				<a class="alm-menu-link" href="/about/">about</a>
 			</li>
 			<li class="alm-menu-item">
-				<a class="alm-menu-item--link" href="/log/">log</a>
+				<a class="alm-menu-link" href="/log/">log</a>
 			</li>
 			<li class="alm-menu-item">
-				<a class="alm-menu-item--link" href="/talks/">talks</a>
+				<a class="alm-menu-link" href="/talks/">talks</a>
 			</li>
 		</ul>
 	</nav>
 	{{# if translated }}
-	<ul class="alm-header--lang-list">
-		<li class="alm-header--lang-item {{#ifEn lang}}alm-header--lang-item--is-active{{/ifEn}}">
-			<a class="alm-header--lang-link" lang="en" title="English version"
+	<ul class="alm-lang-menu">
+		<li class="alm-lang-menu-item {{#ifEn lang}}alm-lang-menu-item--is-active{{/ifEn}}">
+			<a class="alm-lang-menu-link" lang="en" title="English version"
 			   href="/{{ urlTo 'en' path }}/">EN</a>
 		</li>
-		<li class="alm-header--lang-item {{#ifPt lang}}alm-header--lang-item--is-active{{/ifPt}}">
-			<a class="alm-header--lang-link" lang="pt" title="Versão em português"
+		<li class="alm-lang-menu-item {{#ifPt lang}}alm-lang-menu-item--is-active{{/ifPt}}">
+			<a class="alm-lang-menu-link" lang="pt" title="Versão em português"
 			   href="/{{ urlTo 'pt' path }}/">PT</a>
 		</li>
 	</ul>
