@@ -121,5 +121,19 @@ talks:
     with:
       name: Caio Gondim
       url: http://caiogondim.com
+
+  - keynote:
+      title: "CSS Layout: o ontem, o hoje e o depois"
+      url: https://speakerdeck.com/almirfilho/css-layout-o-ontem-o-hoje-e-o-depois
+      lang: pt
+    event:
+      title: Front in Rio
+      url: http://lanyrd.com/2013/front-in-rio/
+      date: 2013-06-15
+      location: Rio de Janeiro / RJ
+      icon: frontinrio2013.png
+    with:
+      name: Caio Gondim
+      url: http://caiogondim.com
 ---
 
