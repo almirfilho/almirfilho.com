@@ -6,6 +6,17 @@ translated: true
 talks:
 
   - keynote:
+      title: Esse cara é o grunt
+      url: https://speakerdeck.com/almirfilho/esse-cara-e-o-grunt
+      lang: pt
+    event:
+      title: Front in Bahia
+      url: http://www.frontinbahia.com.br
+      date: 2014-09-13
+      location: Salvador / Brazil
+      icon: frontinbahia2014.png
+
+  - keynote:
       title: Throttle & Debounce patterns in web apps
       url: https://speakerdeck.com/almirfilho/throttle-and-debounce-patterns-in-web-apps
       lang: en
