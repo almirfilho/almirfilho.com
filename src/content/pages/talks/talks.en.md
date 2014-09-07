@@ -145,4 +145,15 @@ talks:
     with:
       name: Caio Gondim
       url: http://caiogondim.com
+
+  - keynote:
+      title: Web audio hero
+      url: https://speakerdeck.com/almirfilho/web-audio-hero
+      lang: pt
+    event:
+      title: OlhóSEO
+      url: http://www.olhoseo.com.br/2013/
+      date: 2013-05-03
+      location: Florianópolis / Brazil
+      icon: olhoseo2013.png
 ---
