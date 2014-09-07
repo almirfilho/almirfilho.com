@@ -198,6 +198,17 @@ talks:
       url: https://speakerdeck.com/almirfilho/html5-seu-navegador-nao-e-mais-o-mesmo
       lang: pt
     event:
+      title: Jubileu de Prata do curso de Ciência da Computação UFMA
+      url: http://www.connection.ufma.br/jubileu/index.php/programacao
+      date: 2011-11-29
+      location: São Luís / Brazil
+      icon: jubileuufma.png
+
+  - keynote:
+      title: "HTML5: seu navegador não é mais o mesmo"
+      url: https://speakerdeck.com/almirfilho/html5-seu-navegador-nao-e-mais-o-mesmo
+      lang: pt
+    event:
       title: 3.PHP
       url: http://www.phpmaranhao.com.br/3-php/
       date: 2011-10-16
