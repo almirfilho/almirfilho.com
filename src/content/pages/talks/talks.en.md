@@ -167,4 +167,15 @@ talks:
       date: 2013-03-23
       location: Porto Alegre / Brazil
       icon: rsjs2013.png
+
+  - keynote:
+      title: Web audio hero
+      url: https://speakerdeck.com/almirfilho/web-audio-hero
+      lang: pt
+    event:
+      title: Rio.js
+      url: http://lanyrd.com/2013/riojs/
+      date: 2013-03-09
+      location: Rio de Janeiro / Brazil
+      icon: riojs2013.png
 ---
