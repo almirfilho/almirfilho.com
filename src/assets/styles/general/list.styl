@@ -73,14 +73,22 @@
 
 .alm-list--item-with
   &::before
-    content '~ '
     text-transform lowercase
 
+    @media screen and (min-width: min-tablet-width)
+      content '~ '
+
     html:lang(en) &
-      content '~ with'
+      content 'with'
+
+      @media screen and (min-width: min-tablet-width)
+        content '~ with'
 
     html:lang(pt) &
-      content '~ com'
+      content 'com'
+
+      @media screen and (min-width: min-tablet-width)
+        content '~ com'
 
 // List Item Title -------------------------------------------------------------
 
