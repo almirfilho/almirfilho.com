@@ -6,6 +6,17 @@ translated: true
 talks:
 
   - keynote:
+      title: Throttle & Debounce patterns in web apps
+      url: dasdas
+      lang: en
+    event:
+      title: Front Interior
+      url: dasdasdasd
+      date: 2014-08-30
+      location: Bauru / Brazil
+      icon: frontinterior2014.png
+
+  - keynote:
       title: Web audio hero
       url: dasdas
       lang: pt
