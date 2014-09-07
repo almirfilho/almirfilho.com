@@ -1,7 +1,7 @@
 ---
 title: Talks
 titulo: Palestras
-subtitle: dsadasda
+subtitle: Palestras e workshops em conferências.
 template: talks.hbt
 translated: true
 sections:

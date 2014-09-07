@@ -1,6 +1,6 @@
 ---
 title: Log
-subtitle: A compilation of technical articles by myself.
+subtitle: Material written by myself on the web.
 template: log.hbt
 translated: true
 articles:

@@ -1,6 +1,6 @@
 ---
 title: Log
-subtitle: Uma compilação de outros posts meus.
+subtitle: Material escrito por mim na web.
 template: log.hbt
 translated: true
 articles:

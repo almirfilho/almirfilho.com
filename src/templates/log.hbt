@@ -12,7 +12,7 @@
     <ul class="alm-list">
         {{# each articles }}
         <li class="alm-list-item">
-        	<a class="alm-list-item-link" href="{{ this.url }}">
+        	<a class="alm-list-item-link" href="{{ this.url }}" target="_blank">
         		<div class="alm-list-item-thumb">
 		            <img class="alm-avatar"
 		                 src="/images/avatars/{{ this.icon }}" />

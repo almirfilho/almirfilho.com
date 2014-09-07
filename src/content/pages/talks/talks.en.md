@@ -1,6 +1,6 @@
 ---
 title: Talks
-subtitle: heheheh
+subtitle: Lectures and workshops in conferences.
 template: talks.hbt
 translated: true
 sections:
