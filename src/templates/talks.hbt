@@ -23,9 +23,11 @@
                     <h3 class="alm-list--item-title alm-list--item-title--size-big">
                         <a href="{{ this.event.url }}" target="_blank">
                             {{ this.event.title }}
-                            <time class="alm-list--item-year">
-                                '{{ dateformat ../lang this.event.date 'shortYear' }}
-                            </time>
+                            {{# if this.event.showyear }}
+                            <span class="alm-list--item-year">
+                                '{{ dateformat ../../lang this.event.date 'shortYear' }}
+                            </span>
+                            {{/ if }}
                         </a>
                     </h3>
                     <p class="alm-list--item-title" lang="{{ this.keynote.lang }}">

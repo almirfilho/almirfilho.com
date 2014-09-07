@@ -16,6 +16,7 @@ talks:
       date: 2014-11-15
       location: Maceió / AL
       icon: frontinmaceio2014.png
+      showyear: true
 
   - keynote:
       title: Esse cara é o grunt
@@ -27,6 +28,7 @@ talks:
       date: 2014-09-13
       location: Salvador / BA
       icon: frontinbahia2014.png
+      showyear: true
 
   - keynote:
       title: Throttle & Debounce patterns in web apps
@@ -38,6 +40,7 @@ talks:
       date: 2014-08-30
       location: Bauru / SP
       icon: frontinterior2014.png
+      showyear: true
 
   - keynote:
       title: Web audio hero
@@ -49,6 +52,7 @@ talks:
       date: 2014-08-02
       location: Aracaju / SE
       icon: frontinaracaju2014.png
+      showyear: true
 
   - keynote:
       title: Throttle & Debounce patterns in web apps
@@ -60,6 +64,7 @@ talks:
       date: 2014-07-26
       location: Belo Horizonte / MG
       icon: frontinbh2014.png
+      showyear: true
 
   - keynote:
       title: Esse cara é o grunt
@@ -71,6 +76,7 @@ talks:
       date: 2014-05-17
       location: Fortaleza / CE
       icon: frontinfortaleza2014.png
+      showyear: true
 
   - keynote:
       title: Esse cara é o grunt
@@ -93,6 +99,7 @@ talks:
       date: 2013-12-14
       location: Recife / PE
       icon: frontinrecife2013.png
+      showyear: true
     with:
       name: Davidson Fellipe
       url: http://fellipe.com
@@ -107,6 +114,7 @@ talks:
       date: 2013-11-18
       location: São Paulo / SP
       icon: webbr2013.png
+      showyear: true
 
   - keynote:
       title: "CSS Layout: o ontem, o hoje e o depois"
@@ -118,6 +126,7 @@ talks:
       date: 2013-09-14
       location: São Paulo / SP
       icon: frontinsampa2013.png
+      showyear: true
     with:
       name: Caio Gondim
       url: http://caiogondim.com
@@ -132,6 +141,7 @@ talks:
       date: 2013-06-15
       location: Rio de Janeiro / RJ
       icon: frontinrio2013.png
+      showyear: true
     with:
       name: Caio Gondim
       url: http://caiogondim.com
@@ -146,6 +156,7 @@ talks:
       date: 2013-05-03
       location: Florianópolis / SC
       icon: olhoseo2013.png
+      showyear: true
 
   - keynote:
       title: Web audio hero
@@ -157,6 +168,7 @@ talks:
       date: 2013-03-23
       location: Porto Alegre / RS
       icon: rsjs2013.png
+      showyear: true
 
   - keynote:
       title: Web audio hero
@@ -168,6 +180,7 @@ talks:
       date: 2013-03-09
       location: Rio de Janeiro / RJ
       icon: riojs2013.png
+      showyear: true
 
   - keynote:
       title: "HTML5 Sensitivo: seu browser no plano astral"
@@ -179,6 +192,7 @@ talks:
       date: 2012-10-27
       location: Maceió / AL
       icon: frontinmaceio2012.png
+      showyear: true
     with:
       name: Caio Gondim
       url: http://caiogondim.com
