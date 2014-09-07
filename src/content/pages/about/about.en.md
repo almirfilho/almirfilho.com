@@ -1,6 +1,8 @@
 ---
 title: about
-template: page.hbt
+subtitle: teste
+template: about.hbt
+translated: true
 ---
 
 ## about english

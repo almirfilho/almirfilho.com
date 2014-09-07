@@ -1,7 +1,9 @@
 ---
 title: about
 titulo: Sobre
-template: page.hbt
+subtitle: teste potr
+template: about.hbt
+translated: true
 ---
 
 ## sobre portugues

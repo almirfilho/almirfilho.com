@@ -1,0 +1,28 @@
+{{> head }}
+
+<section class="alm-main-content alm-main-content--with-padding">
+    <header class="alm-main-content-header">
+        <h1 class="alm-title">
+            <a class="alm-title-link" href="/{{ path }}/">
+                {{ en_pt lang title titulo }}
+            </a>
+        </h1>
+        <p class="alm-subtitle">{{ subtitle }}</p>
+        <hr class="alm-hr" />
+    </header>
+
+    <ul class="alm-social-list">
+        <li class="alm-social-item">
+            <a class="alm-round-icon" href="#"></a>
+        </li>
+        <li class="alm-social-item">
+            <a class="alm-round-icon" href="#"></a>
+        </li>
+        <li class="alm-social-item">
+            <a class="alm-round-icon" href="#"></a>
+        </li>
+    </ul>
+
+</section>
+
+{{> tail }}
