@@ -95,7 +95,7 @@ talks:
       icon: frontinrecife2013.png
     with:
       name: Davidson Fellipe
-      url: dasdasdas
+      url: http://fellipe.com
 
   - keynote:
       title: "CSS Layout: o ontem, o hoje e o depois"
@@ -107,5 +107,19 @@ talks:
       date: 2013-11-18
       location: São Paulo / SP
       icon: webbr2013.png
+
+  - keynote:
+      title: "CSS Layout: o ontem, o hoje e o depois"
+      url: https://speakerdeck.com/almirfilho/css-layout-o-ontem-o-hoje-e-o-depois
+      lang: pt
+    event:
+      title: Front in Sampa
+      url: http://frontinsampa.com.br/2013/
+      date: 2013-09-14
+      location: São Paulo / SP
+      icon: frontinsampa2013.png
+    with:
+      name: Caio Gondim
+      url: http://caiogondim.com
 ---
 
