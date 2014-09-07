@@ -14,11 +14,38 @@ sections:
         url:
         lang:
       event:
-        title: Front in Maceió
+        title: Comics ~ Front in Maceió
         url: http://frontinmaceio.com.br
         date: 2014-11-15
         location: Maceió / AL
         icon: frontinmaceio2014.png
+        showyear: true
+
+    - keynote:
+        title: Workshop de grunt
+        url:
+        lang:
+      event:
+        title: W3C Web.br
+        url: http://conferenciaweb.w3c.br/
+        date: 2014-09-26
+        location: São Paulo / SP
+        icon: webbr2014.png
+        showyear: true
+      with:
+        name: Davidson Fellipe
+        url: http://fellipe.com
+
+    - keynote:
+        title: Throttle & Debounce patterns in web apps
+        url: https://speakerdeck.com/almirfilho/throttle-and-debounce-patterns-in-web-apps
+        lang: en
+      event:
+        title: W3C Web.br
+        url: http://conferenciaweb.w3c.br/
+        date: 2014-09-25
+        location: São Paulo / SP
+        icon: webbr2014.png
         showyear: true
 
     - keynote:
