@@ -178,4 +178,15 @@ talks:
       date: 2013-03-09
       location: Rio de Janeiro / Brazil
       icon: riojs2013.png
+
+  - keynote:
+      title: "HTML5 Sensitivo: seu browser no plano astral"
+      url: https://speakerdeck.com/almirfilho/html5-sensitivo-seu-browser-no-plano-astral
+      lang: pt
+    event:
+      title: Front in Maceió
+      url: http://frontinmaceio.com.br/2012/
+      date: 2012-10-27
+      location: Maceió / Brazil
+      icon: frontinmaceio2012.png
 ---
