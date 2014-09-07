@@ -44,7 +44,7 @@ talks:
       url: https://speakerdeck.com/almirfilho/web-audio-hero
       lang: pt
     event:
-      title: Front in Aracaju
+      title: Rock and Code ~ Front in Aracaju
       url: http://www.frontinaracaju.com.br
       date: 2014-08-02
       location: Aracaju / SE

@@ -43,7 +43,7 @@ talks:
       url: https://speakerdeck.com/almirfilho/web-audio-hero
       lang: pt
     event:
-      title: Front in Aracaju
+      title: Rock and Code ~ Front in Aracaju
       url: http://www.frontinaracaju.com.br
       date: 2014-08-02
       location: Aracaju / Brazil
@@ -120,4 +120,15 @@ talks:
     with:
       name: Caio Gondim
       url: http://caiogondim.com
+
+  - keynote:
+      title: "CSS Layout: o ontem, o hoje e o depois"
+      url: https://speakerdeck.com/almirfilho/css-layout-o-ontem-o-hoje-e-o-depois
+      lang: pt
+    event:
+      title: Front in Aracaju
+      url: http://www.frontinaracaju.com.br/2013/
+      date: 2013-08-31
+      location: Aracaju / Brazil
+      icon: frontinaracaju2013.png
 ---
