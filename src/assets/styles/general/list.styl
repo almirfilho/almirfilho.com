@@ -5,7 +5,7 @@
 
 // List Item -------------------------------------------------------------------
 
-.alm-list--item
+.alm-list-item
   width: 100%;
   padding: size-smaller;
   margin-left: - size-smaller;
@@ -32,13 +32,13 @@
 
 // List Item Modifiers ---------------------------------------------------------
 
-.alm-list--item--size-big
+.alm-list-item--size-big
   @media screen and (min-width: min-tablet-width)
     margin-top size-medium
 
 // List Item Components --------------------------------------------------------
 
-.alm-list--item-link
+.alm-list-item-link
 
   &:active > *
     link-active()
@@ -46,7 +46,7 @@
   @media screen and (min-width: min-tablet-width)
     display table-row
 
-.alm-list--item-thumb
+.alm-list-item-thumb
   display none
 
   @media screen and (min-width: min-tablet-width)
@@ -57,21 +57,21 @@
   .alm-avatar
     display block
 
-.alm-list--item-info
+.alm-list-item-info
   @media screen and (min-width: min-tablet-width)
     display table-cell
     vertical-align middle
     width 100%
     padding-left 2em
 
-.alm-list--item-year
+.alm-list-item-year
   font-family fonts-sans-bold
   color color-palette-blue
 
-.alm-list--item-attrs
+.alm-list-item-attrs
   line-height 180%
 
-.alm-list--item-with
+.alm-list-item-with
   &::before
     text-transform lowercase
 
@@ -92,7 +92,7 @@
 
 // List Item Title -------------------------------------------------------------
 
-.alm-list--item-title
+.alm-list-item-title
   margin-bottom 0.4em
   font-size 2em
   font-weight normal
@@ -129,7 +129,7 @@
 
 // List Item Title Modifiers ---------------------------------------------------
 
-.alm-list--item-title--size-big
+.alm-list-item-title--size-big
   font-size 2.3em
   font-family fonts-sans-light
   text-transform uppercase
