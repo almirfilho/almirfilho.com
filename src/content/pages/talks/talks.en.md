@@ -6,6 +6,17 @@ translated: true
 talks:
 
   - keynote:
+      title: "?"
+      url: #
+      lang: pt
+    event:
+      title: Front in Maceió
+      url: http://frontinmaceio.com.br
+      date: 2014-11-15
+      location: Maceió / Brazil
+      icon: frontinmaceio2014.png
+
+  - keynote:
       title: Esse cara é o grunt
       url: https://speakerdeck.com/almirfilho/esse-cara-e-o-grunt
       lang: pt
