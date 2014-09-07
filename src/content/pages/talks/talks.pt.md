@@ -4,222 +4,234 @@ titulo: Palestras
 subtitle: dsadasda
 template: talks.hbt
 translated: true
-talks:
+sections:
 
-  - keynote:
-      title: "?"
-      url: #
-      lang: pt
-    event:
-      title: Front in Maceió
-      url: http://frontinmaceio.com.br
-      date: 2014-11-15
-      location: Maceió / AL
-      icon: frontinmaceio2014.png
-      showyear: true
+  - title:
+    talks:
 
-  - keynote:
-      title: Esse cara é o grunt
-      url: https://speakerdeck.com/almirfilho/esse-cara-e-o-grunt
-      lang: pt
-    event:
-      title: Front in Bahia
-      url: http://www.frontinbahia.com.br
-      date: 2014-09-13
-      location: Salvador / BA
-      icon: frontinbahia2014.png
-      showyear: true
+    - keynote:
+        title: palestra à confirmar...
+        url:
+        lang:
+      event:
+        title: Front in Maceió
+        url: http://frontinmaceio.com.br
+        date: 2014-11-15
+        location: Maceió / AL
+        icon: frontinmaceio2014.png
+        showyear: true
 
-  - keynote:
-      title: Throttle & Debounce patterns in web apps
-      url: https://speakerdeck.com/almirfilho/throttle-and-debounce-patterns-in-web-apps
-      lang: en
-    event:
-      title: Front Interior
-      url: http://www.frontinterior.com.br
-      date: 2014-08-30
-      location: Bauru / SP
-      icon: frontinterior2014.png
-      showyear: true
+    - keynote:
+        title: Esse cara é o grunt
+        url: https://speakerdeck.com/almirfilho/esse-cara-e-o-grunt
+        lang: pt
+      event:
+        title: Front in Bahia
+        url: http://www.frontinbahia.com.br
+        date: 2014-09-13
+        location: Salvador / BA
+        icon: frontinbahia2014.png
+        showyear: true
 
-  - keynote:
-      title: Web audio hero
-      url: https://speakerdeck.com/almirfilho/web-audio-hero
-      lang: pt
-    event:
-      title: Rock and Code ~ Front in Aracaju
-      url: http://www.frontinaracaju.com.br
-      date: 2014-08-02
-      location: Aracaju / SE
-      icon: frontinaracaju2014.png
-      showyear: true
+    - keynote:
+        title: Throttle & Debounce patterns in web apps
+        url: https://speakerdeck.com/almirfilho/throttle-and-debounce-patterns-in-web-apps
+        lang: en
+      event:
+        title: Front Interior
+        url: http://www.frontinterior.com.br
+        date: 2014-08-30
+        location: Bauru / SP
+        icon: frontinterior2014.png
+        showyear: true
 
-  - keynote:
-      title: Throttle & Debounce patterns in web apps
-      url: https://speakerdeck.com/almirfilho/throttle-and-debounce-patterns-in-web-apps
-      lang: en
-    event:
-      title: Front in BH
-      url: http://frontinbh.com.br
-      date: 2014-07-26
-      location: Belo Horizonte / MG
-      icon: frontinbh2014.png
-      showyear: true
+    - keynote:
+        title: Web audio hero
+        url: https://speakerdeck.com/almirfilho/web-audio-hero
+        lang: pt
+      event:
+        title: Rock and Code ~ Front in Aracaju
+        url: http://www.frontinaracaju.com.br
+        date: 2014-08-02
+        location: Aracaju / SE
+        icon: frontinaracaju2014.png
+        showyear: true
 
-  - keynote:
-      title: Esse cara é o grunt
-      url: https://speakerdeck.com/almirfilho/esse-cara-e-o-grunt
-      lang: pt
-    event:
-      title: Front in Fortaleza
-      url: http://www.frontinfortaleza.com.br
-      date: 2014-05-17
-      location: Fortaleza / CE
-      icon: frontinfortaleza2014.png
-      showyear: true
+    - keynote:
+        title: Throttle & Debounce patterns in web apps
+        url: https://speakerdeck.com/almirfilho/throttle-and-debounce-patterns-in-web-apps
+        lang: en
+      event:
+        title: Front in BH
+        url: http://frontinbh.com.br
+        date: 2014-07-26
+        location: Belo Horizonte / MG
+        icon: frontinbh2014.png
+        showyear: true
 
-  - keynote:
-      title: Esse cara é o grunt
-      url: https://speakerdeck.com/almirfilho/esse-cara-e-o-grunt
-      lang: pt
-    event:
-      title: 16º Encontro Locaweb de Profissionais de Internet
-      url: http://eventos.locaweb.com.br/16o-encontro-locaweb-de-profissionais-de-internet-rio-de-janeiro/
-      date: 2014-05-15
-      location: Rio de Janeiro / RJ
-      icon: 16encontrolocaweb.png
+    - keynote:
+        title: Esse cara é o grunt
+        url: https://speakerdeck.com/almirfilho/esse-cara-e-o-grunt
+        lang: pt
+      event:
+        title: Front in Fortaleza
+        url: http://www.frontinfortaleza.com.br
+        date: 2014-05-17
+        location: Fortaleza / CE
+        icon: frontinfortaleza2014.png
+        showyear: true
 
-  - keynote:
-      title: Esse cara é o grunt
-      url: https://speakerdeck.com/almirfilho/esse-cara-e-o-grunt
-      lang: pt
-    event:
-      title: Front in Recife
-      url: http://frontinrecife.com.br
-      date: 2013-12-14
-      location: Recife / PE
-      icon: frontinrecife2013.png
-      showyear: true
-    with:
-      name: Davidson Fellipe
-      url: http://fellipe.com
+    - keynote:
+        title: Esse cara é o grunt
+        url: https://speakerdeck.com/almirfilho/esse-cara-e-o-grunt
+        lang: pt
+      event:
+        title: 16º Encontro Locaweb de Profissionais de Internet
+        url: http://eventos.locaweb.com.br/16o-encontro-locaweb-de-profissionais-de-internet-rio-de-janeiro/
+        date: 2014-05-15
+        location: Rio de Janeiro / RJ
+        icon: 16encontrolocaweb.png
 
-  - keynote:
-      title: "CSS Layout: o ontem, o hoje e o depois"
-      url: https://speakerdeck.com/almirfilho/css-layout-o-ontem-o-hoje-e-o-depois
-      lang: pt
-    event:
-      title: W3C Web.br
-      url: http://conferenciaweb.w3c.br/2013/
-      date: 2013-11-18
-      location: São Paulo / SP
-      icon: webbr2013.png
-      showyear: true
+  - title: 2013
+    talks:
 
-  - keynote:
-      title: "CSS Layout: o ontem, o hoje e o depois"
-      url: https://speakerdeck.com/almirfilho/css-layout-o-ontem-o-hoje-e-o-depois
-      lang: pt
-    event:
-      title: Front in Sampa
-      url: http://frontinsampa.com.br/2013/
-      date: 2013-09-14
-      location: São Paulo / SP
-      icon: frontinsampa2013.png
-      showyear: true
-    with:
-      name: Caio Gondim
-      url: http://caiogondim.com
+    - keynote:
+        title: Esse cara é o grunt
+        url: https://speakerdeck.com/almirfilho/esse-cara-e-o-grunt
+        lang: pt
+      event:
+        title: Front in Recife
+        url: http://frontinrecife.com.br
+        date: 2013-12-14
+        location: Recife / PE
+        icon: frontinrecife2013.png
+        showyear: true
+      with:
+        name: Davidson Fellipe
+        url: http://fellipe.com
 
-  - keynote:
-      title: "CSS Layout: o ontem, o hoje e o depois"
-      url: https://speakerdeck.com/almirfilho/css-layout-o-ontem-o-hoje-e-o-depois
-      lang: pt
-    event:
-      title: Front in Rio
-      url: http://lanyrd.com/2013/front-in-rio/
-      date: 2013-06-15
-      location: Rio de Janeiro / RJ
-      icon: frontinrio2013.png
-      showyear: true
-    with:
-      name: Caio Gondim
-      url: http://caiogondim.com
+    - keynote:
+        title: "CSS Layout: o ontem, o hoje e o depois"
+        url: https://speakerdeck.com/almirfilho/css-layout-o-ontem-o-hoje-e-o-depois
+        lang: pt
+      event:
+        title: W3C Web.br
+        url: http://conferenciaweb.w3c.br/2013/
+        date: 2013-11-18
+        location: São Paulo / SP
+        icon: webbr2013.png
+        showyear: true
 
-  - keynote:
-      title: Web audio hero
-      url: https://speakerdeck.com/almirfilho/web-audio-hero
-      lang: pt
-    event:
-      title: OlhóSEO
-      url: http://www.olhoseo.com.br/2013/
-      date: 2013-05-03
-      location: Florianópolis / SC
-      icon: olhoseo2013.png
-      showyear: true
+    - keynote:
+        title: "CSS Layout: o ontem, o hoje e o depois"
+        url: https://speakerdeck.com/almirfilho/css-layout-o-ontem-o-hoje-e-o-depois
+        lang: pt
+      event:
+        title: Front in Sampa
+        url: http://frontinsampa.com.br/2013/
+        date: 2013-09-14
+        location: São Paulo / SP
+        icon: frontinsampa2013.png
+        showyear: true
+      with:
+        name: Caio Gondim
+        url: http://caiogondim.com
 
-  - keynote:
-      title: Web audio hero
-      url: https://speakerdeck.com/almirfilho/web-audio-hero
-      lang: pt
-    event:
-      title: RSJS
-      url: http://rsjs.org/2013/
-      date: 2013-03-23
-      location: Porto Alegre / RS
-      icon: rsjs2013.png
-      showyear: true
+    - keynote:
+        title: "CSS Layout: o ontem, o hoje e o depois"
+        url: https://speakerdeck.com/almirfilho/css-layout-o-ontem-o-hoje-e-o-depois
+        lang: pt
+      event:
+        title: Front in Rio
+        url: http://lanyrd.com/2013/front-in-rio/
+        date: 2013-06-15
+        location: Rio de Janeiro / RJ
+        icon: frontinrio2013.png
+        showyear: true
+      with:
+        name: Caio Gondim
+        url: http://caiogondim.com
 
-  - keynote:
-      title: Web audio hero
-      url: https://speakerdeck.com/almirfilho/web-audio-hero
-      lang: pt
-    event:
-      title: Rio.js
-      url: http://lanyrd.com/2013/riojs/
-      date: 2013-03-09
-      location: Rio de Janeiro / RJ
-      icon: riojs2013.png
-      showyear: true
+    - keynote:
+        title: Web audio hero
+        url: https://speakerdeck.com/almirfilho/web-audio-hero
+        lang: pt
+      event:
+        title: OlhóSEO
+        url: http://www.olhoseo.com.br/2013/
+        date: 2013-05-03
+        location: Florianópolis / SC
+        icon: olhoseo2013.png
+        showyear: true
 
-  - keynote:
-      title: "HTML5 Sensitivo: seu browser no plano astral"
-      url: https://speakerdeck.com/almirfilho/html5-sensitivo-seu-browser-no-plano-astral
-      lang: pt
-    event:
-      title: Front in Maceió
-      url: http://frontinmaceio.com.br/2012/
-      date: 2012-10-27
-      location: Maceió / AL
-      icon: frontinmaceio2012.png
-      showyear: true
-    with:
-      name: Caio Gondim
-      url: http://caiogondim.com
+    - keynote:
+        title: Web audio hero
+        url: https://speakerdeck.com/almirfilho/web-audio-hero
+        lang: pt
+      event:
+        title: RSJS
+        url: http://rsjs.org/2013/
+        date: 2013-03-23
+        location: Porto Alegre / RS
+        icon: rsjs2013.png
+        showyear: true
 
-  - keynote:
-      title: "HTML5: seu navegador não é mais o mesmo"
-      url: https://speakerdeck.com/almirfilho/html5-seu-navegador-nao-e-mais-o-mesmo
-      lang: pt
-    event:
-      title: Jubileu de Prata do curso de Ciência da Computação UFMA
-      url: http://www.connection.ufma.br/jubileu/index.php/programacao
-      date: 2011-11-29
-      location: São Luís / Brazil
-      icon: jubileuufma.png
+    - keynote:
+        title: Web audio hero
+        url: https://speakerdeck.com/almirfilho/web-audio-hero
+        lang: pt
+      event:
+        title: Rio.js
+        url: http://lanyrd.com/2013/riojs/
+        date: 2013-03-09
+        location: Rio de Janeiro / RJ
+        icon: riojs2013.png
+        showyear: true
 
-  - keynote:
-      title: "HTML5: seu navegador não é mais o mesmo"
-      url: https://speakerdeck.com/almirfilho/html5-seu-navegador-nao-e-mais-o-mesmo
-      lang: pt
-    event:
-      title: 3.PHP
-      url: http://www.phpmaranhao.com.br/3-php/
-      date: 2011-10-16
-      location: São Luís / MA
-      icon: 3php.png
-    with:
-      name: Caio Gondim
-      url: http://caiogondim.com
+  - title: 2012
+    talks:
+
+    - keynote:
+        title: "HTML5 Sensitivo: seu browser no plano astral"
+        url: https://speakerdeck.com/almirfilho/html5-sensitivo-seu-browser-no-plano-astral
+        lang: pt
+      event:
+        title: Front in Maceió
+        url: http://frontinmaceio.com.br/2012/
+        date: 2012-10-27
+        location: Maceió / AL
+        icon: frontinmaceio2012.png
+        showyear: true
+      with:
+        name: Caio Gondim
+        url: http://caiogondim.com
+
+  - title: 2011
+    talks:
+
+    - keynote:
+        title: "HTML5: seu navegador não é mais o mesmo"
+        url: https://speakerdeck.com/almirfilho/html5-seu-navegador-nao-e-mais-o-mesmo
+        lang: pt
+      event:
+        title: Jubileu de Prata do curso de Ciência da Computação UFMA
+        url: http://www.connection.ufma.br/jubileu/index.php/programacao
+        date: 2011-11-29
+        location: São Luís / Brazil
+        icon: jubileuufma.png
+
+    - keynote:
+        title: "HTML5: seu navegador não é mais o mesmo"
+        url: https://speakerdeck.com/almirfilho/html5-seu-navegador-nao-e-mais-o-mesmo
+        lang: pt
+      event:
+        title: 3.PHP
+        url: http://www.phpmaranhao.com.br/3-php/
+        date: 2011-10-16
+        location: São Luís / MA
+        icon: 3php.png
+      with:
+        name: Caio Gondim
+        url: http://caiogondim.com
 ---
 

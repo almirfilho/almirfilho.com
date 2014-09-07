@@ -11,8 +11,14 @@
         <hr class="alm-hr" />
     </header>
 
+    {{# each sections }}
+    {{# if this.title }}
+    <h2 class="alm-title alm-title--is-secondary alm-title--with-margin">
+        {{ this.title }}
+    </h2>
+    {{/ if }}
     <ul class="alm-list">
-        {{# each talks }}
+        {{# each this.talks }}
         <li class="alm-list--item alm-list--item--size-big">
             <div class="alm-list--item-row">
                 <div class="alm-list--item-thumb">
@@ -25,22 +31,26 @@
                             {{ this.event.title }}
                             {{# if this.event.showyear }}
                             <span class="alm-list--item-year">
-                                '{{ dateformat ../../lang this.event.date 'shortYear' }}
+                                '{{ dateformat ../../../lang this.event.date 'shortYear' }}
                             </span>
                             {{/ if }}
                         </a>
                     </h3>
                     <p class="alm-list--item-title" lang="{{ this.keynote.lang }}">
+                        {{# if this.keynote.url }}
                         <a href="{{ this.keynote.url }}" target="_blank">
                             {{ this.keynote.title }}
                         </a>
+                        {{ else }}
+                        {{ this.keynote.title }}
+                        {{/ if }}
                     </p>
                     <p class="alm-list--item-attrs">
                         <time class="alm-small alm-icon alm-icon-date" datetime="{{ this.event.date }}">
-                            {{ dateformat ../lang this.event.date 'day' }}
-                            {{ dateformat ../lang this.event.date 'month' }}
+                            {{ dateformat ../../lang this.event.date 'day' }}
+                            {{ dateformat ../../lang this.event.date 'month' }}
                             <span class="alm-strong">
-                                {{ dateformat ../lang this.event.date 'year' }}
+                                {{ dateformat ../../lang this.event.date 'year' }}
                             </span>
                         </time>
                         <small class="alm-small alm-icon alm-icon-location">
@@ -59,6 +69,7 @@
         </li>
         {{/ each }}
     </ul>
+    {{/ each }}
 </section>
 
 {{> tail }}
