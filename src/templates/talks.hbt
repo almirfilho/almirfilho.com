@@ -15,7 +15,7 @@
         	<div class="alm-list--item-row">
         		<div class="alm-list--item-thumb">
 		            <img class="alm-avatar alm-avatar--size-big"
-		                 src="/images/avatars/{{ this.event.icon }}.jpg" />
+		                 src="/images/talks/{{ this.event.icon }}" />
 		        </div>
 	            <div class="alm-list--item-info">
 		            <h3 class="alm-list--item-title alm-list--item-title--size-big">
