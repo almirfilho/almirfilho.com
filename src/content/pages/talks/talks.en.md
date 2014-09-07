@@ -189,4 +189,21 @@ talks:
       date: 2012-10-27
       location: Maceió / Brazil
       icon: frontinmaceio2012.png
+    with:
+      name: Caio Gondim
+      url: http://caiogondim.com
+
+  - keynote:
+      title: "HTML5: seu navegador não é mais o mesmo"
+      url: https://speakerdeck.com/almirfilho/html5-seu-navegador-nao-e-mais-o-mesmo
+      lang: pt
+    event:
+      title: 3.PHP
+      url: http://www.phpmaranhao.com.br/3-php/
+      date: 2011-10-16
+      location: São Luís / Brazil
+      icon: 3php.png
+    with:
+      name: Caio Gondim
+      url: http://caiogondim.com
 ---
