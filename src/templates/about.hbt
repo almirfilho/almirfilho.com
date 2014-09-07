@@ -13,13 +13,34 @@
 
     <ul class="alm-social-list">
         <li class="alm-social-item">
-            <a class="alm-round-icon" href="#"></a>
+            <a class="alm-round-icon alm-icon-twitter" href="#"></a>
         </li>
         <li class="alm-social-item">
-            <a class="alm-round-icon" href="#"></a>
+            <a class="alm-round-icon alm-icon-github" href="#"></a>
         </li>
         <li class="alm-social-item">
-            <a class="alm-round-icon" href="#"></a>
+            <a class="alm-round-icon alm-icon-facebook" href="#"></a>
+        </li>
+        <li class="alm-social-item">
+            <a class="alm-round-icon alm-icon-instagram" href="#"></a>
+        </li>
+        <li class="alm-social-item">
+            <a class="alm-round-icon alm-icon-lastfm" href="#"></a>
+        </li>
+        <li class="alm-social-item">
+            <a class="alm-round-icon alm-icon-linkedin" href="#"></a>
+        </li>
+        <li class="alm-social-item">
+            <a class="alm-round-icon alm-icon-coderwall" href="#"></a>
+        </li>
+        <li class="alm-social-item">
+            <a class="alm-round-icon alm-icon-googleplus" href="#"></a>
+        </li>
+        <li class="alm-social-item">
+            <a class="alm-round-icon alm-icon-slideshare" href="#"></a>
+        </li>
+        <li class="alm-social-item">
+            <a class="alm-round-icon alm-icon-speakerdeck" href="#"></a>
         </li>
     </ul>
 
