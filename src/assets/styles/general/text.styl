@@ -1,4 +1,35 @@
-// Text elements ---------------------------------------------------------------
+// Title -----------------------------------------------------------------------
+
+.alm-title
+  font-size 3.8em
+  font-weight normal
+  font-family fonts-sans-bold
+  text-align center
+  text-transform uppercase
+  letter-spacing -0.05em
+
+// Title Modifiers -------------------------------------------------------------
+
+.alm-title--is-secondary
+  font-size 3em
+  font-family fonts-sans-lighter
+  color color-palette-green
+
+.alm-title--with-margin
+  margin size-smallest 0
+
+// Subtitle --------------------------------------------------------------------
+
+.alm-subtitle
+  font-size 2em
+  font-style italic
+  font-family fonts-serif-normal
+  text-align center
+
+  .alm-title + &
+    margin-top (size-smallest / 2)
+
+// Inline elements -------------------------------------------------------------
 
 .alm-small
   font-size 1.2em
