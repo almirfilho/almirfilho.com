@@ -146,5 +146,16 @@ talks:
       date: 2013-05-03
       location: Florianópolis / SC
       icon: olhoseo2013.png
+
+  - keynote:
+      title: Web audio hero
+      url: https://speakerdeck.com/almirfilho/web-audio-hero
+      lang: pt
+    event:
+      title: RSJS
+      url: http://rsjs.org/2013/
+      date: 2013-03-23
+      location: Porto Alegre / RS
+      icon: rsjs2013.png
 ---
 
