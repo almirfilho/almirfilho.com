@@ -79,7 +79,7 @@ talks:
     event:
       title: 16º Encontro Locaweb de Profissionais de Internet
       url: http://eventos.locaweb.com.br/16o-encontro-locaweb-de-profissionais-de-internet-rio-de-janeiro/
-      date: 2014-05-17
+      date: 2014-05-15
       location: Rio de Janeiro / RJ
       icon: 16encontrolocaweb.png
 
@@ -90,11 +90,22 @@ talks:
     event:
       title: Front in Recife
       url: http://frontinrecife.com.br
-      date: 2013-05-17
+      date: 2013-12-14
       location: Recife / PE
       icon: frontinrecife2013.png
     with:
       name: Davidson Fellipe
       url: dasdasdas
+
+  - keynote:
+      title: "CSS Layout: o ontem, o hoje e o depois"
+      url: https://speakerdeck.com/almirfilho/css-layout-o-ontem-o-hoje-e-o-depois
+      lang: pt
+    event:
+      title: W3C Web.br
+      url: http://conferenciaweb.w3c.br/2013/
+      date: 2013-11-18
+      location: São Paulo / SP
+      icon: webbr2013.png
 ---
 
