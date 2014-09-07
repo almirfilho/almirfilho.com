@@ -1,57 +1,59 @@
 {{> head }}
 
 <section class="alm-main-content alm-main-content--with-padding">
-	<header class="alm-main-content--header">
-		<h1 class="alm-title">
-			<a class="alm-title-link" href="/{{ path }}/">{{ title }}</a>
-		</h1>
-		<p class="alm-subtitle">{{ subtitle }}</p>
-		<hr class="alm-hr" />
-	</header>
+    <header class="alm-main-content--header">
+        <h1 class="alm-title">
+            <a class="alm-title-link" href="/{{ path }}/">
+                {{ en_pt lang title titulo }}
+            </a>
+        </h1>
+        <p class="alm-subtitle">{{ subtitle }}</p>
+        <hr class="alm-hr" />
+    </header>
 
     <ul class="alm-list">
         {{# each talks }}
         <li class="alm-list--item alm-list--item--size-big">
-        	<div class="alm-list--item-row">
-        		<div class="alm-list--item-thumb">
-		            <img class="alm-avatar alm-avatar--size-big"
-		                 src="/images/talks/{{ this.event.icon }}" />
-		        </div>
-	            <div class="alm-list--item-info">
-		            <h3 class="alm-list--item-title alm-list--item-title--size-big">
-		            	<a href="{{ this.event.url }}" target="_blank">
-		            		{{ this.event.title }}
-		            		<time class="alm-list--item-year">
-		            			'{{ dateformat ../lang this.event.date 'shortYear' }}
-		            		</time>
-		            	</a>
-		            </h3>
-		            <p class="alm-list--item-title" lang="{{ this.keynote.lang }}">
-		            	<a href="{{ this.keynote.url }}" target="_blank">
-		            		{{ this.keynote.title }}
-		            	</a>
-		            </p>
-		            <p class="alm-list--item-attrs">
-			            <time class="alm-small alm-icon alm-icon-date" datetime="{{ this.event.date }}">
-			            	{{ dateformat ../lang this.event.date 'day' }}
-			            	{{ dateformat ../lang this.event.date 'month' }}
-			            	<span class="alm-strong">
-			            		{{ dateformat ../lang this.event.date 'year' }}
-			            	</span>
-			            </time>
-			            <small class="alm-small alm-icon alm-icon-location">
-			            	{{ this.event.location }}
-			            </small>
-			            {{# if this.with }}
-			            <small class="alm-small alm-list--item-with">
-			            	<a class="alm-strong" href="{{ this.with.url }}">
-			            		{{ this.with.name }}
-			            	</a>
-			            </small>
-			            {{/ if }}
-			        </p>
-				</div>
-	        </div>
+            <div class="alm-list--item-row">
+                <div class="alm-list--item-thumb">
+                    <img class="alm-avatar alm-avatar--size-big"
+                         src="/images/talks/{{ this.event.icon }}" />
+                </div>
+                <div class="alm-list--item-info">
+                    <h3 class="alm-list--item-title alm-list--item-title--size-big">
+                        <a href="{{ this.event.url }}" target="_blank">
+                            {{ this.event.title }}
+                            <time class="alm-list--item-year">
+                                '{{ dateformat ../lang this.event.date 'shortYear' }}
+                            </time>
+                        </a>
+                    </h3>
+                    <p class="alm-list--item-title" lang="{{ this.keynote.lang }}">
+                        <a href="{{ this.keynote.url }}" target="_blank">
+                            {{ this.keynote.title }}
+                        </a>
+                    </p>
+                    <p class="alm-list--item-attrs">
+                        <time class="alm-small alm-icon alm-icon-date" datetime="{{ this.event.date }}">
+                            {{ dateformat ../lang this.event.date 'day' }}
+                            {{ dateformat ../lang this.event.date 'month' }}
+                            <span class="alm-strong">
+                                {{ dateformat ../lang this.event.date 'year' }}
+                            </span>
+                        </time>
+                        <small class="alm-small alm-icon alm-icon-location">
+                            {{ this.event.location }}
+                        </small>
+                        {{# if this.with }}
+                        <small class="alm-small alm-list--item-with">
+                            <a class="alm-strong" href="{{ this.with.url }}">
+                                {{ this.with.name }}
+                            </a>
+                        </small>
+                        {{/ if }}
+                    </p>
+                </div>
+            </div>
         </li>
         {{/ each }}
     </ul>
