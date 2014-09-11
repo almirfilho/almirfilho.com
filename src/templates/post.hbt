@@ -12,7 +12,7 @@
 				{{# if cover }}
 					src="{{ cover.file }}"
 				{{ else }}
-					src="/images/posts/{{ slugify title }}.jpg"
+					src="{{ slugify title }}.jpg"
 				{{/ if }}
 				/>
 				<h1 class="alm-title alm-post-title">
