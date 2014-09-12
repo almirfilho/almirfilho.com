@@ -7,13 +7,13 @@ header-cover-height--expanded-desktop = header-cover-height * scale
 // Mixins ----------------------------------------------------------------------
 
 vertical-top()
-  -webkit-transform none
+  s('none')
 
 vertical-bottom(height)
-  -webkit-transform s('translateY(calc(' + height + ' - 100%))')
+  s('translateY(calc(' + height + ' - 100%))')
 
 vertical-center(height)
-  -webkit-transform s('translateY(calc(' + (height / 2) + ' - 50%))')
+  s('translateY(calc(' + (height / 2) + ' - 50%))')
 
 // Header ----------------------------------------------------------------------
 
@@ -46,33 +46,33 @@ vertical-center(height)
   position absolute
   width 100%
   transition -webkit-transform 1.2s ease
-  vertical-center(header-cover-height)
+  -webkit-transform vertical-center(header-cover-height)
 
   .alm-post-header-cover-box:hover &
     transition -webkit-transform 0.8s ease
-    vertical-center(header-cover-height--expanded-mobile)
+    -webkit-transform vertical-center(header-cover-height--expanded-mobile)
 
     @media screen and (min-width: min-desktop-width)
-      vertical-center(header-cover-height--expanded-desktop)
+      -webkit-transform vertical-center(header-cover-height--expanded-desktop)
 
 // Header cover Modifiers ------------------------------------------------------
 
 .alm-post-header-cover--at-top-on-ini
-  vertical-top()
+  -webkit-transform vertical-top()
 
 .alm-post-header-cover--at-top-on-end
   .alm-post-header-cover-box:hover &
-    vertical-top()
+    -webkit-transform vertical-top()
 
 .alm-post-header-cover--at-bottom-on-ini
-  vertical-bottom(header-cover-height)
+  -webkit-transform vertical-bottom(header-cover-height)
 
 .alm-post-header-cover--at-bottom-on-end
   .alm-post-header-cover-box:hover &
-    vertical-bottom(header-cover-height--expanded-mobile)
+    -webkit-transform vertical-bottom(header-cover-height--expanded-mobile)
 
     @media screen and (min-width: min-desktop-width)
-      vertical-bottom(header-cover-height--expanded-desktop)
+      -webkit-transform vertical-bottom(header-cover-height--expanded-desktop)
 
 // Header cover description ----------------------------------------------------
 
