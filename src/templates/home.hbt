@@ -1,15 +1,44 @@
 {{> head }}
 
 <section class="alm-main-content">
-    <ul class="alm-post-list">
-        {{# each collections.posts }}
-        <li class="alm-post-list--item">
-            <a class="alm-post-list--item-link" href="{{ this.path }}/">
-                <span class="alm-post-title">{{ this.title }}</span>
-            </a>
-        </li>
-        {{/ each }}
-    </ul>
+	<ul class="alm-post-list">
+		{{# each collections.posts }}
+		<li class="alm-post-header">
+			<div class="alm-post-header-cover-box">
+				<img class="alm-post-header-cover
+					{{# ifequals this.cover.ini_pos 'top' }}alm-post-header-cover--at-top-on-ini{{/ ifequals }}
+				 	{{# ifequals this.cover.ini_pos 'bottom' }}alm-post-header-cover--at-bottom-on-ini{{/ ifequals }}"
+					src="{{# if this.cover.file }}{{ this.cover.file }}{{ else }}{{ this.path }}/{{ slugify this.title }}.jpg{{/ if }}"
+				/>
+				<h1 class="alm-title alm-post-title">
+					<a class="alm-post-title-link" href="{{ this.path }}">
+						<span class="alm-post-title-content">{{ this.title }}</span>
+					</a>
+				</h1>
+			</div>
+			<aside class="alm-post-info">
+				<span class="alm-post-info-description alm-post-info-description--is-left">
+					{{ en_pt lang 'On' 'Em' }}
+					<time class="alm-post-info-date" datetime="{{ this.date }}">
+						{{ dateformat lang this.date }}
+					</time>
+				</span>
+				<img class="alm-avatar alm-post-author-avatar"
+					 src="{{ author.avatar }}"
+					 alt="{{ author.name }}" />
+				<span class="alm-post-info-description alm-post-info-description--is-right">
+					{{ en_pt lang 'By' 'Por' }}
+					<span class="alm-post-author-name">{{ author.name }}</span>
+				</span>
+				{{# if cover.desc }}
+					<p class="alm-post-header-cover-description">
+						{{ en_pt lang 'Photo' 'Foto' }}: {{ this.cover.desc }}
+					</p>
+				{{/ if }}
+			</aside>
+		</li>
+		{{/ each }}
+	</ul>
 </section>
 
 {{> tail }}
