@@ -4,8 +4,27 @@
   list-style none
 
   .alm-post-title
-    background none
+    background rgba(color-palette-purple, 60%)
+    transition background 0.25s ease
 
   .alm-post-title-content
     position static
     top 0
+
+  .alm-post-info
+    display none
+
+  .alm-post-header-cover
+    transition-duration 0.5s
+    -webkit-transform scale(1.04) vertical-center(header-cover-height)
+
+  .alm-post-header-cover-box
+    &:hover
+      height header-cover-height
+
+      .alm-post-title
+        background none
+
+      .alm-post-header-cover
+        transition-duration 0.5s
+        -webkit-transform vertical-center(header-cover-height)
