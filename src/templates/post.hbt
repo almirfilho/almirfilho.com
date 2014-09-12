@@ -9,11 +9,7 @@
 				 	{{# ifequals cover.ini_pos 'bottom' }}alm-post-header-cover--at-bottom-on-ini{{/ ifequals }}
 				 	{{# ifequals cover.end_pos 'top' }}alm-post-header-cover--at-top-on-end{{/ ifequals }}
 				 	{{# ifequals cover.end_pos 'bottom' }}alm-post-header-cover--at-bottom-on-end{{/ ifequals }}"
-				{{# if cover }}
-					src="{{ cover.file }}"
-				{{ else }}
-					src="{{ slugify title }}.jpg"
-				{{/ if }}
+					src="{{# if cover.file }}{{ cover.file }}{{ else }}{{ slugify title }}.jpg{{/ if }}"
 				/>
 				<h1 class="alm-title alm-post-title">
 					<a class="alm-post-title-link" href="#">
