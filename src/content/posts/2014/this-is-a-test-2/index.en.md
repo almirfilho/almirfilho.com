@@ -1,6 +1,6 @@
 ---
-title: This is a test
-date: 2014-09-12
+title: This is a test 2
+date: 2014-09-13
 template: post.hbt
 lang: en
 translated: false

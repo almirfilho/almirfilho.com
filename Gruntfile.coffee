@@ -45,6 +45,14 @@ module.exports = (grunt) ->
           src: ['**']
           dest: 'build/images/'
         ]
+      post_images:
+        files: [
+          expand: true
+          cwd: 'src/content/posts/'
+          src: ['**/*.jpg']
+          dest: 'build/posts/'
+          rename: (dest, src, opt) -> dest + src.replace /^\d{4}\//, ''
+        ]
       fonts:
         files: [
           expand: true
@@ -72,7 +80,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'metal', ['shell:metalsmith', 'clean:after']
   grunt.registerTask 'build:dev', ['metal', 'stylus:dev', 'copy']
-  grunt.registerTask 'build:dev:fresh', ['clean:all', 'metal', 'stylus:dev', 'copy']
+  grunt.registerTask 'build:dev:fresh', ['clean:all', 'build:dev']
   grunt.registerTask 'build:prod', ['metal', 'stylus:prod', 'copy']
   grunt.registerTask 'run', ['build:dev:fresh', 'concurrent']
   grunt.registerTask 'default', ['run']
