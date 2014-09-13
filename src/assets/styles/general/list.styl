@@ -71,6 +71,16 @@
 .alm-list-item-attrs
   line-height 180%
 
+  .alm-icon
+    display block
+    padding-top 0
+
+    @media screen and (min-width: min-tablet-width)
+      display inline-block
+
+      + .alm-icon
+        margin-left 0.6em
+
 .alm-list-item-with
   &::before
     text-transform lowercase
