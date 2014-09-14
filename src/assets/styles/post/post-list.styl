@@ -1,37 +1,34 @@
+post-list-header-cover-height = post-header-cover-height - 22
+post-list-cover-transition    = transform 0.5s ease, opacity 0.5s ease
+
 // Post Lists ------------------------------------------------------------------
 
 .alm-post-list
   list-style none
 
   .alm-post-title
-    // background rgba(color-palette-purple, 60%)
-    // transition background 0.25s ease
     background none
 
   .alm-post-title-content
     position static
-    top 0
 
   .alm-post-info
     display none
 
   .alm-post-header-cover
     opacity 0.6
-    transition -webkit-transform 0.5s ease, opacity 0.5s ease
-    // transition-duration 0.5s
-    // -webkit-transform scale(1.04) vertical-center(header-cover-height)
+    transition post-list-cover-transition
 
   .alm-post-header-cover-box
-    height 238px
+    height post-list-header-cover-height
 
     &:hover
-      height 238px
+      height post-list-header-cover-height
 
       .alm-post-title
         background none
 
       .alm-post-header-cover
         opacity 1
-        transition -webkit-transform 0.5s ease, opacity 0.5s ease
-        // transition-duration 0.5s
-        -webkit-transform scale(1.04) vertical-center(header-cover-height)
+        transition post-list-cover-transition
+        transform scale(1.04) vertical-center(post-header-cover-height)
