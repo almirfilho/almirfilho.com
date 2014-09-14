@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1"
-	 xmlns="http://www.w3.org/2000/svg"
-	 xmlns:xlink="http://www.w3.org/1999/xlink"
-	 x="0px" y="0px"
-	 width="111.749px" height="60px">
-	<polygon fill="#626988" points="34.641,0 0,60 15.677,60 42.479,13.576 "/>
-	<polygon fill="#8BA27A" points="55.875,0 21.234,60 36.912,60 63.713,13.576 "/>
-	<polygon fill="#CCCCCC" points="42.469,60 77.108,0 111.749,60 "/>
+<svg class="alm-logo-image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="111.749px" height="60px">
+	<polygon class="alm-logo-t alm-logo-t1" fill="#626988" points="34.641,0 0,60 15.677,60 42.479,13.576 "/>
+	<polygon class="alm-logo-t alm-logo-t2" fill="#8BA27A" points="55.875,0 21.234,60 36.912,60 63.713,13.576 "/>
+	<polygon class="alm-logo-t alm-logo-t3" fill="#CCCCCC" points="42.469,60 77.108,0 111.749,60 "/>
 </svg>
