@@ -4,8 +4,9 @@
   list-style none
 
   .alm-post-title
-    background rgba(color-palette-purple, 60%)
-    transition background 0.25s ease
+    // background rgba(color-palette-purple, 60%)
+    // transition background 0.25s ease
+    background none
 
   .alm-post-title-content
     position static
@@ -15,16 +16,22 @@
     display none
 
   .alm-post-header-cover
-    transition-duration 0.5s
-    -webkit-transform scale(1.04) vertical-center(header-cover-height)
+    opacity 0.6
+    transition -webkit-transform 0.5s ease, opacity 0.5s ease
+    // transition-duration 0.5s
+    // -webkit-transform scale(1.04) vertical-center(header-cover-height)
 
   .alm-post-header-cover-box
+    height 238px
+
     &:hover
-      height header-cover-height
+      height 238px
 
       .alm-post-title
         background none
 
       .alm-post-header-cover
-        transition-duration 0.5s
-        -webkit-transform vertical-center(header-cover-height)
+        opacity 1
+        transition -webkit-transform 0.5s ease, opacity 0.5s ease
+        // transition-duration 0.5s
+        -webkit-transform scale(1.04) vertical-center(header-cover-height)
