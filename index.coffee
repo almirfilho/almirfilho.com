@@ -25,11 +25,12 @@ handlebarsConfig = (options) ->
 
     if 'helpers' of options
       availableHelpers =
+        svgLogo: -> new handlebars.SafeString svgLogoContent if svgLogoContent
+
+        slugify: (str) -> new handlebars.SafeString _s.slugify str
+
         ifequals: (value1, value2, options) ->
           if value1 is value2 then options.fn @ else options.inverse @
-
-        slugify: (str) ->
-          new handlebars.SafeString _s.slugify str
 
         dateformat: (lang, dateStr, part = null) ->
           date = new Date dateStr
@@ -81,6 +82,11 @@ debug = ->
 
 # running metalsmith pipeline --------------------------------------------------
 
+svgLogoContent = (->
+  filename = 'src/content/images/almirfilho-logo.svg'
+  fs.readFileSync("#{__dirname}/#{filename}").toString()
+)()
+
 new Metalsmith __dirname
   .source 'src/content'
   .use metadata
@@ -120,7 +126,7 @@ new Metalsmith __dirname
   .use markdown smartypants: true
   .use handlebarsConfig
     partials: ['head', 'tail', 'header', 'footer', 'back', 'scripts']
-    helpers: ['ifequals', 'slugify', 'dateformat', 'ifEn', 'ifPt', 'en_pt', 'urlTo']
+    helpers: ['ifequals', 'slugify', 'dateformat', 'ifEn', 'ifPt', 'en_pt', 'urlTo',  'svgLogo']
   .use templates
     engine: 'handlebars'
     directory: 'src/templates'
