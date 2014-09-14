@@ -6,9 +6,7 @@
 		</a>
 	</h1>
 	<div class="alm-logo">
-		<a class="alm-logo-link" href="/">
-			<img class="alm-logo-image" src="/images/almirfilho-logo.svg" />
-		</a>
+		<a class="alm-logo-link" href="/">{{ svgLogo }}</a>
 	</div>
 	<nav class="alm-menu">
 		<ul class="alm-menu-list">
