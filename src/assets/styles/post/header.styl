@@ -45,34 +45,34 @@ vertical-center(height)
 .alm-post-header-cover
   position absolute
   width 100%
-  transition -webkit-transform 1.2s ease
-  -webkit-transform vertical-center(post-header-cover-height)
+  transition transform 1.2s ease
+  transform vertical-center(post-header-cover-height)
 
   .alm-post-header-cover-box:hover &
-    transition -webkit-transform 0.8s ease
-    -webkit-transform vertical-center(post-header-cover-height--expanded-mobile)
+    transition transform 0.8s ease
+    transform vertical-center(post-header-cover-height--expanded-mobile)
 
     @media screen and (min-width: min-desktop-width)
-      -webkit-transform vertical-center(post-header-cover-height--expanded-desktop)
+      transform vertical-center(post-header-cover-height--expanded-desktop)
 
 // Header cover Modifiers ------------------------------------------------------
 
 .alm-post-header-cover--at-top-on-ini
-  -webkit-transform vertical-top()
+  transform vertical-top()
 
 .alm-post-header-cover--at-top-on-end
   .alm-post-header-cover-box:hover &
-    -webkit-transform vertical-top()
+    transform vertical-top()
 
 .alm-post-header-cover--at-bottom-on-ini
-  -webkit-transform vertical-bottom(post-header-cover-height)
+  transform vertical-bottom(post-header-cover-height)
 
 .alm-post-header-cover--at-bottom-on-end
   .alm-post-header-cover-box:hover &
-    -webkit-transform vertical-bottom(post-header-cover-height--expanded-mobile)
+    transform vertical-bottom(post-header-cover-height--expanded-mobile)
 
     @media screen and (min-width: min-desktop-width)
-      -webkit-transform vertical-bottom(post-header-cover-height--expanded-desktop)
+      transform vertical-bottom(post-header-cover-height--expanded-desktop)
 
 // Header cover description ----------------------------------------------------
 
