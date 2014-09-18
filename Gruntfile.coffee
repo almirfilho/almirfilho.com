@@ -20,6 +20,15 @@ module.exports = (grunt) ->
         files:
           'build/styles/style.css': 'src/assets/styles/main.styl'
 
+    svgmin:
+      dist:
+        files: [
+          expand: true
+          cwd: 'build/images/'
+          src: ['**/*.svg']
+          dest: 'build/images/'
+        ]
+
     connect:
       server:
         options:
@@ -64,7 +73,7 @@ module.exports = (grunt) ->
         tasks: ['stylus:dev']
       images:
         files: ['src/**/*.jpg', 'src/**/*.svg', 'src/**/*.png']
-        tasks: ['copy:images']
+        tasks: ['copy:images', 'svgmin']
 
     concurrent:
       dev:
@@ -73,8 +82,8 @@ module.exports = (grunt) ->
           logConcurrentOutput: true
 
   grunt.registerTask 'metal', ['shell:metalsmith', 'clean:after']
-  grunt.registerTask 'build:dev', ['metal', 'stylus:dev', 'copy']
+  grunt.registerTask 'build:dev', ['metal', 'stylus:dev', 'copy', 'svgmin']
   grunt.registerTask 'build:dev:fresh', ['clean:all', 'build:dev']
-  grunt.registerTask 'build:prod', ['metal', 'stylus:prod', 'copy']
+  grunt.registerTask 'build:prod', ['metal', 'stylus:prod', 'copy', 'svgmin']
   grunt.registerTask 'run', ['build:dev:fresh', 'concurrent']
   grunt.registerTask 'default', ['run']
