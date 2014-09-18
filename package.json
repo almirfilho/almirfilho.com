@@ -27,6 +27,7 @@
     "grunt-contrib-stylus": "~0.17.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-shell": "~0.7.0",
+    "grunt-svgmin": "^1.0.0",
     "handlebars": "~2.0.0-alpha.4",
     "load-grunt-tasks": "^0.6.0",
     "metalsmith": "~0.8.0",
