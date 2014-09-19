@@ -60,13 +60,15 @@ handlebarsConfig = (options) ->
 
         urlTo: (lang, path = '') ->
           if lang? and path?
+            if path is '/' or path is '/pt'
+              return if lang is 'en' then '/' else '/pt/'
             ptEnd = '/pt'
             strEndsWithPt = path.indexOf(ptEnd, path.length - ptEnd.length) isnt -1
             if lang is 'en' and strEndsWithPt
               path = new handlebars.SafeString path[..-(ptEnd.length + 1)]
             else if lang is 'pt' and not strEndsWithPt
               path = new handlebars.SafeString "#{path}/pt"
-          path
+            "/#{path}/"
 
       for helper in options.helpers
         if helper of availableHelpers

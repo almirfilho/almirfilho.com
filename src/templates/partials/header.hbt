@@ -25,11 +25,11 @@
 	<ul class="alm-lang-menu">
 		<li class="alm-lang-menu-item {{#ifEn lang}}alm-lang-menu-item--is-active{{/ifEn}}">
 			<a class="alm-lang-menu-link" lang="en" title="English version"
-			   href="/{{ urlTo 'en' path }}/">EN</a>
+			   href="{{ urlTo 'en' path }}">EN</a>
 		</li>
 		<li class="alm-lang-menu-item {{#ifPt lang}}alm-lang-menu-item--is-active{{/ifPt}}">
 			<a class="alm-lang-menu-link" lang="pt" title="Versão em português"
-			   href="/{{ urlTo 'pt' path }}/">PT</a>
+			   href="{{ urlTo 'pt' path }}">PT</a>
 		</li>
 	</ul>
 	{{/ if }}
