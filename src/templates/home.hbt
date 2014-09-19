@@ -8,10 +8,10 @@
 				<img class="alm-post-header-cover
 					{{# ifequals this.cover.ini_pos 'top' }}alm-post-header-cover--at-top-on-ini{{/ ifequals }}
 				 	{{# ifequals this.cover.ini_pos 'bottom' }}alm-post-header-cover--at-bottom-on-ini{{/ ifequals }}"
-					src="{{# if this.cover.file }}{{ this.cover.file }}{{ else }}{{ this.path }}/{{ slugify this.title }}.jpg{{/ if }}"
+					src="{{# if this.cover.file }}{{ this.cover.file }}{{ else }}/{{ this.path }}/{{ slugify this.title }}.jpg{{/ if }}"
 				/>
 				<h1 class="alm-title alm-post-title">
-					<a class="alm-post-title-link" href="{{ this.path }}">
+					<a class="alm-post-title-link" href="{{ urlTo ../lang this.path }}">
 						<span class="alm-post-title-content">{{ this.title }}</span>
 					</a>
 				</h1>
