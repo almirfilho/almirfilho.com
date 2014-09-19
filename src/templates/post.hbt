@@ -45,5 +45,4 @@
 	</article>
 </section>
 
-{{> back }}
 {{> tail }}
