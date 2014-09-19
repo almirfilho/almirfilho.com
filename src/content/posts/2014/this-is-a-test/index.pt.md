@@ -1,9 +1,11 @@
 ---
-title: This is a test
-titulo: Isso é um teste
+slug: This is a test
+title: Isso é um teste
 date: 2014-09-12
 template: post.hbt
 translated: true
+cover:
+  desc: Uma descrição para a cara do post.
 ---
 
 ## Português texto

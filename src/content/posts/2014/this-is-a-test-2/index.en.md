@@ -1,9 +1,9 @@
 ---
+slug: This is a test 2
 title: This is a test 2
 date: 2014-09-13
 template: post.hbt
-lang: en
-translated: false
+translated: true
 cover:
   desc: The is a description for the post's cover image.
   ini_pos:

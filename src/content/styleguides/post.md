@@ -1,4 +1,5 @@
 ---
+slug: Post
 title: Post
 date: 2014-07-13
 template: post.hbt

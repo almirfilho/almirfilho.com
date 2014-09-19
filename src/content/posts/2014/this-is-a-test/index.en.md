@@ -1,4 +1,5 @@
 ---
+slug: This is a test
 title: This is a test
 date: 2014-09-12
 template: post.hbt

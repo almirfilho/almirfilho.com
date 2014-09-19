@@ -98,32 +98,34 @@ new Metalsmith __dirname
     {pattern: "**/*.pt.md", metadata: {"lang": "pt"}}
   ]
   .use collections
-    posts:
+    posts_en:
       pattern: 'posts/**/*.en.md'
+    posts_pt:
+      pattern: 'posts/**/*.pt.md'
   .use(
     branch 'posts/**/*.en.md'
       .use markdown smartypants: true
-      .use permalinks pattern: 'posts/:title'
+      .use permalinks pattern: 'posts/:slug'
   )
   .use(
     branch 'posts/**/*.pt.md'
       .use markdown smartypants: true
-      .use permalinks pattern: 'posts/:title/pt'
+      .use permalinks pattern: 'posts/:slug/pt'
   )
   .use(
     branch 'pages/**/*.en.md'
       .use markdown smartypants: true
-      .use permalinks pattern: ':title'
+      .use permalinks pattern: ':slug'
   )
   .use(
     branch 'pages/**/*.pt.md'
       .use markdown smartypants: true
-      .use permalinks pattern: ':title/pt'
+      .use permalinks pattern: ':slug/pt'
   )
   .use(
     branch 'styleguides/**/*.md'
       .use markdown smartypants: true
-      .use permalinks pattern: 'styleguides/:title'
+      .use permalinks pattern: 'styleguides/:slug'
   )
   .use(
     branch 'home/index.en.md'
