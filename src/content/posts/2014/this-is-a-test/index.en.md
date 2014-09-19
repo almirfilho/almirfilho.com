@@ -2,8 +2,7 @@
 title: This is a test
 date: 2014-09-12
 template: post.hbt
-lang: en
-translated: false
+translated: true
 cover:
   desc: The is a description for the post's cover image.
   ini_pos:
