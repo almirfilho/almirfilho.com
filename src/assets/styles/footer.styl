@@ -1,10 +1,14 @@
 .alm-footer
-  padding size-small 0 size-medium 0
-  font-size 1.1em
+  padding size-smaller size-smallest
+  font-size 0.7em
   text-align center
   text-transform uppercase
   line-height 200%
   color rgba(color-palette-gray, 0.5)
+
+  @media screen and (min-width: min-tablet-width)
+    padding size-small size-smaller size-medium size-smaller
+    font-size 1.1em
 
 .alm-footer-link
   color rgba(color-palette-gray, 0.8)
