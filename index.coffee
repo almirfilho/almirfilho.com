@@ -123,6 +123,16 @@ new Metalsmith __dirname
       .use markdown smartypants: true
       .use permalinks pattern: 'styleguides/:title'
   )
+  .use(
+    branch 'home/index.en.md'
+      .use markdown smartypants: true
+      .use permalinks '/'
+  )
+  .use(
+    branch 'home/index.pt.md'
+      .use markdown smartypants: true
+      .use permalinks '/pt'
+  )
   .use markdown smartypants: true
   .use handlebarsConfig
     partials: ['head', 'tail', 'header', 'footer', 'scripts']
