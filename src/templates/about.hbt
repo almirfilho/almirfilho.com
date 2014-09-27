@@ -3,9 +3,7 @@
 <section class="alm-main-content alm-main-content--with-padding">
     <header class="alm-main-content-header">
         <h1 class="alm-title">
-            <a class="alm-title-link" href="/{{ path }}/">
-                {{ en_pt lang title titulo }}
-            </a>
+            <a class="alm-title-link" href="/{{ path }}/">{{ title }}</a>
         </h1>
         <p class="alm-subtitle">{{ subtitle }}</p>
         <hr class="alm-hr" />

@@ -1,6 +1,6 @@
 ---
-title: about
-titulo: Sobre
+slug: about
+title: Sobre
 subtitle: teste potr
 template: about.hbt
 translated: true

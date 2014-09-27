@@ -1,6 +1,6 @@
 ---
-title: Talks
-titulo: Palestras
+slug: talks
+title: Palestras
 subtitle: Palestras e workshops em conferências.
 template: talks.hbt
 translated: true

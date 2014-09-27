@@ -1,4 +1,5 @@
 ---
+slug: about
 title: about
 subtitle: teste
 template: about.hbt

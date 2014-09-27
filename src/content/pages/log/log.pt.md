@@ -1,4 +1,5 @@
 ---
+slug: log
 title: Log
 subtitle: Material escrito por mim na web.
 template: log.hbt
