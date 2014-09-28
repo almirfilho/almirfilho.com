@@ -3,7 +3,7 @@ module.exports = (grunt) ->
     dist:
       files: [
         expand: true
-        cwd: 'build/images/'
+        cwd: grunt.config.data.paths.src.images
         src: ['**/*.svg']
-        dest: 'build/images/'
+        dest: grunt.config.data.paths.build.images
       ]

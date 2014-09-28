@@ -1,10 +1,13 @@
 module.exports = (grunt) ->
+  src   = "#{grunt.config.data.paths.src.styles}/main.styl"
+  build = "#{grunt.config.data.paths.build.styles}/style.css"
+
   grunt.config 'stylus',
     prod:
-      files:
-        'build/styles/style.css': 'src/assets/styles/main.styl'
+      src: src
+      dest: build
     dev:
+      src: src
+      dest: build
       options:
         compress: false
-      files:
-        'build/styles/style.css': 'src/assets/styles/main.styl'

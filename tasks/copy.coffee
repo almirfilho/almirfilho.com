@@ -1,26 +1,29 @@
 module.exports = (grunt) ->
+  src   = grunt.config.data.paths.src
+  build = grunt.config.data.paths.build
+
   grunt.config 'copy',
     images:
       files: [
         expand: true
-        cwd: 'src/content/images/'
+        cwd: src.images
         src: ['**']
-        dest: 'build/images/'
+        dest: build.images
       ]
 
     post_images:
       files: [
         expand: true
-        cwd: 'src/content/posts/'
+        cwd: src.posts
         src: ['**/*.jpg']
-        dest: 'build/posts/'
+        dest: build.posts + '/'
         rename: (dest, src, opt) -> dest + src.replace /^\d{4}\//, ''
       ]
 
     fonts:
       files: [
         expand: true
-        cwd: 'src/assets/fonts/'
+        cwd: src.fonts
         src: ['**']
-        dest: 'build/fonts/'
+        dest: build.fonts
       ]

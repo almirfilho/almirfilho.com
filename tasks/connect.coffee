@@ -3,5 +3,5 @@ module.exports = (grunt) ->
     server:
       options:
         port: 4001
-        base: 'build'
+        base: grunt.config.data.paths.build.root
         keepalive: true
