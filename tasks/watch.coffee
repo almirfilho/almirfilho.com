@@ -15,5 +15,5 @@ module.exports = (grunt) ->
       files: ["#{src.styles}/**/*.styl"]
 
     images:
-      tasks: ['newer:copy:images']
+      tasks: ['newer:copy:images', 'newer:copy:post_images']
       files: ["#{src.root}/**/*.{jpg,svg,png}"]
