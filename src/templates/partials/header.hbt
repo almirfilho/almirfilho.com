@@ -1,36 +1,39 @@
 <header class="alm-header">
-	<h1 class="alm-header-title">
-		<a class="alm-header-title-link" href="/">
-			almir
-			<span class="alm-header-title--strong">filho</span>
-		</a>
-	</h1>
-	<div class="alm-logo">
-		<a class="alm-logo-link" href="/">{{ svgLogo }}</a>
-	</div>
-	<nav class="alm-menu">
-		<ul class="alm-menu-list">
-			<li class="alm-menu-item">
-				<a class="alm-menu-link" href="/about/">about</a>
-			</li>
-			<li class="alm-menu-item">
-				<a class="alm-menu-link" href="/log/">log</a>
-			</li>
-			<li class="alm-menu-item">
-				<a class="alm-menu-link" href="/talks/">talks</a>
-			</li>
-		</ul>
-	</nav>
-	{{# if translated }}
-	<ul class="alm-lang-menu">
-		<li class="alm-lang-menu-item {{#ifEn lang}}alm-lang-menu-item--is-active{{/ifEn}}">
-			<a class="alm-lang-menu-link" lang="en" title="English version"
-			   href="{{ urlTo 'en' path }}">EN</a>
-		</li>
-		<li class="alm-lang-menu-item {{#ifPt lang}}alm-lang-menu-item--is-active{{/ifPt}}">
-			<a class="alm-lang-menu-link" lang="pt" title="Versão em português"
-			   href="{{ urlTo 'pt' path }}">PT</a>
-		</li>
-	</ul>
-	{{/ if }}
+    <h1 class="alm-header-title">
+        <a class="alm-header-title-link" href="{{ urlTo lang '/' }}">
+            almir <span class="alm-header-title--strong">filho</span>
+        </a>
+    </h1>
+    <div class="alm-logo">
+        <a class="alm-logo-link" href="{{ urlTo lang '/' }}">{{ svgLogo }}</a>
+    </div>
+    <nav class="alm-menu">
+        <ul class="alm-menu-list">
+            <li class="alm-menu-item">
+                <a class="alm-menu-link" href="{{ urlTo lang 'about' }}">
+                    {{ en_pt lang 'About' 'Sobre' }}
+                </a>
+            </li>
+            <li class="alm-menu-item">
+                <a class="alm-menu-link" href="{{ urlTo lang 'log' }}">log</a>
+            </li>
+            <li class="alm-menu-item">
+                <a class="alm-menu-link" href="{{ urlTo lang 'talks' }}">
+                    {{ en_pt lang 'Talks' 'Palestras' }}
+                </a>
+            </li>
+        </ul>
+    </nav>
+    {{# if translated }}
+    <ul class="alm-lang-menu">
+        <li class="alm-lang-menu-item {{#ifEn lang}}alm-lang-menu-item--is-active{{/ifEn}}">
+            <a class="alm-lang-menu-link" lang="en" title="English version"
+               href="{{ urlTo 'en' path }}">EN</a>
+        </li>
+        <li class="alm-lang-menu-item {{#ifPt lang}}alm-lang-menu-item--is-active{{/ifPt}}">
+            <a class="alm-lang-menu-link" lang="pt" title="Versão em português"
+               href="{{ urlTo 'pt' path }}">PT</a>
+        </li>
+    </ul>
+    {{/ if }}
 </header>
