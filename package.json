@@ -26,6 +26,7 @@
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-stylus": "~0.17.0",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-newer": "^0.7.0",
     "grunt-shell": "~0.7.0",
     "grunt-svgmin": "^1.0.0",
     "handlebars": "~2.0.0-alpha.4",
