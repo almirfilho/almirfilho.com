@@ -8,7 +8,7 @@ src:
   fonts: src/assets/fonts
 build:
   root: build
-  posts: build/posts
+  posts: build
   images: build/images
   styles: build/styles
   fonts: build/fonts

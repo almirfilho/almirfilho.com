@@ -105,12 +105,12 @@ new Metalsmith __dirname
   .use(
     branch 'posts/**/*.en.md'
       .use markdown smartypants: true
-      .use permalinks pattern: 'posts/:slug'
+      .use permalinks pattern: ':slug'
   )
   .use(
     branch 'posts/**/*.pt.md'
       .use markdown smartypants: true
-      .use permalinks pattern: 'posts/:slug/pt'
+      .use permalinks pattern: ':slug/pt'
   )
   .use(
     branch 'pages/**/*.en.md'
