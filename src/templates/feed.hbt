@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://almirfilho.com/</id>
+    <title>almirfilho.com</title>
+    <icon>http://almirfilho.com/images/favicon.png</icon>
+    <updated>2014-09-05T21:48:46-03:00</updated>
+    <link rel="self" href="http://almirfilho.com/index.xml" />
+    <link href="http://loopinfinito.com.br/" />
+
+    {{# each posts }}
+    <entry>
+        <id>http://almirfilho.com/{{ this.path }}</id>
+        <title>{{ this.title }}</title>
+        <updated>{{ this.date }} 2013-11-26T00:00:00-02:00</updated>
+        <link href="http://almirfilho.com/{{ @key }}" />
+        <author>
+          <name>Almir Filho</name>
+          <uri>http://twitter.com/almirfilho</uri>
+        </author>
+        <content type="html">{{ this.contents }}</content>
+    </entry>
+    {{/ each }}
+
+</feed>
