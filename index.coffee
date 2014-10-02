@@ -81,6 +81,23 @@ debug = ->
     console.log files
     done()
 
+rss = ->
+  qnt = 10
+  dest = 'index.xml'
+
+  (files, metalsmith, done) ->
+    # carregar template
+    templateFile = "#{__dirname}/src/templates/feed.hbt"
+    fs.readFile templateFile, {encoding: 'utf8'}, (err, data) ->
+      templateContent = data.toString()
+      template = handlebars.compile(templateContent)
+      contents = template({posts: files})
+
+      files[dest] = {
+        contents: contents
+      }
+      done()
+
 
 # running metalsmith pipeline --------------------------------------------------
 
@@ -106,6 +123,7 @@ new Metalsmith __dirname
     branch 'posts/**/*.en.md'
       .use markdown smartypants: true
       .use permalinks pattern: ':slug'
+      .use rss()
   )
   .use(
     branch 'posts/**/*.pt.md'
