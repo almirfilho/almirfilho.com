@@ -15,7 +15,7 @@
         <link href="{{ ../site.url }}/{{ @key }}" />
         <author>
           <name>{{ ../author.name }}</name>
-          <uri>http://twitter.com/{{ ../author.twitter }}</uri>
+          <uri>{{ ../author.twitter.url }}</uri>
         </author>
         <content type="html">{{ this.contents }}</content>
     </entry>
