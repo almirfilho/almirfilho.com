@@ -11,34 +11,54 @@
 
     <ul class="alm-social-list">
         <li class="alm-social-item">
-            <a class="alm-round-icon alm-icon-twitter" href="#"></a>
+            <a class="alm-round-icon alm-icon-twitter" href="{{ author.twitter.url }}">
+                <span class="alm-hidden">{{ author.twitter.username }}</span>
+            </a>
         </li>
         <li class="alm-social-item">
-            <a class="alm-round-icon alm-icon-github" href="#"></a>
+            <a class="alm-round-icon alm-icon-github" href="{{ author.github.url }}">
+                <span class="alm-hidden">{{ author.github.username }}</span>
+            </a>
         </li>
         <li class="alm-social-item">
-            <a class="alm-round-icon alm-icon-facebook" href="#"></a>
+            <a class="alm-round-icon alm-icon-facebook" href="{{ author.facebook.url }}">
+                <span class="alm-hidden">{{ author.facebook.username }}</span>
+            </a>
         </li>
         <li class="alm-social-item">
-            <a class="alm-round-icon alm-icon-instagram" href="#"></a>
+            <a class="alm-round-icon alm-icon-instagram" href="{{ author.instagram.url }}">
+                <span class="alm-hidden">{{ author.instagram.username }}</span>
+            </a>
         </li>
         <li class="alm-social-item">
-            <a class="alm-round-icon alm-icon-lastfm" href="#"></a>
+            <a class="alm-round-icon alm-icon-lastfm" href="{{ author.lastfm.url }}">
+                <span class="alm-hidden">{{ author.lastfm.username }}</span>
+            </a>
         </li>
         <li class="alm-social-item">
-            <a class="alm-round-icon alm-icon-linkedin" href="#"></a>
+            <a class="alm-round-icon alm-icon-linkedin" href="{{ author.linkedin.url }}">
+                <span class="alm-hidden">{{ author.linkedin.username }}</span>
+            </a>
         </li>
         <li class="alm-social-item">
-            <a class="alm-round-icon alm-icon-coderwall" href="#"></a>
+            <a class="alm-round-icon alm-icon-coderwall" href="{{ author.coderwall.url }}">
+                <span class="alm-hidden">{{ author.coderwall.username }}</span>
+            </a>
         </li>
         <li class="alm-social-item">
-            <a class="alm-round-icon alm-icon-googleplus" href="#"></a>
+            <a class="alm-round-icon alm-icon-googleplus" href="{{ author.googleplus.url }}">
+                <span class="alm-hidden">{{ author.googleplus.username }}</span>
+            </a>
         </li>
         <li class="alm-social-item">
-            <a class="alm-round-icon alm-icon-slideshare" href="#"></a>
+            <a class="alm-round-icon alm-icon-slideshare" href="{{ author.slideshare.url }}">
+                <span class="alm-hidden">{{ author.slideshare.username }}</span>
+            </a>
         </li>
         <li class="alm-social-item">
-            <a class="alm-round-icon alm-icon-speakerdeck" href="#"></a>
+            <a class="alm-round-icon alm-icon-speakerdeck" href="{{ author.speakerdeck.url }}">
+                <span class="alm-hidden">{{ author.speakerdeck.username }}</span>
+            </a>
         </li>
     </ul>
 
