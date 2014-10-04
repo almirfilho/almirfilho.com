@@ -81,9 +81,8 @@ debug = ->
     console.log files
     done()
 
-rss = ->
-  qnt = 10
-  dest = 'index.xml'
+rss = (options = {}) ->
+  dest = options.dest or 'index.xml'
 
   (files, metalsmith, done) ->
     # carregar template
@@ -92,10 +91,7 @@ rss = ->
       templateContent = data.toString()
       template = handlebars.compile(templateContent)
       contents = template({posts: files})
-
-      files[dest] = {
-        contents: contents
-      }
+      files[dest] = contents: contents
       done()
 
 
