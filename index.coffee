@@ -85,12 +85,14 @@ rss = (options = {}) ->
   dest = options.dest or 'index.xml'
 
   (files, metalsmith, done) ->
-    # carregar template
     templateFile = "#{__dirname}/src/templates/feed.hbt"
     fs.readFile templateFile, {encoding: 'utf8'}, (err, data) ->
       templateContent = data.toString()
       template = handlebars.compile(templateContent)
-      contents = template({posts: files})
+      contents = template
+        posts: files
+        author: metalsmith.data.author
+        site: metalsmith.data.site
       files[dest] = contents: contents
       done()
 
@@ -106,9 +108,10 @@ new Metalsmith __dirname
   .source 'src/content'
   .use metadata
     author: 'author.yaml'
+    site: 'site.yaml'
   .use filemetadata [
-    {pattern: "**/*.en.md", metadata: {"lang": "en"}}
-    {pattern: "**/*.pt.md", metadata: {"lang": "pt"}}
+    {pattern: '**/*.en.md', metadata: {'lang': 'en'}}
+    {pattern: '**/*.pt.md', metadata: {'lang': 'pt'}}
   ]
   .use collections
     posts_en:
@@ -125,6 +128,7 @@ new Metalsmith __dirname
     branch 'posts/**/*.pt.md'
       .use markdown smartypants: true
       .use permalinks pattern: ':slug/pt'
+      .use rss dest: 'pt/index.xml'
   )
   .use(
     branch 'pages/**/*.en.md'
