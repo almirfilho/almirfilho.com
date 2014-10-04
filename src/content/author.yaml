@@ -1,12 +1,30 @@
 name: Almir Filho
 email: almir@almirfilho.com
 avatar: /images/avatars/3-medium.jpg
-github: almirfilho
-lastfm: almirfilho
-twitter: almirfilho
+github:
+  username: almirfilho
+  url: https://github.com/almirfilho
+lastfm:
+  username: almirfilho
+  url:
+twitter:
+  username: "@almirfilho"
+  url: https://twitter.com/almirfilho
 linkedin:
+  username:
+  url:
 facebook:
-instagram: almirfilh0
+  username: almirflorenciofilho
+  url:
+instagram:
+  username: "@almirfilh0"
+  url:
 coderwall:
+  username:
+  url:
 googleplus:
-speakerdeck: almirfilho
+  username:
+  url:
+speakerdeck:
+  username: almirfilho
+  url: https://speakerdeck.com/almirfilho
