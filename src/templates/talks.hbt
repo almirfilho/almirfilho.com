@@ -55,7 +55,7 @@
                             {{ this.event.location }}
                         </small>
                         {{# if this.with }}
-                        <small class="alm-small alm-list-item-with">
+                        <small class="alm-small alm-note alm-list-item-with">
                             <a class="alm-strong" href="{{ this.with.url }}">
                                 {{ this.with.name }}
                             </a>
