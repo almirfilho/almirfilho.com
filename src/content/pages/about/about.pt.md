@@ -4,13 +4,27 @@ title: Sobre
 subtitle: teste potr
 template: about.hbt
 translated: true
+sections:
+  - title: Gosto de escrever
+    items:
+      - title: Loop Infinito
+        url: http://loopinfinito.com.br
+        icon: loopinfinito.png
+        type: Blog
+        desc: Co-fundador e autor
+      - title: Tableless
+        url: http://tableless.com.br
+        icon: tableless.png
+        type: Blog
+        desc: Autor convidado
+      - title: Coleânea Front-end
+        url: http://
+        icon: coletaneafrontend.png
+        type: Livro
+        desc: Autor de 1 capítulo
+      - title: Web Design Responsivo
+        url: http://
+        icon: webdesignresponsivo.png
+        type: Livro
+        desc: Autor de 1 capítulo
 ---
-
-## sobre portugues
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
