@@ -33,4 +33,18 @@ sections:
         url: http://globo.com
         icon: globocom.png
         desc: Analyst and Web Developer
+  - title: And to study
+    items:
+      - title: Master's Degree in Computer Science
+        url: http://www.ufma.br
+        icon: ufma.png
+        desc: Federal University of Maranhão (UFMA)
+      - title: Barchelor's Degree in Computer Science
+        url: http://www.ufma.br
+        icon: ufma.png
+        desc: Federal University of Maranhão (UFMA)
+      - title: Scrum Master Certified
+        url: http://
+        icon: scrumaliance.png
+        desc: Scrum Aliance
 ---

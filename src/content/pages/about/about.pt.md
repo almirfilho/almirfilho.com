@@ -32,5 +32,19 @@ sections:
       - title: Globo.com
         url: http://globo.com
         icon: globocom.png
-        desc: Analista e Desenvolvedor web
+        desc: Analista e Desenvolvedor Web
+  - title: E de estudar
+    items:
+      - title: Mestre em Ciência da Computação
+        url: http://www.ufma.br
+        icon: ufma.png
+        desc: Universidade Federal do Maranhão (UFMA)
+      - title: Bacharel em Ciência da Computação
+        url: http://www.ufma.br
+        icon: ufma.png
+        desc: Universidade Federal do Maranhão (UFMA)
+      - title: Scrum Master Certificado
+        url: http://
+        icon: scrumaliance.png
+        desc: Scrum Aliance
 ---
