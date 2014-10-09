@@ -62,6 +62,33 @@
         </li>
     </ul>
 
+    {{# each sections }}
+    <h2 class="alm-title alm-title--is-secondary alm-title--with-margin">
+        {{ this.title }},
+    </h2>
+    <ul class="alm-list">
+        {{# each this.items }}
+        <li class="alm-list-item">
+            <a class="alm-list-item-link" href="{{ this.url }}" target="_blank">
+                <div class="alm-list-item-thumb">
+                    <img class="alm-avatar"
+                         src="/images/avatars/{{ this.icon }}" />
+                </div>
+                <div class="alm-list-item-info">
+                    <h3 class="alm-list-item-title" lang="{{ this.lang }}">
+                        {{ this.title }}
+                    </h3>
+                    <small class="alm-small">
+                        <span class="alm-strong">{{ this.type }}</span>
+                        <span class="alm-note">{{ this.desc }}</span>
+                    </small>
+                </div>
+            </a>
+        </li>
+        {{/ each }}
+    </ul>
+    {{/ each }}
+
 </section>
 
 {{> tail }}
