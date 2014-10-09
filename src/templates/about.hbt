@@ -79,8 +79,12 @@
                         {{ this.title }}
                     </h3>
                     <small class="alm-small">
+                        {{# if this.type }}
                         <span class="alm-strong">{{ this.type }}</span>
                         <span class="alm-note">{{ this.desc }}</span>
+                        {{ else }}
+                        {{ this.desc }}
+                        {{/ if }}
                     </small>
                 </div>
             </a>
