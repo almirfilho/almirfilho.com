@@ -27,4 +27,10 @@ sections:
         icon: webdesignresponsivo.png
         type: Livro
         desc: Autor de 1 capítulo
+  - title: E de desafios
+    items:
+      - title: Globo.com
+        url: http://globo.com
+        icon: globocom.png
+        desc: Analista e Desenvolvedor web
 ---
