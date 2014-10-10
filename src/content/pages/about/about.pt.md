@@ -27,13 +27,13 @@ sections:
         icon: webdesignresponsivo.png
         type: Livro
         desc: Autor de 1 capítulo
-  - title: E de desafios
+  - title: De desafios
     items:
       - title: Globo.com
         url: http://globo.com
         icon: globocom.png
         desc: Analista e Desenvolvedor Web
-  - title: E de estudar
+  - title: De estudar
     items:
       - title: Mestre em Ciência da Computação
         url: http://www.ufma.br
@@ -47,4 +47,12 @@ sections:
         url: http://
         icon: scrumaliance.png
         desc: Scrum Aliance
+  - title: De palestrar
+    text: >
+      Acho que expor suas idéias é sempre ótimo, mas manter contato próximo à
+      comunidade é o que me faz evoluir de verdade como pessoa.
+  - title: E me interesso por
+    text: >
+      Web, front-end, produtividade, estilo de vida, música, filosofia, ciência
+      e artes.
 ---

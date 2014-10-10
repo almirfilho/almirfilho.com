@@ -27,13 +27,13 @@ sections:
         icon: webdesignresponsivo.png
         type: Book
         desc: Author of 1 chapter
-  - title: And challanges
+  - title: To face challanges
     items:
       - title: Globo.com
         url: http://globo.com
         icon: globocom.png
         desc: Analyst and Web Developer
-  - title: And to study
+  - title: To study
     items:
       - title: Master's Degree in Computer Science
         url: http://www.ufma.br
@@ -47,4 +47,12 @@ sections:
         url: http://
         icon: scrumaliance.png
         desc: Scrum Aliance
+  - title: To talk
+    text: >
+      I think exposing ideas is aways great, but keeping close contact with the
+      comunity is what really makes me evolve as a person.
+  - title: And most interested in
+    text: >
+      Web, front-end, productivity, lifestyle design, music, philosophy, science
+      and arts.
 ---
