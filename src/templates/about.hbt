@@ -66,6 +66,10 @@
     <h2 class="alm-title alm-title--is-secondary alm-title--with-margin">
         {{ this.title }},
     </h2>
+    {{# if this.text }}
+    <p class="alm-desc">{{ this.text }}</p>
+    {{/ if }}
+    {{# if this.items }}
     <ul class="alm-list">
         {{# each this.items }}
         <li class="alm-list-item">
@@ -91,6 +95,7 @@
         </li>
         {{/ each }}
     </ul>
+    {{/ if }}
     {{/ each }}
 
 </section>
