@@ -17,14 +17,15 @@ sections:
         icon: tableless.png
         type: Blog
         desc: Autor convidado
-      - title: Coleânea Front-end
-        url: http://
-        icon: coletaneafrontend.png
+      - title: >
+          Coletânea Front-end: Uma antologia da comunidade front-end brasileira
+        url: http://www.casadocodigo.com.br/products/livro-coletanea-front-end
+        icon: coletaneafrontend.jpg
         type: Livro
         desc: Autor de 1 capítulo
       - title: Web Design Responsivo
-        url: http://
-        icon: webdesignresponsivo.png
+        url: http://www.livrorwd.com.br
+        icon: webdesignresponsivo.jpg
         type: Livro
         desc: Autor de 1 capítulo
   - title: De desafios
@@ -37,16 +38,16 @@ sections:
     items:
       - title: Mestre em Ciência da Computação
         url: http://www.ufma.br
-        icon: ufma.png
+        icon: ufma.jpg
         desc: Universidade Federal do Maranhão (UFMA)
       - title: Bacharel em Ciência da Computação
         url: http://www.ufma.br
-        icon: ufma.png
+        icon: ufma.jpg
         desc: Universidade Federal do Maranhão (UFMA)
       - title: Scrum Master Certificado
-        url: http://
-        icon: scrumaliance.png
-        desc: Scrum Aliance
+        url: https://www.scrumalliance.org/community/profile/afilho7
+        icon: scrumalliance.png
+        desc: Scrum Alliance
   - title: De palestrar
     text: >
       Acho que expor suas idéias é sempre ótimo, mas manter contato próximo à

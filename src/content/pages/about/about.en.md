@@ -17,14 +17,15 @@ sections:
         icon: tableless.png
         type: Blog
         desc: Guest author
-      - title: Coleânea Front-end
-        url: http://
-        icon: coletaneafrontend.png
+      - title: >
+          Front-end Collection: An anthology of Brazilian front-end community
+        url: http://www.casadocodigo.com.br/products/livro-coletanea-front-end
+        icon: coletaneafrontend.jpg
         type: Book
         desc: Author of 1 chapter
-      - title: Web Design Responsivo
-        url: http://
-        icon: webdesignresponsivo.png
+      - title: Responsive Web Design
+        url: http://www.livrorwd.com.br
+        icon: webdesignresponsivo.jpg
         type: Book
         desc: Author of 1 chapter
   - title: To face challanges
@@ -37,16 +38,16 @@ sections:
     items:
       - title: Master's Degree in Computer Science
         url: http://www.ufma.br
-        icon: ufma.png
+        icon: ufma.jpg
         desc: Federal University of Maranhão (UFMA)
-      - title: Barchelor's Degree in Computer Science
+      - title: Bachelor's Degree in Computer Science
         url: http://www.ufma.br
-        icon: ufma.png
+        icon: ufma.jpg
         desc: Federal University of Maranhão (UFMA)
       - title: Scrum Master Certified
-        url: http://
-        icon: scrumaliance.png
-        desc: Scrum Aliance
+        url: https://www.scrumalliance.org/community/profile/afilho7
+        icon: scrumalliance.png
+        desc: Scrum Alliance
   - title: To talk
     text: >
       I think exposing ideas is aways great, but keeping close contact with the
