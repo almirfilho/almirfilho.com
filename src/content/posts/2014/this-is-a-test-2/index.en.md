@@ -1,5 +1,5 @@
 ---
-slug: This is a test 2
+slug: this-is-a-test-2
 title: This is a test 2
 date: 2014-09-13
 template: post.hbt
