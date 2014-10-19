@@ -2,43 +2,7 @@
 
 <section class="alm-main-content alm-main-content--with-contrast">
     <article class="alm-post">
-        <header class="alm-post-header">
-            <div class="alm-post-header-cover-box">
-                <img class="alm-post-header-cover
-                    {{# ifequals cover.ini_pos 'top' }}alm-post-header-cover--at-top-on-ini{{/ ifequals }}
-                    {{# ifequals cover.ini_pos 'bottom' }}alm-post-header-cover--at-bottom-on-ini{{/ ifequals }}
-                    {{# ifequals cover.end_pos 'top' }}alm-post-header-cover--at-top-on-end{{/ ifequals }}
-                    {{# ifequals cover.end_pos 'bottom' }}alm-post-header-cover--at-bottom-on-end{{/ ifequals }}"
-                    src="{{# if cover.file }}{{ cover.file }}{{ else }}{{ slugify title }}.jpg{{/ if }}"
-                />
-                <h1 class="alm-title alm-post-title">
-                    <a class="alm-post-title-link" href="#">
-                        <span class="alm-post-title-content">{{ title }}</span>
-                    </a>
-                </h1>
-            </div>
-            <aside class="alm-post-info">
-                <span class="alm-post-info-description alm-post-info-description--is-left">
-                    {{ en_pt lang 'On' 'Em' }}
-                    <time class="alm-post-info-date" datetime="{{ date }}">
-                        {{ dateformat lang date }}
-                    </time>
-                </span>
-                <img class="alm-avatar alm-post-author-avatar"
-                     src="{{ author.avatar }}"
-                     alt="{{ author.name }}" />
-                <span class="alm-post-info-description alm-post-info-description--is-right">
-                    {{ en_pt lang 'By' 'Por' }}
-                    <span class="alm-post-author-name">{{ author.name }}</span>
-                </span>
-                {{# if cover.desc }}
-                    <p class="alm-post-header-cover-description">
-                        {{ en_pt lang 'Photo' 'Foto' }}: {{ cover.desc }}
-                    </p>
-                {{/ if }}
-            </aside>
-            <hr class="alm-hr" />
-        </header>
+        {{> post_header this info=true }}
         <section class="alm-post-content">
             {{{ contents }}}
         </section>
