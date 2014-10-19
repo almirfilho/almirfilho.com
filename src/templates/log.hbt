@@ -11,26 +11,7 @@
 
     <ul class="alm-list">
         {{# each articles }}
-        <li class="alm-list-item">
-            <a class="alm-list-item-link" href="{{ this.url }}" target="_blank">
-                <div class="alm-list-item-thumb">
-                    <img class="alm-avatar"
-                         src="/images/avatars/{{ this.icon }}" />
-                </div>
-                <div class="alm-list-item-info">
-                    <h3 class="alm-list-item-title" lang="{{ this.lang }}">
-                        {{ this.title }}
-                    </h3>
-                    <time class="alm-small alm-icon alm-icon-date" datetime="{{ this.date }}">
-                        {{ dateformat ../lang this.date 'day' }}
-                        {{ dateformat ../lang this.date 'month' }}
-                        <span class="alm-strong">
-                            {{ dateformat ../lang this.date 'year' }}
-                        </span>
-                    </time>
-                </div>
-            </a>
-        </li>
+        {{> list_item item=this item_date=this.date }}
         {{/ each }}
     </ul>
 </section>
