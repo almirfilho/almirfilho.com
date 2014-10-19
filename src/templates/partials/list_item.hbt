@@ -1,0 +1,23 @@
+<li class="alm-list-item">
+    <a class="alm-list-item-link" href="{{ item.url }}" target="_blank">
+        <div class="alm-list-item-thumb">
+            <img class="alm-avatar" src="/images/avatars/{{ item.icon }}" />
+        </div>
+        <div class="alm-list-item-info">
+            <h3 class="alm-list-item-title" lang="{{ item.lang }}">
+                {{ item.title }}
+            </h3>
+            {{# if item_date }}
+            <p>
+                <time class="alm-small alm-icon alm-icon-date" datetime="{{ item_date }}">
+                    {{ dateformat lang item_date 'day' }}
+                    {{ dateformat lang item_date 'month' }}
+                    <span class="alm-strong">
+                        {{ dateformat lang item_date 'year' }}
+                    </span>
+                </time>
+            </p>
+            {{/ if }}
+        </div>
+    </a>
+</li>
