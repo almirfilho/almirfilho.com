@@ -1,0 +1,5 @@
+<li class="alm-social-item">
+    <a class="alm-round-icon alm-icon-{{ name }}" href="{{ profile.url }}">
+        <span class="alm-hidden">{{ profile.username }}</span>
+    </a>
+</li>
