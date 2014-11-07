@@ -157,7 +157,7 @@ new Metalsmith __dirname
   )
   .use markdown smartypants: true
   .use handlebarsConfig
-    partials: ['head', 'tail', 'header', 'footer', 'scripts', 'post_header', 'social_list_item', 'list_item', 'date']
+    partials: ['head', 'tail', 'header', 'footer', 'scripts', 'post_header', 'social_list_item', 'list_item', 'list_item_big', 'date']
     helpers: ['ifequals', 'slugify', 'dateformat', 'ifEn', 'ifPt', 'en_pt', 'urlTo',  'svgLogo']
   .use templates
     engine: 'handlebars'

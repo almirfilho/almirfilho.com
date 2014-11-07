@@ -1,0 +1,42 @@
+<li class="alm-list-item alm-list-item--size-big">
+    <div class="alm-list-item-row">
+        <div class="alm-list-item-thumb">
+            <img class="alm-avatar alm-avatar--size-big"
+                 src="/images/talks/{{ item.event.icon }}" />
+        </div>
+        <div class="alm-list-item-info">
+            <h3 class="alm-list-item-title alm-list-item-title--size-big">
+                <a href="{{ item.event.url }}" target="_blank">
+                    {{ item.event.title }}
+                    {{# if item.event.showyear }}
+                        <span class="alm-list-item-year">
+                            '{{ dateformat lang item.event.date 'shortYear' }}
+                        </span>
+                    {{/ if }}
+                </a>
+            </h3>
+            <p class="alm-list-item-title" lang="{{ item.keynote.lang }}">
+                {{# if item.keynote.url }}
+                    <a href="{{ item.keynote.url }}" target="_blank">
+                        {{ item.keynote.title }}
+                    </a>
+                {{ else }}
+                    {{ item.keynote.title }}
+                {{/ if }}
+            </p>
+            <p class="alm-list-item-attrs">
+                {{> date date=item.event.date }}
+                <small class="alm-small alm-icon alm-icon-location">
+                    {{ item.event.location }}
+                </small>
+                {{# if item.with }}
+                    <small class="alm-small alm-note alm-list-item-with">
+                        <a class="alm-strong" href="{{ item.with.url }}">
+                            {{ item.with.name }}
+                        </a>
+                    </small>
+                {{/ if }}
+            </p>
+        </div>
+    </div>
+</li>
