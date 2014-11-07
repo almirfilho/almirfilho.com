@@ -32,27 +32,7 @@
         {{# if this.items }}
             <ul class="alm-list">
                 {{# each this.items }}
-                    <li class="alm-list-item">
-                        <a class="alm-list-item-link" href="{{ this.url }}" target="_blank">
-                            <div class="alm-list-item-thumb">
-                                <img class="alm-avatar"
-                                     src="/images/avatars/{{ this.icon }}" />
-                            </div>
-                            <div class="alm-list-item-info">
-                                <h3 class="alm-list-item-title" lang="{{ this.lang }}">
-                                    {{ this.title }}
-                                </h3>
-                                <small class="alm-small">
-                                    {{# if this.type }}
-                                        <span class="alm-strong">{{ this.type }}</span>
-                                        <span class="alm-note">{{ this.desc }}</span>
-                                    {{ else }}
-                                        {{ this.desc }}
-                                    {{/ if }}
-                                </small>
-                            </div>
-                        </a>
-                    </li>
+                    {{> list_item item=this }}
                 {{/ each }}
             </ul>
         {{/ if }}

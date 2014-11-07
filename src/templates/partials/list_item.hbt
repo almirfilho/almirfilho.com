@@ -10,6 +10,16 @@
             {{# if item.date }}
                 {{> date date=item.date }}
             {{/ if }}
+            {{# if item.desc }}
+                <small class="alm-small">
+                    {{# if item.type }}
+                        <span class="alm-strong">{{ item.type }}</span>
+                        <span class="alm-note">{{ item.desc }}</span>
+                    {{ else }}
+                        {{ item.desc }}
+                    {{/ if }}
+                </small>
+            {{/ if }}
         </div>
     </a>
 </li>
