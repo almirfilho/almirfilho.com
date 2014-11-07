@@ -11,7 +11,7 @@
 
     <ul class="alm-list">
         {{# each articles }}
-        {{> list_item item=this }}
+            {{> list_item item=this lang=../lang }}
         {{/ each }}
     </ul>
 </section>
