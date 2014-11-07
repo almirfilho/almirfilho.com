@@ -7,16 +7,8 @@
             <h3 class="alm-list-item-title" lang="{{ item.lang }}">
                 {{ item.title }}
             </h3>
-            {{# if item_date }}
-            <p>
-                <time class="alm-small alm-icon alm-icon-date" datetime="{{ item_date }}">
-                    {{ dateformat lang item_date 'day' }}
-                    {{ dateformat lang item_date 'month' }}
-                    <span class="alm-strong">
-                        {{ dateformat lang item_date 'year' }}
-                    </span>
-                </time>
-            </p>
+            {{# if item.date }}
+            {{> date date=item.date }}
             {{/ if }}
         </div>
     </a>

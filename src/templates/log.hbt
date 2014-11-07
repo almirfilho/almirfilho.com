@@ -11,7 +11,7 @@
 
     <ul class="alm-list">
         {{# each articles }}
-        {{> list_item item=this item_date=this.date }}
+        {{> list_item item=this }}
         {{/ each }}
     </ul>
 </section>

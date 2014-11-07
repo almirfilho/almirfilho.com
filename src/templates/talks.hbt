@@ -44,13 +44,7 @@
                         {{/ if }}
                     </p>
                     <p class="alm-list-item-attrs">
-                        <time class="alm-small alm-icon alm-icon-date" datetime="{{ this.event.date }}">
-                            {{ dateformat ../../lang this.event.date 'day' }}
-                            {{ dateformat ../../lang this.event.date 'month' }}
-                            <span class="alm-strong">
-                                {{ dateformat ../../lang this.event.date 'year' }}
-                            </span>
-                        </time>
+                        {{> date date=this.event.date lang=../../lang }}
                         <small class="alm-small alm-icon alm-icon-location">
                             {{ this.event.location }}
                         </small>
