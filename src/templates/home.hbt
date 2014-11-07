@@ -2,19 +2,15 @@
 
 <section class="alm-main-content">
     <ul class="alm-post-list">
-    {{# ifEn lang }}
-
-        {{# each collections.posts_en }}
-        {{> post_header this }}
-        {{/ each }}
-
-    {{ else }}
-
-        {{# each collections.posts_pt }}
-        {{> post_header this }}
-        {{/ each }}
-
-    {{/ ifEn }}
+        {{# ifEn lang }}
+            {{# each collections.posts_en }}
+                {{> post_header this }}
+            {{/ each }}
+        {{ else }}
+            {{# each collections.posts_pt }}
+                {{> post_header this }}
+            {{/ each }}
+        {{/ ifEn }}
     </ul>
 </section>
 

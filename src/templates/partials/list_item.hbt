@@ -8,7 +8,7 @@
                 {{ item.title }}
             </h3>
             {{# if item.date }}
-            {{> date date=item.date }}
+                {{> date date=item.date }}
             {{/ if }}
         </div>
     </a>
