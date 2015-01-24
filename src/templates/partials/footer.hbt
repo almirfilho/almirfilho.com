@@ -1,23 +1,12 @@
 <footer class="alm-footer">
-{{# ifEn lang }}
-
     <p>
-        Built by <a class="alm-footer-link" href="#">@almirfilho</a> using
+        {{ en_pt lang 'Built by' 'Feito por' }}
+        <a class="alm-footer-link" href="#">@almirfilho</a>
+        {{ en_pt lang 'with' 'com' }}
         <a class="alm-footer-link" href="#">Metalsmith</a>,
-        <a class="alm-footer-link" href="#">Stylus</a> and
+        <a class="alm-footer-link" href="#">Stylus</a>
+        {{ en_pt lang 'and' 'e' }}
         <a class="alm-footer-link" href="#">Grunt</a>.
     </p>
     <p>Live the now</p>
-
-{{ else }}
-
-    <p>
-        Feito com <a class="alm-footer-link" href="#">@almirfilho</a> usando
-        <a class="alm-footer-link" href="#">Metalsmith</a>,
-        <a class="alm-footer-link" href="#">Stylus</a> e
-        <a class="alm-footer-link" href="#">Grunt</a>.
-    </p>
-    <p>Viva o agora</p>
-
-{{/ ifEn}}
 </footer>
