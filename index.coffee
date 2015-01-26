@@ -100,8 +100,8 @@ rss = (options = {}) ->
 # running metalsmith pipeline --------------------------------------------------
 
 svgLogoContent = (->
-  filename = 'src/content/images/almirfilho-logo.svg'
-  fs.readFileSync("#{__dirname}/#{filename}").toString()
+  fs.readFileSync "#{__dirname}/src/content/images/almirfilho-logo.svg"
+  .toString()
 )()
 
 new Metalsmith __dirname
@@ -110,14 +110,12 @@ new Metalsmith __dirname
     author: 'author.yaml'
     site: 'site.yaml'
   .use filemetadata [
-    {pattern: '**/*.en.md', metadata: {'lang': 'en'}}
-    {pattern: '**/*.pt.md', metadata: {'lang': 'pt'}}
+    {pattern: '**/*.en.md', metadata: lang: 'en'}
+    {pattern: '**/*.pt.md', metadata: lang: 'pt'}
   ]
   .use collections
-    posts_en:
-      pattern: 'posts/**/*.en.md'
-    posts_pt:
-      pattern: 'posts/**/*.pt.md'
+    posts_en: pattern: 'posts/**/*.en.md'
+    posts_pt: pattern: 'posts/**/*.pt.md'
   .use(
     branch 'posts/**/*.en.md'
       .use markdown smartypants: true
@@ -158,7 +156,7 @@ new Metalsmith __dirname
   .use markdown smartypants: true
   .use handlebarsConfig
     partials: ['head', 'tail', 'header', 'footer', 'scripts', 'post_header', 'social_list_item', 'list_item', 'list_item_big', 'date', 'content_header']
-    helpers: ['ifequals', 'slugify', 'dateformat', 'ifEn', 'ifPt', 'en_pt', 'urlTo',  'svgLogo']
+    helpers: ['ifequals', 'slugify', 'dateformat', 'ifEn', 'ifPt', 'en_pt', 'urlTo', 'svgLogo']
   .use templates
     engine: 'handlebars'
     directory: 'src/templates'
