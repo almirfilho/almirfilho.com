@@ -4,6 +4,7 @@ title: Isso é um teste
 date: 2014-09-12
 template: post.hbt
 translated: true
+keywords: isso é um teste, teste, aqui, agora
 cover:
   desc: Uma descrição para a cara do post.
 ---

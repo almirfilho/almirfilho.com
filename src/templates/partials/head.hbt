@@ -8,7 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title itemprop="name">{{ title }}</title>
-        <meta itemprop="keywords" name="keywords" content="{{ en_pt lang site.keywords.en site.keywords.pt }}" />
+        <meta itemprop="keywords" name="keywords" content="
+            {{# if this.keywords }}{{ this.keywords }}, {{/ if }}
+            {{ en_pt lang site.keywords.en site.keywords.pt }}" />
         <meta itemprop="image" content="{{ site.url }}/images/almirfilho-logo.png" />
         <meta itemprop="inLanguage" content="{{ lang }}" />
 

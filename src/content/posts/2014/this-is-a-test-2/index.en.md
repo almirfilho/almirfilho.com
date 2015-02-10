@@ -4,6 +4,7 @@ title: This is a test 2
 date: 2014-09-13
 template: post.hbt
 translated: true
+keywords: this is a test 2
 cover:
   desc: The is a description for the post's cover image.
   ini_pos:
