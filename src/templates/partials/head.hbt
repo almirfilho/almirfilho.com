@@ -1,11 +1,19 @@
 <!doctype html>
-<html lang="{{# if lang }}{{ lang }}{{ else }}en{{/ if }}">
+<html itemscope
+      itemtype="http://schema.org/WebPage"
+      lang="{{ lang }}">
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{{ title }}</title>
+
+        <title itemprop="name">{{ title }}</title>
+        <meta itemprop="image" content="{{ site.url }}/images/almirfilho-logo.png" />
+        <meta itemprop="inLanguage" content="{{ lang }}" />
+
         <link rel="stylesheet" type="text/css" href="/styles/style.css" />
     </head>
+
     <body>
         <div class="alm-body">
             {{> header }}
