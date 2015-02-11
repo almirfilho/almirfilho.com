@@ -8,11 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title itemprop="name">{{ title }}</title>
-        <meta itemprop="keywords" name="keywords" content="
-            {{# if this.keywords }}{{ this.keywords }}, {{/ if }}
-            {{ en_pt lang site.keywords.en site.keywords.pt }}" />
         <meta itemprop="image" content="{{ site.url }}/images/almirfilho-logo.png" />
         <meta itemprop="inLanguage" content="{{ lang }}" />
+        {{# unless this.slug }}
+        <meta itemprop="description" name="description"
+              content="{{ en_pt lang site.description.en site.description.pt }}" />
+        {{/ unless }}
+        <meta itemprop="keywords" name="keywords"
+              content="{{# if this.keywords }}{{ this.keywords }}, {{/ if }}
+                       {{ en_pt lang site.keywords.en site.keywords.pt }}" />
 
         <link rel="stylesheet" type="text/css" href="/styles/style.css" />
     </head>
