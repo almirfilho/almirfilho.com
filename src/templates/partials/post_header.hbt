@@ -27,6 +27,7 @@
             itemprop="author"
             itemscope
             itemtype="http://schema.org/Person">
+            <meta itemprop="url" content="{{ author.googleplus.url }}" />
             <img class="alm-avatar alm-post-author-avatar"
                  src="{{ author.avatar }}"
                  alt="{{ author.name }}"
