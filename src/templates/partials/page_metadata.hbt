@@ -1,0 +1,15 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta itemprop="image" content="{{ site.url }}/images/almirfilho-logo.png" />
+<meta itemprop="inLanguage" content="{{ lang }}" />
+<meta itemprop="keywords" name="keywords"
+      content="{{# if this.keywords }}{{ this.keywords }}, {{/ if }}
+               {{ en_pt lang site.keywords.en site.keywords.pt }}" />
+
+{{# unless this.slug }}
+<meta itemprop="description" name="description"
+      content="{{ en_pt lang site.description.en site.description.pt }}" />
+{{/ unless }}
+
+<link rel="author" href="{{ author.googleplus.url }}" />
