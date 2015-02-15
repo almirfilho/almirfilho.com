@@ -6,10 +6,10 @@
             {{# ifequals this.cover.end_pos 'top' }}alm-post-header-cover--at-top-on-end{{/ ifequals }}
             {{# ifequals this.cover.end_pos 'bottom' }}alm-post-header-cover--at-bottom-on-end{{/ ifequals }}"
             src="{{# if this.cover.file }}{{ this.cover.file }}{{ else }}{{ urlTo 'en' this.path }}{{ this.slug }}.jpg{{/ if }}"
-        />
+            itemprop="image" />
         <h1 class="alm-title alm-post-title">
-            <a class="alm-post-title-link" href="/{{ this.path }}/">
-                <span class="alm-post-title-content">{{ this.title }}</span>
+            <a class="alm-post-title-link" href="/{{ this.path }}/" itemprop="url">
+                <span class="alm-post-title-content" itemprop="name">{{ this.title }}</span>
             </a>
         </h1>
     </div>
@@ -17,16 +17,26 @@
     <aside class="alm-post-info">
         <span class="alm-post-info-description alm-post-info-description--is-left">
             {{ en_pt lang 'On' 'Em' }}
-            <time class="alm-post-info-date" datetime="{{ this.date }}">
+            <time class="alm-post-info-date"
+                datetime="{{ this.date }}"
+                itemprop="datePublished">
                 {{ dateformat lang this.date }}
             </time>
         </span>
-        <img class="alm-avatar alm-post-author-avatar"
-             src="{{ author.avatar }}"
-             alt="{{ author.name }}" />
-        <span class="alm-post-info-description alm-post-info-description--is-right">
-            {{ en_pt lang 'By' 'Por' }}
-            <span class="alm-post-author-name">{{ author.name }}</span>
+        <span class="alm-post-author"
+            itemprop="author"
+            itemscope
+            itemtype="http://schema.org/Person">
+            <img class="alm-avatar alm-post-author-avatar"
+                 src="{{ author.avatar }}"
+                 alt="{{ author.name }}"
+                 itemprop="image" />
+            <span class="alm-post-info-description alm-post-info-description--is-right">
+                {{ en_pt lang 'By' 'Por' }}
+                <span class="alm-post-author-name" itemprop="name">
+                    {{ author.name }}
+                </span>
+            </span>
         </span>
         {{# if cover.desc }}
             <p class="alm-post-header-cover-description">

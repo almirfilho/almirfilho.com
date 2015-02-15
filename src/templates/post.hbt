@@ -1,9 +1,9 @@
 {{> head }}
 
 <section class="alm-main-content alm-main-content--with-contrast">
-    <article class="alm-post">
+    <article class="alm-post" itemscope itemtype="http://schema.org/BlogPosting">
         {{> post_header this info=true }}
-        <section class="alm-post-content">
+        <section class="alm-post-content" itemprop="articleBody">
             {{{ contents }}}
         </section>
     </article>
