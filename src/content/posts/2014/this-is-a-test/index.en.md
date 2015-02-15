@@ -1,7 +1,7 @@
 ---
 slug: this-is-a-test
 title: This is a test
-date: 2014-09-12
+date: '2014-09-12'
 template: post.hbt
 translated: true
 keywords: this is a test, test, another test, here, now

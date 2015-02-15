@@ -1,7 +1,7 @@
 ---
 slug: this-is-a-test-3
 title: This is a test 3
-date: 2014-09-14
+date: '2014-09-14'
 template: post.hbt
 translated: true
 cover:
