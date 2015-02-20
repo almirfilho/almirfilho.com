@@ -1,4 +1,5 @@
 <li class="alm-post-header">
+    <meta itemprop="inLanguage" content="{{ this.lang }}" />
     <div class="alm-post-header-cover-box">
         <img class="alm-post-header-cover
             {{# ifequals this.cover.ini_pos 'top' }}alm-post-header-cover--at-top-on-ini{{/ ifequals }}
