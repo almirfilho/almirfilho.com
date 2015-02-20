@@ -1,4 +1,4 @@
-<li class="alm-post-header">
+<header class="alm-post-header">
     <meta itemprop="inLanguage" content="{{ this.lang }}" />
     <div class="alm-post-header-cover-box">
         <img class="alm-post-header-cover
@@ -48,4 +48,4 @@
     {{# if info }}
         <hr class="alm-hr" />
     {{/ if }}
-</li>
+</header>
