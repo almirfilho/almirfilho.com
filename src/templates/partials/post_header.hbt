@@ -14,8 +14,7 @@
             </a>
         </h1>
     </div>
-    {{# if info }}
-    <aside class="alm-post-info">
+    <aside class="alm-post-info {{# unless info }}alm-hidden{{/ unless }}">
         <span class="alm-post-info-description alm-post-info-description--is-left">
             {{ en_pt lang 'On' 'Em' }}
             <time class="alm-post-info-date"
@@ -46,6 +45,7 @@
             </p>
         {{/ if }}
     </aside>
-    <hr class="alm-hr" />
+    {{# if info }}
+        <hr class="alm-hr" />
     {{/ if }}
 </li>

@@ -4,11 +4,15 @@
     <ul class="alm-post-list">
         {{# ifEn lang }}
             {{# each collections.posts_en }}
-                {{> post_header this }}
+                <div itemscope itemtype="http://schema.org/BlogPosting">
+                    {{> post_header this author=../author }}
+                </div>
             {{/ each }}
         {{ else }}
             {{# each collections.posts_pt }}
-                {{> post_header this }}
+                <div itemscope itemtype="http://schema.org/BlogPosting">
+                    {{> post_header this author=../author }}
+                </div>
             {{/ each }}
         {{/ ifEn }}
     </ul>
