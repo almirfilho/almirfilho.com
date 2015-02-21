@@ -12,7 +12,7 @@
             {{ item.title }}
         </h3>
         {{# if item.date }}
-            {{> date date=item.date }}
+            {{> date date=item.date itemprop='datePublished' }}
         {{/ if }}
         {{# if item.desc }}
             <small class="alm-small">
