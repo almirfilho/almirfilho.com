@@ -1,4 +1,6 @@
-<time class="alm-small alm-icon alm-icon-date" datetime="{{ date }}">
+<time class="alm-small alm-icon alm-icon-date"
+    datetime="{{ date }}"
+    {{# if itemprop }}itemprop="{{ itemprop }}"{{/ if }}>
     {{ dateformat lang date 'day' }}
     {{ dateformat lang date 'month' }}
     <span class="alm-strong">
