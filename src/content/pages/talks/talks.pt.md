@@ -16,7 +16,7 @@ sections:
       event:
         title: Comics ~ Front in Maceió
         url: http://frontinmaceio.com.br
-        date: 2014-11-15
+        date: '2014-11-15'
         location: Maceió / AL
         icon: frontinmaceio2014.png
         showyear: true
@@ -28,7 +28,7 @@ sections:
       event:
         title: W3C Web.br
         url: http://conferenciaweb.w3c.br/
-        date: 2014-09-26
+        date: '2014-09-26'
         location: São Paulo / SP
         icon: webbr2014.png
         showyear: true
@@ -43,7 +43,7 @@ sections:
       event:
         title: W3C Web.br
         url: http://conferenciaweb.w3c.br/
-        date: 2014-09-25
+        date: '2014-09-25'
         location: São Paulo / SP
         icon: webbr2014.png
         showyear: true
@@ -55,7 +55,7 @@ sections:
       event:
         title: Front in Bahia
         url: http://www.frontinbahia.com.br
-        date: 2014-09-13
+        date: '2014-09-13'
         location: Salvador / BA
         icon: frontinbahia2014.png
         showyear: true
@@ -67,7 +67,7 @@ sections:
       event:
         title: Front Interior
         url: http://www.frontinterior.com.br
-        date: 2014-08-30
+        date: '2014-08-30'
         location: Bauru / SP
         icon: frontinterior2014.png
         showyear: true
@@ -79,7 +79,7 @@ sections:
       event:
         title: Rock and Code ~ Front in Aracaju
         url: http://www.frontinaracaju.com.br
-        date: 2014-08-02
+        date: '2014-08-02'
         location: Aracaju / SE
         icon: frontinaracaju2014.png
         showyear: true
@@ -91,7 +91,7 @@ sections:
       event:
         title: Front in BH
         url: http://frontinbh.com.br
-        date: 2014-07-26
+        date: '2014-07-26'
         location: Belo Horizonte / MG
         icon: frontinbh2014.png
         showyear: true
@@ -103,7 +103,7 @@ sections:
       event:
         title: Front in Fortaleza
         url: http://www.frontinfortaleza.com.br
-        date: 2014-05-17
+        date: '2014-05-17'
         location: Fortaleza / CE
         icon: frontinfortaleza2014.png
         showyear: true
@@ -115,7 +115,7 @@ sections:
       event:
         title: 16º Encontro Locaweb de Profissionais de Internet
         url: http://eventos.locaweb.com.br/16o-encontro-locaweb-de-profissionais-de-internet-rio-de-janeiro/
-        date: 2014-05-15
+        date: '2014-05-15'
         location: Rio de Janeiro / RJ
         icon: 16encontrolocaweb.png
 
@@ -129,7 +129,7 @@ sections:
       event:
         title: Front in Recife
         url: http://frontinrecife.com.br
-        date: 2013-12-14
+        date: '2013-12-14'
         location: Recife / PE
         icon: frontinrecife2013.png
         showyear: true
@@ -144,7 +144,7 @@ sections:
       event:
         title: W3C Web.br
         url: http://conferenciaweb.w3c.br/2013/
-        date: 2013-11-18
+        date: '2013-11-18'
         location: São Paulo / SP
         icon: webbr2013.png
         showyear: true
@@ -156,7 +156,7 @@ sections:
       event:
         title: Front in Sampa
         url: http://frontinsampa.com.br/2013/
-        date: 2013-09-14
+        date: '2013-09-14'
         location: São Paulo / SP
         icon: frontinsampa2013.png
         showyear: true
@@ -171,7 +171,7 @@ sections:
       event:
         title: Front in Rio
         url: http://lanyrd.com/2013/front-in-rio/
-        date: 2013-06-15
+        date: '2013-06-15'
         location: Rio de Janeiro / RJ
         icon: frontinrio2013.png
         showyear: true
@@ -186,7 +186,7 @@ sections:
       event:
         title: OlhóSEO
         url: http://www.olhoseo.com.br/2013/
-        date: 2013-05-03
+        date: '2013-05-03'
         location: Florianópolis / SC
         icon: olhoseo2013.png
         showyear: true
@@ -198,7 +198,7 @@ sections:
       event:
         title: RSJS
         url: http://rsjs.org/2013/
-        date: 2013-03-23
+        date: '2013-03-23'
         location: Porto Alegre / RS
         icon: rsjs2013.png
         showyear: true
@@ -210,7 +210,7 @@ sections:
       event:
         title: Rio.js
         url: http://lanyrd.com/2013/riojs/
-        date: 2013-03-09
+        date: '2013-03-09'
         location: Rio de Janeiro / RJ
         icon: riojs2013.png
         showyear: true
@@ -225,7 +225,7 @@ sections:
       event:
         title: Front in Maceió
         url: http://frontinmaceio.com.br/2012/
-        date: 2012-10-27
+        date: '2012-10-27'
         location: Maceió / AL
         icon: frontinmaceio2012.png
         showyear: true
@@ -243,7 +243,7 @@ sections:
       event:
         title: Jubileu de Prata do curso de Ciência da Computação UFMA
         url: http://www.connection.ufma.br/jubileu/index.php/programacao
-        date: 2011-11-29
+        date: '2011-11-29'
         location: São Luís / Brazil
         icon: jubileuufma.png
 
@@ -254,7 +254,7 @@ sections:
       event:
         title: 3.PHP
         url: http://www.phpmaranhao.com.br/3-php/
-        date: 2011-10-16
+        date: '2011-10-16'
         location: São Luís / MA
         icon: 3php.png
       with:
