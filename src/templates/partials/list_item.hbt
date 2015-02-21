@@ -1,10 +1,15 @@
 <li class="alm-list-item">
-    <a class="alm-list-item-link" href="{{ item.url }}" target="_blank">
+    <a class="alm-list-item-link"
+        itemprop="url"
+        href="{{ item.url }}"
+        target="_blank">
         <div class="alm-list-item-thumb">
-            <img class="alm-avatar" src="/images/avatars/{{ item.icon }}" />
+            <img class="alm-avatar"
+                itemprop="image"
+                src="/images/avatars/{{ item.icon }}" />
         </div>
-        <div class="alm-list-item-info">
-            <h3 class="alm-list-item-title" lang="{{ item.lang }}">
+        <div class="alm-list-item-info" lang="{{ item.lang }}">
+            <h3 class="alm-list-item-title" itemprop="name">
                 {{ item.title }}
             </h3>
             {{# if item.date }}
@@ -14,9 +19,13 @@
                 <small class="alm-small">
                     {{# if item.type }}
                         <span class="alm-strong">{{ item.type }}</span>
-                        <span class="alm-note">{{ item.desc }}</span>
+                        <span class="alm-note" itemprop="description">
+                            {{ item.desc }}
+                        </span>
                     {{ else }}
-                        {{ item.desc }}
+                        <span itemprop="description">
+                            {{ item.desc }}
+                        </span>
                     {{/ if }}
                 </small>
             {{/ if }}
