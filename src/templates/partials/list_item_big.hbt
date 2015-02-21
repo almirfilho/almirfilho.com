@@ -39,9 +39,14 @@
                 itemtype="https://schema.org/PostalAddress">
                 <meta itemprop="name" content="{{ item.event.location.city }}–{{ item.event.location.state }}" />
                 <meta itemprop="address" content="{{ item.event.location.city }}–{{ item.event.location.state }}" />
-                <meta itemprop="addressRegion" content="{{ item.event.location.state }}" />
                 <span itemprop="addressLocality">{{ item.event.location.city }}</span> /
-                <span itemprop="addressCountry">{{ item.event.location.country }}</span>
+                {{# ifEn lang }}
+                    <meta itemprop="addressRegion" content="{{ item.event.location.state }}" />
+                    <span itemprop="addressCountry">{{ item.event.location.country }}</span>
+                {{ else }}
+                    <meta itemprop="addressCountry" content="{{ item.event.location.country }}" />
+                    <span itemprop="addressRegion">{{ item.event.location.state }}</span>
+                {{/ ifEn}}
             </small>
             {{# if item.with }}
                 <small class="alm-small alm-note alm-list-item-with">
