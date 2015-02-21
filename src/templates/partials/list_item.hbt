@@ -1,34 +1,32 @@
-<li class="alm-list-item">
-    <a class="alm-list-item-link"
-        itemprop="url"
-        href="{{ item.url }}"
-        target="_blank">
-        <div class="alm-list-item-thumb">
-            <img class="alm-avatar"
-                itemprop="image"
-                src="/images/avatars/{{ item.icon }}" />
-        </div>
-        <div class="alm-list-item-info" lang="{{ item.lang }}">
-            <h3 class="alm-list-item-title" itemprop="name">
-                {{ item.title }}
-            </h3>
-            {{# if item.date }}
-                {{> date date=item.date }}
-            {{/ if }}
-            {{# if item.desc }}
-                <small class="alm-small">
-                    {{# if item.type }}
-                        <span class="alm-strong">{{ item.type }}</span>
-                        <span class="alm-note" itemprop="description">
-                            {{ item.desc }}
-                        </span>
-                    {{ else }}
-                        <span itemprop="description">
-                            {{ item.desc }}
-                        </span>
-                    {{/ if }}
-                </small>
-            {{/ if }}
-        </div>
-    </a>
-</li>
+<a class="alm-list-item-link"
+    itemprop="url"
+    href="{{ item.url }}"
+    target="_blank">
+    <div class="alm-list-item-thumb">
+        <img class="alm-avatar"
+            itemprop="image"
+            src="/images/avatars/{{ item.icon }}" />
+    </div>
+    <div class="alm-list-item-info" lang="{{ item.lang }}">
+        <h3 class="alm-list-item-title" itemprop="name">
+            {{ item.title }}
+        </h3>
+        {{# if item.date }}
+            {{> date date=item.date }}
+        {{/ if }}
+        {{# if item.desc }}
+            <small class="alm-small">
+                {{# if item.type }}
+                    <span class="alm-strong">{{ item.type }}</span>
+                    <span class="alm-note" itemprop="description">
+                        {{ item.desc }}
+                    </span>
+                {{ else }}
+                    <span itemprop="description">
+                        {{ item.desc }}
+                    </span>
+                {{/ if }}
+            </small>
+        {{/ if }}
+    </div>
+</a>
