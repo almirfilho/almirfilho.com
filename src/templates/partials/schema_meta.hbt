@@ -1,0 +1,3 @@
+{{# each items }}
+    <meta itemprop="{{ this.itemprop }}" content="{{ this.content }}" />
+{{/ each }}
