@@ -1,0 +1,1 @@
+{{# if type }}itemscope itemtype="{{ type }}"{{/ if }}
