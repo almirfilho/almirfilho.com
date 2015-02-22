@@ -11,11 +11,7 @@
         {{/ if }}
         <ul class="alm-list">
             {{# each this.talks }}
-                <li class="alm-list-item alm-list-item--size-big"
-                    itemscope
-                    itemtype="https://schema.org/EducationEvent">
-                    {{> list_item_big item=this lang=../../lang }}
-                </li>
+                {{> list_item_big item=this lang=../../lang schema=../../schema }}
             {{/ each }}
         </ul>
     {{/ each }}
