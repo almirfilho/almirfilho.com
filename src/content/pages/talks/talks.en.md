@@ -4,6 +4,29 @@ title: Talks
 subtitle: Lectures and workshops in conferences.
 template: talks.hbt
 translated: true
+
+schema:
+  event:
+    type: https://schema.org/EducationEvent
+    title: name
+    url: url
+    date: startDate
+    icon: image
+    location:
+      itemprop: location
+      type: https://schema.org/PostalAddress
+      city: addressLocality
+      state: addressRegion
+      country: addressCountry
+  keynote:
+    itemprop: workPerformed
+    type: https://schema.org/CreativeWork
+    title: name
+    lang: inLanguage
+    meta:
+      - itemprop: author
+        content: Almir Filho
+
 sections:
 
   - title:
