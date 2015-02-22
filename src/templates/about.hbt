@@ -26,7 +26,7 @@
         {{# if this.items }}
             <ul class="alm-list">
                 {{# each this.items }}
-                    {{> list_item item=this }}
+                    {{> list_item item=this schema=this.schema }}
                 {{/ each }}
             </ul>
         {{/ if }}
