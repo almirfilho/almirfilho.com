@@ -5,19 +5,7 @@
 
     <ul class="alm-list">
         {{# each articles }}
-            <li class="alm-list-item"
-                itemscope
-                itemtype="https://schema.org/TechArticle">
-                {{> list_item item=this lang=../lang }}
-                <aside class="alm-hidden"
-                    itemprop="author"
-                    itemscope
-                    itemtype="http://schema.org/Person">
-                    <meta itemprop="url" content="{{ ../author.googleplus.url }}" />
-                    <meta itemprop="image" content="{{ ../author.avatar }}" />
-                    <span itemprop="name">{{ ../author.name }}</span>
-                </aside>
-            </li>
+            {{> list_item item=this lang=../lang schema=../schema }}
         {{/ each }}
     </ul>
 </section>
