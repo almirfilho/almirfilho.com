@@ -1,60 +1,61 @@
-<div class="alm-list-item-row">
-    <div class="alm-list-item-thumb">
-        <img class="alm-avatar alm-avatar--size-big"
-            itemprop="image"
-            src="/images/talks/{{ item.event.icon }}" />
-    </div>
-    <div class="alm-list-item-info">
-        <h3 class="alm-list-item-title alm-list-item-title--size-big">
-            <a itemprop="url" href="{{ item.event.url }}" target="_blank">
-                <span itemprop="name">
-                    {{ item.event.title }}
-                    {{# if item.event.showyear }}
-                        <span class="alm-list-item-year">
-                            '{{ dateformat lang item.event.date 'shortYear' }}
-                        </span>
-                    {{/ if }}
-                </span>
-            </a>
-        </h3>
-        <p class="alm-list-item-title"
-            itemprop="workPerformed"
-            itemscope
-            itemtype="https://schema.org/CreativeWork"
-            lang="{{ item.keynote.lang }}">
-            <meta itemprop="inLanguage" content="{{ item.keynote.lang }}" />
-            {{# if item.keynote.url }}
-                <a itemprop="url" href="{{ item.keynote.url }}" target="_blank">
-                    <span itemprop="name">{{ item.keynote.title }}</span>
+<li class="alm-list-item alm-list-item--size-big" {{> itemtype type=schema.event.type }}>
+    <div class="alm-list-item-row">
+        <div class="alm-list-item-thumb">
+            <img class="alm-avatar alm-avatar--size-big"
+                {{> itemprop prop=schema.event.icon }}
+                src="/images/talks/{{ item.event.icon }}" />
+        </div>
+        <div class="alm-list-item-info">
+            <h3 class="alm-list-item-title alm-list-item-title--size-big">
+                <a href="{{ item.event.url }}" target="_blank" {{> itemprop prop=schema.event.url }}>
+                    <span {{> itemprop prop=schema.event.title }}>
+                        {{ item.event.title }}
+                        {{# if item.event.showyear }}
+                            <span class="alm-list-item-year">
+                                '{{ dateformat lang item.event.date 'shortYear' }}
+                            </span>
+                        {{/ if }}
+                    </span>
                 </a>
-            {{ else }}
-                <span itemprop="name">{{ item.keynote.title }}</span>
-            {{/ if }}
-        </p>
-        <p class="alm-list-item-attrs">
-            {{> date date=item.event.date itemprop='startDate' }}
-            <small class="alm-small alm-icon alm-icon-location"
-                itemprop="location"
-                itemscope
-                itemtype="https://schema.org/PostalAddress">
-                <meta itemprop="name" content="{{ item.event.location.city }}–{{ item.event.location.state }}" />
-                <meta itemprop="address" content="{{ item.event.location.city }}–{{ item.event.location.state }}" />
-                <span itemprop="addressLocality">{{ item.event.location.city }}</span> /
-                {{# ifEn lang }}
-                    <meta itemprop="addressRegion" content="{{ item.event.location.state }}" />
-                    <span itemprop="addressCountry">{{ item.event.location.country }}</span>
-                {{ else }}
-                    <meta itemprop="addressCountry" content="{{ item.event.location.country }}" />
-                    <span itemprop="addressRegion">{{ item.event.location.state }}</span>
-                {{/ ifEn}}
-            </small>
-            {{# if item.with }}
-                <small class="alm-small alm-note alm-list-item-with">
-                    <a class="alm-strong" href="{{ item.with.url }}">
-                        {{ item.with.name }}
+            </h3>
+            <p class="alm-list-item-title"
+                {{> itemprop prop=schema.keynote.itemprop }}
+                {{> itemtype type=schema.keynote.type }}
+                lang="{{ item.keynote.lang }}">
+                {{# if item.keynote.url }}
+                    <a {{> itemprop prop=schema.keynote.url }} href="{{ item.keynote.url }}" target="_blank">
+                        <span {{> itemprop prop=schema.keynote.title }}>{{ item.keynote.title }}</span>
                     </a>
+                {{ else }}
+                    <span {{> itemprop prop=schema.keynote.title }}>{{ item.keynote.title }}</span>
+                {{/ if }}
+                <meta {{> itemprop prop=schema.keynote.lang }} content="{{ item.keynote.lang }}" />
+                {{> schema_meta items=schema.keynote.meta }}
+            </p>
+            <p class="alm-list-item-attrs">
+                {{> date date=item.event.date itemprop=schema.event.date }}
+                <small class="alm-small alm-icon alm-icon-location"
+                    {{> itemprop prop=schema.event.location.itemprop }}
+                    {{> itemtype type=schema.event.location.type }}>
+                    <meta itemprop="name" content="{{ item.event.location.city }}–{{ item.event.location.state }}" />
+                    <meta itemprop="address" content="{{ item.event.location.city }}–{{ item.event.location.state }}" />
+                    <span {{> itemprop prop=schema.event.location.city }}>{{ item.event.location.city }}</span> /
+                    {{# ifEn lang }}
+                        <meta {{> itemprop prop=schema.event.location.state }} content="{{ item.event.location.state }}" />
+                        <span {{> itemprop prop=schema.event.location.country }}>{{ item.event.location.country }}</span>
+                    {{ else }}
+                        <meta {{> itemprop prop=schema.event.location.country }} content="{{ item.event.location.country }}" />
+                        <span {{> itemprop prop=schema.event.location.state }}>{{ item.event.location.state }}</span>
+                    {{/ ifEn}}
                 </small>
-            {{/ if }}
-        </p>
+                {{# if item.with }}
+                    <small class="alm-small alm-note alm-list-item-with">
+                        <a class="alm-strong" href="{{ item.with.url }}">
+                            {{ item.with.name }}
+                        </a>
+                    </small>
+                {{/ if }}
+            </p>
+        </div>
     </div>
-</div>
+</li>
