@@ -1,32 +1,35 @@
-<a class="alm-list-item-link"
-    itemprop="url"
-    href="{{ item.url }}"
-    target="_blank">
-    <div class="alm-list-item-thumb">
-        <img class="alm-avatar"
-            itemprop="image"
-            src="/images/avatars/{{ item.icon }}" />
-    </div>
-    <div class="alm-list-item-info" lang="{{ item.lang }}">
-        <h3 class="alm-list-item-title" itemprop="name">
-            {{ item.title }}
-        </h3>
-        {{# if item.date }}
-            {{> date date=item.date itemprop='datePublished' }}
-        {{/ if }}
-        {{# if item.desc }}
-            <small class="alm-small">
-                {{# if item.type }}
-                    <span class="alm-strong">{{ item.type }}</span>
-                    <span class="alm-note" itemprop="description">
-                        {{ item.desc }}
-                    </span>
-                {{ else }}
-                    <span itemprop="description">
-                        {{ item.desc }}
-                    </span>
-                {{/ if }}
-            </small>
-        {{/ if }}
-    </div>
-</a>
+<li class="alm-list-item" {{> itemtype type=item.schema.type }}>
+    <a class="alm-list-item-link"
+        {{> itemprop prop=item.schema.url }}
+        href="{{ item.url }}"
+        target="_blank">
+        <div class="alm-list-item-thumb">
+            <img class="alm-avatar"
+                {{> itemprop prop=item.schema.icon }}
+                src="/images/avatars/{{ item.icon }}" />
+        </div>
+        <div class="alm-list-item-info" lang="{{ item.lang }}">
+            <h3 class="alm-list-item-title" {{> itemprop prop=item.schema.title }}>
+                {{ item.title }}
+            </h3>
+            {{# if item.date }}
+                {{> date date=item.date itemprop='datePublished' }}
+            {{/ if }}
+            {{# if item.desc }}
+                <small class="alm-small">
+                    {{# if item.type }}
+                        <span class="alm-strong">{{ item.type }}</span>
+                        <span class="alm-note" {{> itemprop prop=item.schema.desc }}>
+                            {{ item.desc }}
+                        </span>
+                    {{ else }}
+                        <span {{> itemprop prop=item.schema.desc }}>
+                            {{ item.desc }}
+                        </span>
+                    {{/ if }}
+                </small>
+            {{/ if }}
+        </div>
+    </a>
+    {{> schema_meta items=item.schema.meta }}
+</li>
