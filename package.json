@@ -32,14 +32,14 @@
     "handlebars": "~2.0.0-alpha.4",
     "handlebars-intl": "^1.0.0",
     "load-grunt-tasks": "^0.6.0",
-    "metalsmith": "~0.8.0",
+    "metalsmith": "^2.1.0",
     "metalsmith-branch": "0.0.4",
-    "metalsmith-collections": "~0.4.1",
-    "metalsmith-filemetadata": "0.0.1",
-    "metalsmith-markdown": "~0.2.1",
-    "metalsmith-metadata": "0.0.1",
-    "metalsmith-permalinks": "~0.3.2",
-    "metalsmith-templates": "~0.5.1",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-filemetadata": "^1.0.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metadata": "0.0.4",
+    "metalsmith-permalinks": "^0.4.1",
+    "metalsmith-templates": "^0.7.0",
     "underscore.string": "~2.3.3"
   }
 }
