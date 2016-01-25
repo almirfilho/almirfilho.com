@@ -2,7 +2,7 @@
 slug: this-is-a-test-2
 title: This is a test 2
 date: '2014-09-13'
-template: post.hbt
+layout: post.hbt
 translated: true
 keywords: this is a test 2
 cover:

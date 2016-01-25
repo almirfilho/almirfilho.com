@@ -2,7 +2,7 @@
 slug: this-is-a-test-3
 title: This is a test 3
 date: '2014-09-14'
-template: post.hbt
+layout: post.hbt
 translated: true
 cover:
   desc: The is a description for the post's cover image.

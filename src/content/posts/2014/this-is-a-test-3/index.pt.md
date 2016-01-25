@@ -2,7 +2,7 @@
 slug: this-is-a-test-3
 title: Isso é um teste 3
 date: '2014-09-14'
-template: post.hbt
+layout: post.hbt
 translated: true
 ---
 
