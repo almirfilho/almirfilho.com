@@ -2,7 +2,7 @@
 slug: about
 title: about
 subtitle: test
-template: about.hbt
+layout: about.hbt
 translated: true
 sections:
 

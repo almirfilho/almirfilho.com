@@ -2,7 +2,7 @@
 slug: talks
 title: Palestras
 subtitle: Palestras e workshops em conferências.
-template: talks.hbt
+layout: talks.hbt
 translated: true
 
 schema:

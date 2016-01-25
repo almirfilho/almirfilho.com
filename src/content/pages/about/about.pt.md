@@ -2,7 +2,7 @@
 slug: about
 title: Sobre
 subtitle: teste potr
-template: about.hbt
+layout: about.hbt
 translated: true
 sections:
 

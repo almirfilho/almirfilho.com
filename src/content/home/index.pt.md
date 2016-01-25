@@ -1,5 +1,5 @@
 ---
 title: HOME
-template: home.hbt
+layout: home.hbt
 translated: true
 ---

@@ -2,7 +2,7 @@
 slug: log
 title: Log
 subtitle: Material escrito por mim na web.
-template: log.hbt
+layout: log.hbt
 translated: true
 
 schema:
