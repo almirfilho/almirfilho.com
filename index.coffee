@@ -4,7 +4,7 @@ Metalsmith   = require 'metalsmith'
 filemetadata = require 'metalsmith-filemetadata'
 collections  = require 'metalsmith-collections'
 permalinks   = require 'metalsmith-permalinks'
-templates    = require 'metalsmith-templates'
+layouts      = require 'metalsmith-layouts'
 markdown     = require 'metalsmith-markdown'
 metadata     = require 'metalsmith-metadata'
 branch       = require 'metalsmith-branch'
@@ -120,13 +120,13 @@ new Metalsmith __dirname
     branch 'posts/**/*.en.md'
       .use markdown smartypants: true
       .use permalinks pattern: ':slug'
-      .use rss()
+      # .use rss()
   )
   .use(
     branch 'posts/**/*.pt.md'
       .use markdown smartypants: true
       .use permalinks pattern: ':slug/pt'
-      .use rss dest: 'pt/index.xml'
+      # .use rss dest: 'pt/index.xml'
   )
   .use(
     branch 'pages/**/*.en.md'
@@ -157,7 +157,7 @@ new Metalsmith __dirname
   .use handlebarsConfig
     partials: ['head', 'tail', 'header', 'footer', 'scripts', 'post_header', 'social_list_item', 'list_item', 'list_item_big', 'date', 'content_header', 'page_metadata', 'itemprop', 'itemtype', 'schema_meta']
     helpers: ['ifequals', 'slugify', 'dateformat', 'ifEn', 'ifPt', 'en_pt', 'urlTo', 'svgLogo']
-  .use templates
+  .use layouts
     engine: 'handlebars'
     directory: 'src/templates'
-  .build()
+  .build (err, files) -> console.log 'Error: ', err
