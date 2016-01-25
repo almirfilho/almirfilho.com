@@ -17,12 +17,6 @@ fs           = require 'fs'
 
 handlebarsConfig = (options) ->
   (files, metalsmith, done) ->
-    if 'partials' of options
-      for partial in options.partials
-        handlebars.registerPartial partial,
-          fs.readFileSync "#{__dirname}/src/templates/partials/#{partial}.hbt"
-          .toString()
-
     if 'helpers' of options
       availableHelpers =
         svgLogo: -> new handlebars.SafeString svgLogoContent if svgLogoContent
@@ -105,7 +99,7 @@ svgLogoContent = (->
 )()
 
 new Metalsmith __dirname
-  .source 'src/content'
+  .source './src/content'
   .use metadata
     author: 'author.yaml'
     site: 'site.yaml'
@@ -146,18 +140,20 @@ new Metalsmith __dirname
   .use(
     branch 'home/index.en.md'
       .use markdown smartypants: true
-      .use permalinks '/'
+      .use permalinks '.'
   )
   .use(
     branch 'home/index.pt.md'
       .use markdown smartypants: true
-      .use permalinks '/pt'
+      .use permalinks './pt'
   )
   .use markdown smartypants: true
   .use handlebarsConfig
-    partials: ['head', 'tail', 'header', 'footer', 'scripts', 'post_header', 'social_list_item', 'list_item', 'list_item_big', 'date', 'content_header', 'page_metadata', 'itemprop', 'itemtype', 'schema_meta']
     helpers: ['ifequals', 'slugify', 'dateformat', 'ifEn', 'ifPt', 'en_pt', 'urlTo', 'svgLogo']
   .use layouts
     engine: 'handlebars'
-    directory: 'src/templates'
-  .build (err, files) -> console.log 'Error: ', err
+    directory: './src/templates'
+    partials: './src/templates/partials'
+  .build (err, files) ->
+    if err
+      throw err
