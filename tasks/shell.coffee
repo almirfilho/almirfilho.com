@@ -3,4 +3,8 @@ module.exports = (grunt) ->
     metalsmith:
       command: "node_modules/.bin/coffee #{grunt.config.data.pkg.main}"
       options:
-        stderr: false
+        callback: (err, stdout, stderr, cb) ->
+          grunt.log.write 'Metal ' + '_\\,,/'['white'] + ' building...'
+          if not err
+            grunt.log.ok()
+          cb()
